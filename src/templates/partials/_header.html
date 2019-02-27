@@ -1,1 +1,89 @@
-<p>Hello from partials/_header.html</p>
+<header class="header">
+    <div class="header__inner inner">
+        <div class="header__wrap">
+            <div class="header__button">
+                <button class="btn-icon" type="button">
+                    {{ mixins.icon('icons_menu') }}
+                    {{ mixins.icon('icons_close') }}
+                </button>
+            </div>
+            <div class="header__logo">
+                <img src="./img/logo@2x.png" alt="logotype">
+            </div>
+            <div class="header__button">
+                <button class="btn-icon" type="button">
+                    {{ mixins.icon('icons_users') }}
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="header__menu main-menu">
+        <div class="main-menu__inner inner">
+            <div class="main-menu__wrap">
+                {% for item in [
+                    {
+                        icon: 'satellite',
+                        text: 'Объекты'
+                    },
+                    {
+                        icon: 'satellite',
+                        text: 'Геозоны'
+                    },
+                    {
+                        icon: 'satellite',
+                        text: 'Водители'
+                    },
+                    {
+                        icon: 'satellite',
+                        text: 'Карта'
+                    },
+                    {
+                        icon: 'satellite',
+                        text: 'События'
+                    },
+                    {
+                        icon: 'satellite',
+                        text: 'АЗС'
+                    },
+                    {
+                        icon: 'satellite',
+                        text: 'Сервисы'
+                    },
+                    {
+                        icon: 'satellite',
+                        text: 'Настройки'
+                    },
+                    {
+                        icon: 'satellite',
+                        text: 'Новый'
+                    },
+                    {
+                        icon: 'satellite',
+                        text: 'Новый'
+                    },
+                    {
+                        icon: 'satellite',
+                        text: 'Новый'
+                    }
+                ] %}
+                    
+                    <a href="#" class="main-menu__item">
+                        <div class="main-menu__item-content">
+                            <div class="main-menu__icon">{{ mixins.icon( item.icon ) }}</div>
+                            <div class="main-menu__name">{{ item.text }}</div>
+                        </div>
+                    </a>
+
+                {% endfor %}
+            </div>
+        </div>
+        <div class="main-menu__footer">
+            <div class="main-menu__desktop">
+                <div class="main-menu__footer-icon">
+                    {{ mixins.icon('satellite') }}
+                </div>
+                <div class="main-menu__footer-text">Полная версия</div>
+            </div>
+        </div>
+    </div>
+</header>

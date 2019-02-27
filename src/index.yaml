@@ -1,5 +1,7 @@
 ProjectTitle: template
 
 PageList:
-- file: page.html
+- file: ui.html
+  ready: 50
+- file: 03_01_ObjectsList.html
   ready: 50

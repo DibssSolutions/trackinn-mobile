@@ -1,4 +1,176 @@
+html
+    height: 100%
 body
-	background: #FFF
-	line-height: 1.4
+    background: #FFF
+    line-height: 1.4
+    color: $dark
+    height: 100%
+    font-size: 13px
+    +opensans
+    a
+        color: $dark
+        text-decoration: none
+.out
+    height: 100%
+    padding-top: 54px
+
+.btn
+    height: 48px
+    color: $white
+    background-color: $blue
+    text-align: center
+    padding: 0 30px
+    &_w100
+        width: 100%
+
+.btn-icon
+    display: flex
+    align-items: center
+    justify-content: center
+    color: $white
+    background: none
+    width: 24px
+    height: 24px
+    padding: 3px
+    .icon
+        display: block
+        font-size: 18px
+    .icon-icons_close
+        font-size: 12px
+    &_gray
+        color: $gray
+
+.modal-header
+    height: 57px
+    border-bottom: 1px solid $lightGray
+    &_low
+        height: 48px
+    &__inner
+        height: 100%
+        display: flex
+        align-items: center
+        justify-content: space-between
+
+.head-object
+    height: 48px
+    border-bottom: 1px solid $lightGray
+    &__inner
+        height: 100%
+        display: flex
+        align-items: center
+    &__btn
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 24px
+        height: 24px
+        background: none
+        color: #999
+        font-size: 16px
+        margin-right: 10px
+        .icon
+            display: block
+    &__title
+        // display: inline-block
+        color: rgba($dark, .54)
+        margin-right: 16px
+    &__icon
+        margin-right: 17px
+        max-width: 10px
+        img
+            display: block
+            width: 100%
+    &__comment
+        margin-left: 8px
+        color: rgba($dark, .54)
+
+.footer-btn
+    height: 96px
+    background-color: $white
+    &__inner
+        height: 100%
+        display: flex
+        align-items: center
+
+.form-block
+    padding: 24px 0 0
+.form-group
+    &:not(:first-child)
+        margin-top: 24px
+    &:not(:last-child)
+        margin-bottom: 24px
+    .form-control
+        &:not(:first-child)
+            margin-top: 8px
+.form-control
+    position: relative
+    &__icon
+        position: absolute
+        left: 12px
+        top: 50%
+        transform: translateY(-50%)
+        .icon
+            font-size: 11px
+.form-input
+    padding: 15px 16px
+    font-size: 13px
+    width: 100%
+    height: 48px
+    border: 1px solid $lightGray
+    +opensans
+    +placeholder
+        color: rgba($dark,.54)
+        +opensans
+    &_icon
+        padding-left: 47px
+textarea.form-input
+    height: 168px
+    resize: none
+.divider
+    width: 100%
+    height: 1px
+    background-color: $lightGray
+    &:not(:first-child)
+        margin-top: 24px
+    &:not(:last-child)
+        margin-bottom: 24px
+
+.checkbox
+    cursor: pointer
+    input
+        display: none
+        &:checked ~ .checkbox__text
+            &:before
+                border-color: $orange
+            &:after
+                opacity: 1
+    &__text
+        position: relative
+        padding-left: 31px
+        display: block
+        &:before
+            content: ''
+            position: absolute
+            left: 0
+            top: 50%
+            transform: translateY(-50%)
+            width: 22px
+            height: 22px
+            background-color: $white
+            border: 2px solid #c4c4c4
+            transition: border-color .3s
+        &:after
+            content: ''
+            position: absolute
+            left: 6px
+            top: 50%
+            transform: translateY(-50%)
+            width: 10px
+            height: 10px
+            background-color: $orange
+            opacity: 0
+            transition: opacity .3s
+
+
+
 

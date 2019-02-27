@@ -28,3 +28,66 @@
 </label>
 <!-- end input -->
 {% endmacro %}
+
+{% macro modalHeader(title, low) %}
+	<div class="modal-header{% if low %} modal-header_low{% endif %}">
+		<div class="modal-header__inner inner">
+			<div class="modal-header__title">{{ title }}</div>
+			<div class="modal-header__btn">
+				<button class="btn-icon btn-icon_gray">
+					{{ icon('icons_close') }}
+				</button>
+			</div>
+		</div>
+	</div>
+{% endmacro %}
+
+{% macro headObject(props) %}
+	<div class="head-object">
+		<div class="head-object__inner inner">
+			{% if props.arrow %}
+				<button class="head-object__btn">
+					{{ icon('arrow-left') }}
+				</button>
+			{% endif %}
+			{% if props.title %}
+				<div class="head-object__title">
+					{{ title }}
+				</div>
+			{% endif %}
+			{% if props.icon %}
+				<div class="head-object__icon">
+					<img src="./img/car1.png" alt="icon">
+				</div>
+			{% endif %}
+			<div class="head-object__text">
+				{{ props.text }}
+			</div>
+			{% if props.comment %}
+				<div class="head-object__comment">
+					{{ props.comment }}
+				</div>
+			{% endif %}
+		</div>
+	</div>
+{% endmacro %}
+
+{% macro footerBtn(text) %}
+	<div class="footer-btn">
+		<div class="footer-btn__inner inner">
+			<button class="btn btn_w100">
+				{{ text }}
+			</button>
+		</div>
+	</div>
+{% endmacro %}
+
+{% macro input(placeholder,textarea) %}
+	<div class="form-control">
+		{% if textarea %}
+			<textarea class="form-input" placeholder="{{ placeholder }}"></textarea>
+		{% else %}
+			<input type="text" class="form-input" placeholder="{{ placeholder }}">
+		{% endif %}
+	</div>
+{% endmacro %}

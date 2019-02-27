@@ -5,3 +5,46 @@
 	font-family: $name
 	font-style: $style
 	font-weight: $weight
+
+$familyOpensans: 'Open Sans'
+=opensans
+	font-family: 'Open Sans', Arial, -apple-system, BlinkMacSystemFont, 'Oxygen', sans-serif
+
+@font-face
+	+fontdefault(normal, 300, $familyOpensans)
+	+fontpath('Open Sans Light', 'OpenSans-Light', opensans-light)
+
+@font-face
+	+fontdefault(italic, 300, $familyOpensans)
+	+fontpath('Open Sans Light Italic', 'OpenSans-LightItalic', opensans-lightitalic)
+
+@font-face
+	+fontdefault(normal, 400, $familyOpensans)
+	+fontpath('Open Sans Regular', 'OpenSans-Regular', opensans-regular)
+
+@font-face
+	+fontdefault(italic, 400, $familyOpensans)
+	+fontpath('Open Sans Italic', 'OpenSans-Italic', opensans-italic)
+
+@font-face
+	+fontdefault(normal, 600, $familyOpensans)
+	+fontpath('Open Sans SemiBold', 'OpenSans-SemiBold', opensans-semibold)
+
+@font-face
+	+fontdefault(italic, 600, $familyOpensans)
+	+fontpath('Open Sans SemiBold Italic', 'OpenSans-SemiBoldItalic', opensans-semibolditalic)
+
+@font-face
+	+fontdefault(normal, 700, $familyOpensans)
+	+fontpath('Open Sans Bold', 'OpenSans-Bold', opensans-bold)
+
+@font-face
+	+fontdefault(italic, 700, $familyOpensans)
+	+fontpath('Open Sans Bold Italic', 'OpenSans-BoldItalic', opensans-bolditalic)
+
+@font-face
+	+fontdefault(normal, 800, $familyOpensans)
+	+fontpath('Open Sans ExtraBold', 'OpenSans-ExtraBold', opensans-extrabold)
+@font-face
+	+fontdefault(italic, 800, $familyOpensans)
+	+fontpath('Open Sans ExtraBold Italic', 'OpenSans-ExtraBoldItalic', opensans-extrabolditalic)

@@ -1,0 +1,58 @@
+---
+title: Index page
+---
+{% extends "layouts/_layout.html" %}
+
+
+{% block content %}
+
+<div class="ui" style="margin:10px 0;">
+    <div class="ui" style="margin:10px 0;">
+        modalHeader
+    </div>
+    {{ mixins.modalHeader('Фильтры') }}
+</div>
+<div class="ui" style="margin:10px 0;">
+    <div class="ui" style="margin:10px 0;">
+        modalHeader low
+    </div>
+    {{ mixins.modalHeader('Фильтры',true) }}
+</div>
+<div class="ui" style="margin:10px 0;">
+    <div class="ui" style="margin:10px 0;">
+        headObject height 48px
+    </div>
+    {{ mixins.headObject({
+        arrow: true,
+        icon: true,
+        text: 'Объект 2',
+        comment: '(Комментарий)'
+    }) }}
+    {{ mixins.headObject({
+        icon: true,
+        text: 'Объект 2',
+        comment: '(Комментарий)'
+    }) }}
+    {{ mixins.headObject({
+        arrow: true,
+        text: 'Объект 2',
+        comment: '(Комментарий)'
+    }) }}
+    {{ mixins.headObject({
+        arrow: true,
+        icon: true,
+        text: 'Объект 2'
+    }) }}
+    {{ mixins.headObject({
+        text: 'Объект 2',
+        comment: '(Комментарий)'
+    }) }}
+</div>
+<div class="ui" style="margin:10px 0;">
+        <div class="ui" style="margin:10px 0;">
+            footerBtn
+        </div>
+        {{ mixins.footerBtn('Выполнить') }}
+    </div>
+
+{% endblock %}
