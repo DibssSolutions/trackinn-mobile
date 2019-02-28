@@ -1,0 +1,168 @@
+<div class="page">
+    <div class="page__header">
+        {{ mixins.pageHeader({
+            map: true,
+            filter: true
+        }) }}
+    </div>
+    <div class="page__content">
+        <div class="page__content-wrap">
+            {% for item in [
+                {
+                    img: 'car1.png',
+                    title: 'Объект 1',
+                    date: '01.01.2019 23:51:44',
+                    location: 'Московская область',
+                    btns: [
+                        {
+                            color: 'blue',
+                            icon: 'icons_key',
+                            text: 'Вкл.',
+                            active: true
+                        },
+                        {
+                            color: 'blue',
+                            icon: 'icons_speedometer',
+                            text: '100 км/ч',
+                            active: true
+                        },
+                        {
+                            color: 'green',
+                            icon: 'icons_satellite',
+                            text: 'В сети',
+                            active: true
+                        }
+                    ]
+                },
+                {
+                    img: 'car1.png',
+                    title: 'Объект 2',
+                    date: '01.01.2019 23:51:44',
+                    location: 'Если длинное название обрезать',
+                    btns: [
+                        {
+                            color: 'blue',
+                            icon: 'icons_key',
+                            text: 'Выкл.'
+                        },
+                        {
+                            color: 'blue',
+                            icon: 'icons_speedometer',
+                            text: '0 км/ч'
+                        },
+                        {
+                            color: 'green',
+                            icon: 'icons_satellite',
+                            text: 'Не в сети'
+                        }
+                    ]
+                },
+                {
+                    img: 'car1.png',
+                    title: 'Объект 3',
+                    date: '01.01.2019 23:51:44',
+                    location: 'Московская область',
+                    btns: [
+                        {
+                            color: 'blue',
+                            icon: 'icons_key',
+                            text: 'Вкл.',
+                            active: true
+                        },
+                        {
+                            color: 'blue',
+                            icon: 'icons_parking',
+                            text: '0 км/ч',
+                            active: true
+                        },
+                        {
+                            color: 'green',
+                            icon: 'icons_satellite',
+                            text: 'В сети',
+                            active: true
+                        }
+                    ]
+                },
+                {
+                    img: 'car1.png',
+                    title: 'Объект 4',
+                    date: '01.01.2019 23:51:44',
+                    location: 'Если длинное название обрезать',
+                    btns: [
+                        {
+                            color: 'blue',
+                            icon: 'icons_key',
+                            text: 'Выкл.'
+                        },
+                        {
+                            color: 'blue',
+                            icon: 'icons_speedometer',
+                            text: '0 км/ч'
+                        },
+                        {
+                            color: 'green',
+                            icon: 'icons_satellite',
+                            text: 'Не в сети'
+                        }
+                    ]
+                },
+                {
+                    img: 'car1.png',
+                    title: 'Объект 5',
+                    date: '01.01.2019 23:51:44',
+                    location: 'Московская область',
+                    btns: [
+                        {
+                            color: 'blue',
+                            icon: 'icons_key',
+                            text: 'Вкл.',
+                            active: true
+                        },
+                        {
+                            color: 'blue',
+                            icon: 'icons_speedometer',
+                            text: '100 км/ч',
+                            active: true
+                        },
+                        {
+                            color: 'green',
+                            icon: 'icons_satellite',
+                            text: 'В сети',
+                            active: true
+                        }
+                    ]
+                },
+                {
+                    img: 'car1.png',
+                    title: 'Объект 6',
+                    date: '01.01.2019 23:51:44',
+                    location: 'Московская область',
+                    btns: [
+                        {
+                            color: 'blue',
+                            icon: 'icons_key',
+                            text: 'Вкл.',
+                            active: true
+                        },
+                        {
+                            color: 'blue',
+                            icon: 'icons_speedometer',
+                            text: '100 км/ч',
+                            active: true
+                        },
+                        {
+                            color: 'green',
+                            icon: 'icons_satellite',
+                            text: 'В сети',
+                            active: true
+                        }
+                    ]
+                }
+            ] %}
+            
+                {{ mixins.objectsItem(item) }}
+                
+            {% endfor %}
+        </div>
+    </div>
+</div>

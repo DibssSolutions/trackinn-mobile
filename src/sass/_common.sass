@@ -6,6 +6,7 @@ body
     color: $dark
     height: 100%
     font-size: 13px
+    min-width: 320px
     +opensans
     a
         color: $dark
@@ -20,6 +21,15 @@ body
     background-color: $blue
     text-align: center
     padding: 0 30px
+    &:disabled
+        background-color: rgba($blue,.4)
+    &_remove
+        background-color: transparent
+        color: $dark
+        border: 1px solid $lightGray
+        &:disabled
+            color: rgba($dark,.54)
+            background-color: transparent
     &_w100
         width: 100%
 
@@ -40,49 +50,6 @@ body
     &_gray
         color: $gray
 
-.modal-header
-    height: 57px
-    border-bottom: 1px solid $lightGray
-    &_low
-        height: 48px
-    &__inner
-        height: 100%
-        display: flex
-        align-items: center
-        justify-content: space-between
-
-.head-object
-    height: 48px
-    border-bottom: 1px solid $lightGray
-    &__inner
-        height: 100%
-        display: flex
-        align-items: center
-    &__btn
-        display: flex
-        align-items: center
-        justify-content: center
-        width: 24px
-        height: 24px
-        background: none
-        color: #999
-        font-size: 16px
-        margin-right: 10px
-        .icon
-            display: block
-    &__title
-        // display: inline-block
-        color: rgba($dark, .54)
-        margin-right: 16px
-    &__icon
-        margin-right: 17px
-        max-width: 10px
-        img
-            display: block
-            width: 100%
-    &__comment
-        margin-left: 8px
-        color: rgba($dark, .54)
 
 .footer-btn
     height: 96px
@@ -92,8 +59,11 @@ body
         display: flex
         align-items: center
 
+
 .form-block
     padding: 24px 0 0
+    &__filters-remove
+        margin-top: 32px
 .form-group
     &:not(:first-child)
         margin-top: 24px
@@ -102,6 +72,15 @@ body
     .form-control
         &:not(:first-child)
             margin-top: 8px
+    &__title
+        margin-bottom: 10px
+    &__row
+        // display: flex
+    &__radio
+        display: inline-block
+        min-width: 143px
+        padding-right: 15px
+        // width: 50%
 .form-control
     position: relative
     &__icon
@@ -109,9 +88,11 @@ body
         left: 12px
         top: 50%
         transform: translateY(-50%)
-        .icon
-            font-size: 11px
+        &-right
+            left: auto
+            right: 16px
 .form-input
+    // display: inline-block
     padding: 15px 16px
     font-size: 13px
     width: 100%
@@ -121,8 +102,14 @@ body
     +placeholder
         color: rgba($dark,.54)
         +opensans
+    &_search
+        height: 100%
+        border: none
+        padding: 16px 24px
     &_icon
         padding-left: 47px
+    &_icon-right
+        padding-right: 47px
 textarea.form-input
     height: 168px
     resize: none
@@ -135,11 +122,15 @@ textarea.form-input
     &:not(:last-child)
         margin-bottom: 24px
 
-.checkbox
+.checkbox,
+.radio
     cursor: pointer
+    display: inline-block
+    padding: 2px 0
     input
         display: none
-        &:checked ~ .checkbox__text
+        &:checked ~ .checkbox__text,
+        &:checked ~ .radio__text
             &:before
                 border-color: $orange
             &:after
@@ -147,7 +138,7 @@ textarea.form-input
     &__text
         position: relative
         padding-left: 31px
-        display: block
+        // display: block
         &:before
             content: ''
             position: absolute
@@ -170,6 +161,35 @@ textarea.form-input
             background-color: $orange
             opacity: 0
             transition: opacity .3s
+.radio
+    padding: 3px 0
+    &__text
+        &:before
+            width: 24px
+            height: 24px
+            border-radius: 50%
+        &:after
+            border-radius: 50%
+            left: 7px
+
+.icon
+    display: inline-block
+
+.icon-icons_calendar
+    font-size: 11px
+.icon-icons_map,
+.icon-icons_filter
+    font-size: 20px
+.icon-icons_search,
+.icon-icons_key,
+.icon-icons_parking
+    font-size: 18px
+.icon-icons_speedometer
+    font-size: 16px
+.icon-icons_satellite
+    font-size: 15px
+
+
 
 
 

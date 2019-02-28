@@ -27,14 +27,7 @@
                         {{ mixins.checkbox({text: item}) }}
                     </div>
                     <div class="form-group">
-                        <div class="form-control">
-                            <input type="text" class="form-input dtpicker form-input_icon" value="06.10.2019">
-                            <div class="form-control__icon">
-                                <button class="btn-icon btn-icon_gray">
-                                    {{ mixins.icon('icons_calendar') }}
-                                </button>
-                            </div>
-                        </div>
+                        {{ mixins.inputCalendar() }}
                         {{ mixins.input('Повторение') }}
                     </div>
                 {% endfor %}

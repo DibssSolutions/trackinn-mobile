@@ -5,54 +5,82 @@ title: Index page
 
 
 {% block content %}
-
-<div class="ui" style="margin:10px 0;">
+<div style="padding:0 20px">
     <div class="ui" style="margin:10px 0;">
-        modalHeader
+        <div class="ui" style="margin:10px 0;">
+            modalHeader
+        </div>
+        {{ mixins.modalHeader('Фильтры') }}
     </div>
-    {{ mixins.modalHeader('Фильтры') }}
-</div>
-<div class="ui" style="margin:10px 0;">
     <div class="ui" style="margin:10px 0;">
-        modalHeader low
+        <div class="ui" style="margin:10px 0;">
+            modalHeader low
+        </div>
+        {{ mixins.modalHeader('Фильтры',true) }}
     </div>
-    {{ mixins.modalHeader('Фильтры',true) }}
-</div>
-<div class="ui" style="margin:10px 0;">
     <div class="ui" style="margin:10px 0;">
-        headObject height 48px
+        <div class="ui" style="margin:10px 0;">
+            headObjects height 48px
+        </div>
+        {{ mixins.headObject({
+            arrow: true,
+            icon: true,
+            text: 'Объект 2',
+            comment: '(Комментарий)'
+        }) }}
+        {{ mixins.headObject({
+            icon: true,
+            text: 'Объект 2',
+            comment: '(Комментарий)'
+        }) }}
+        {{ mixins.headObject({
+            arrow: true,
+            text: 'Объект 2',
+            comment: '(Комментарий)'
+        }) }}
+        {{ mixins.headObject({
+            arrow: true,
+            icon: true,
+            text: 'Объект 2'
+        }) }}
+        {{ mixins.headObject({
+            text: 'Объект 2',
+            comment: '(Комментарий)'
+        }) }}
     </div>
-    {{ mixins.headObject({
-        arrow: true,
-        icon: true,
-        text: 'Объект 2',
-        comment: '(Комментарий)'
-    }) }}
-    {{ mixins.headObject({
-        icon: true,
-        text: 'Объект 2',
-        comment: '(Комментарий)'
-    }) }}
-    {{ mixins.headObject({
-        arrow: true,
-        text: 'Объект 2',
-        comment: '(Комментарий)'
-    }) }}
-    {{ mixins.headObject({
-        arrow: true,
-        icon: true,
-        text: 'Объект 2'
-    }) }}
-    {{ mixins.headObject({
-        text: 'Объект 2',
-        comment: '(Комментарий)'
-    }) }}
-</div>
-<div class="ui" style="margin:10px 0;">
+    <div class="ui" style="margin:10px 0;">
         <div class="ui" style="margin:10px 0;">
             footerBtn
         </div>
         {{ mixins.footerBtn('Выполнить') }}
     </div>
+    <div class="ui" style="margin:10px 0;">
+        <div class="ui" style="margin:10px 0;">
+            input
+        </div>
+        {{ mixins.input('Комментарий') }}
+    </div>
+    <div class="ui" style="margin:10px 0;">
+        <div class="ui" style="margin:10px 0;">
+            textarea
+        </div>
+        {{ mixins.input('Комментарий', 'textarea') }}
+    </div>
+    <div class="ui" style="margin:10px 0;">
+        <div class="ui" style="margin:10px 0;">
+            inputCalendar
+        </div>
+        {{ mixins.inputCalendar() }}
+    </div>
+    <div class="ui" style="margin:10px 0;">
+        <div class="ui" style="margin:10px 0;">
+            pageHeader
+        </div>
+        {{ mixins.pageHeader({
+            map: true,
+            filter: true
+        }) }}
+    </div>
+</div>
 
 {% endblock %}

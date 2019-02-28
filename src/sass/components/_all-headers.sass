@@ -1,0 +1,67 @@
+
+.modal-header
+    height: 57px
+    border-bottom: 1px solid $lightGray
+    &_low
+        height: 48px
+    &__inner
+        height: 100%
+        display: flex
+        align-items: center
+        justify-content: space-between
+
+.head-object
+    height: 48px
+    border-bottom: 1px solid $lightGray
+    &__inner
+        height: 100%
+        display: flex
+        align-items: center
+    &__btn
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 24px
+        height: 24px
+        background: none
+        color: #999
+        font-size: 16px
+        margin-right: 10px
+        .icon
+            display: block
+    &__title
+        // display: inline-block
+        color: rgba($dark, .54)
+        margin-right: 16px
+    &__icon
+        margin-right: 17px
+        max-width: 10px
+        img
+            display: block
+            width: 100%
+    &__comment
+        margin-left: 8px
+        color: rgba($dark, .54)
+
+.page-header
+    height: 57px
+    border-bottom: 1px solid $lightGray
+    background-color: #f3f3f3
+    &__wrap
+        display: flex
+        align-items: center
+        height: 100%
+        padding-right: 24px
+        +ms
+            padding-right: 12px
+    &__search
+        height: 100%
+        flex: 1 1 auto
+        .form-control
+            height: 100%
+    &__btns
+        flex-shrink: 0
+        display: flex
+        align-items: center
+    &__btn
+        margin-left: 24px

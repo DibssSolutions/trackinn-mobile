@@ -168,118 +168,292 @@
       </header>
       <div class="page">
         <div class="page__header">
-          <div class="modal-header">
-            <div class="modal-header__inner inner">
-              <div class="modal-header__title">Новая задача</div>
-              <div class="modal-header__btn">
-                <button class="btn-icon btn-icon_gray">
-                  <svg class="icon icon-icons_close">
-                    <use xlink:href="img/sprite.svg#icon-icons_close"></use>
-                  </svg>
-                </button>
+          <div class="page-header">
+            <div class="page-header__wrap">
+              <div class="page-header__search">
+                <div class="form-control">
+                  <input type="search" class="form-input form-input_search form-input_icon-right" placeholder="Поиск">
+                  <div class="form-control__icon form-control__icon-right">
+                    <button class="btn-icon btn-icon_gray">
+                      <svg class="icon icon-icons_search">
+                        <use xlink:href="img/sprite.svg#icon-icons_search"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="head-object">
-            <div class="head-object__inner inner">
-              <div class="head-object__icon">
-                <img src="./img/car1.png" alt="icon">
+              <div class="page-header__btns">
+                <div class="page-header__btn">
+                  <button class="btn-icon btn-icon_gray">
+                    <svg class="icon icon-icons_map">
+                      <use xlink:href="img/sprite.svg#icon-icons_map"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="page-header__btn">
+                  <button class="btn-icon btn-icon_gray">
+                    <svg class="icon icon-icons_filter">
+                      <use xlink:href="img/sprite.svg#icon-icons_filter"></use>
+                    </svg>
+                  </button>
+                </div>
               </div>
-              <div class="head-object__text"> Объект 2 </div>
-              <div class="head-object__comment"> (Комментарий) </div>
             </div>
           </div>
         </div>
         <div class="page__content">
           <div class="page__content-wrap">
-            <div class="page__inner inner">
-              <div class="form-block">
-                <div class="form-group">
-                  <div class="form-control">
-                    <input type="text" class="form-input" placeholder="Комментарий">
+            <div class="objects-item">
+              <div class="objects-item__inner inner">
+                <div class="objects-item__top">
+                  <div class="objects-item__img">
+                    <img src="./img/car1.png" alt="img">
                   </div>
-                  <div class="form-control">
-                    <textarea class="form-input" placeholder="Комментарий"></textarea>
+                  <div class="objects-item__info">
+                    <div class="objects-item__title">Объект 1</div>
+                    <div class="objects-item__details">
+                      <div class="objects-item__date"><span>01.01.2019 23:51:44</span></div>
+                      <div class="objects-item__location"><span>Московская область</span></div>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="divider"></div>
-              <div class="form-group">
-                <!-- begin input -->
-                <label class="checkbox">
-                  <input type="checkbox" name="checkbox">
-                  <span class="checkbox__text">Время, дни</span>
-                </label>
-                <!-- end input -->
-              </div>
-              <div class="form-group">
-                <div class="form-control">
-                  <input type="text" class="form-input dtpicker form-input_icon" value="06.10.2019">
-                  <div class="form-control__icon">
-                    <button class="btn-icon btn-icon_gray">
-                      <svg class="icon icon-icons_calendar">
-                        <use xlink:href="img/sprite.svg#icon-icons_calendar"></use>
+                <div class="objects-item__bottom">
+                  <button class="objects-item__btn is-active">
+                    <span class="objects-item__icon objects-item__icon_blue">
+                      <svg class="icon icon-icons_key">
+                        <use xlink:href="img/sprite.svg#icon-icons_key"></use>
                       </svg>
-                    </button>
-                  </div>
-                </div>
-                <div class="form-control">
-                  <input type="text" class="form-input" placeholder="Повторение">
-                </div>
-              </div>
-              <div class="form-group">
-                <!-- begin input -->
-                <label class="checkbox">
-                  <input type="checkbox" name="checkbox">
-                  <span class="checkbox__text">Одометр, км</span>
-                </label>
-                <!-- end input -->
-              </div>
-              <div class="form-group">
-                <div class="form-control">
-                  <input type="text" class="form-input dtpicker form-input_icon" value="06.10.2019">
-                  <div class="form-control__icon">
-                    <button class="btn-icon btn-icon_gray">
-                      <svg class="icon icon-icons_calendar">
-                        <use xlink:href="img/sprite.svg#icon-icons_calendar"></use>
+                    </span>
+                    <span class="objects-item__text">Вкл.</span>
+                  </button>
+                  <button class="objects-item__btn is-active">
+                    <span class="objects-item__icon objects-item__icon_blue">
+                      <svg class="icon icon-icons_speedometer">
+                        <use xlink:href="img/sprite.svg#icon-icons_speedometer"></use>
                       </svg>
-                    </button>
-                  </div>
-                </div>
-                <div class="form-control">
-                  <input type="text" class="form-input" placeholder="Повторение">
-                </div>
-              </div>
-              <div class="form-group">
-                <!-- begin input -->
-                <label class="checkbox">
-                  <input type="checkbox" name="checkbox">
-                  <span class="checkbox__text">Время работы, ч</span>
-                </label>
-                <!-- end input -->
-              </div>
-              <div class="form-group">
-                <div class="form-control">
-                  <input type="text" class="form-input dtpicker form-input_icon" value="06.10.2019">
-                  <div class="form-control__icon">
-                    <button class="btn-icon btn-icon_gray">
-                      <svg class="icon icon-icons_calendar">
-                        <use xlink:href="img/sprite.svg#icon-icons_calendar"></use>
+                    </span>
+                    <span class="objects-item__text">100 км/ч</span>
+                  </button>
+                  <button class="objects-item__btn is-active">
+                    <span class="objects-item__icon objects-item__icon_green">
+                      <svg class="icon icon-icons_satellite">
+                        <use xlink:href="img/sprite.svg#icon-icons_satellite"></use>
                       </svg>
-                    </button>
-                  </div>
-                </div>
-                <div class="form-control">
-                  <input type="text" class="form-input" placeholder="Повторение">
+                    </span>
+                    <span class="objects-item__text">В сети</span>
+                  </button>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-        <div class="page__footer">
-          <div class="footer-btn">
-            <div class="footer-btn__inner inner">
-              <button class="btn btn_w100"> Сохранить </button>
+            <div class="objects-item">
+              <div class="objects-item__inner inner">
+                <div class="objects-item__top">
+                  <div class="objects-item__img">
+                    <img src="./img/car1.png" alt="img">
+                  </div>
+                  <div class="objects-item__info">
+                    <div class="objects-item__title">Объект 2</div>
+                    <div class="objects-item__details">
+                      <div class="objects-item__date"><span>01.01.2019 23:51:44</span></div>
+                      <div class="objects-item__location"><span>Если длинное название обрезать</span></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="objects-item__bottom">
+                  <button class="objects-item__btn">
+                    <span class="objects-item__icon objects-item__icon_blue">
+                      <svg class="icon icon-icons_key">
+                        <use xlink:href="img/sprite.svg#icon-icons_key"></use>
+                      </svg>
+                    </span>
+                    <span class="objects-item__text">Выкл.</span>
+                  </button>
+                  <button class="objects-item__btn">
+                    <span class="objects-item__icon objects-item__icon_blue">
+                      <svg class="icon icon-icons_speedometer">
+                        <use xlink:href="img/sprite.svg#icon-icons_speedometer"></use>
+                      </svg>
+                    </span>
+                    <span class="objects-item__text">0 км/ч</span>
+                  </button>
+                  <button class="objects-item__btn">
+                    <span class="objects-item__icon objects-item__icon_green">
+                      <svg class="icon icon-icons_satellite">
+                        <use xlink:href="img/sprite.svg#icon-icons_satellite"></use>
+                      </svg>
+                    </span>
+                    <span class="objects-item__text">Не в сети</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="objects-item">
+              <div class="objects-item__inner inner">
+                <div class="objects-item__top">
+                  <div class="objects-item__img">
+                    <img src="./img/car1.png" alt="img">
+                  </div>
+                  <div class="objects-item__info">
+                    <div class="objects-item__title">Объект 3</div>
+                    <div class="objects-item__details">
+                      <div class="objects-item__date"><span>01.01.2019 23:51:44</span></div>
+                      <div class="objects-item__location"><span>Московская область</span></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="objects-item__bottom">
+                  <button class="objects-item__btn is-active">
+                    <span class="objects-item__icon objects-item__icon_blue">
+                      <svg class="icon icon-icons_key">
+                        <use xlink:href="img/sprite.svg#icon-icons_key"></use>
+                      </svg>
+                    </span>
+                    <span class="objects-item__text">Вкл.</span>
+                  </button>
+                  <button class="objects-item__btn is-active">
+                    <span class="objects-item__icon objects-item__icon_blue">
+                      <svg class="icon icon-icons_parking">
+                        <use xlink:href="img/sprite.svg#icon-icons_parking"></use>
+                      </svg>
+                    </span>
+                    <span class="objects-item__text">0 км/ч</span>
+                  </button>
+                  <button class="objects-item__btn is-active">
+                    <span class="objects-item__icon objects-item__icon_green">
+                      <svg class="icon icon-icons_satellite">
+                        <use xlink:href="img/sprite.svg#icon-icons_satellite"></use>
+                      </svg>
+                    </span>
+                    <span class="objects-item__text">В сети</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="objects-item">
+              <div class="objects-item__inner inner">
+                <div class="objects-item__top">
+                  <div class="objects-item__img">
+                    <img src="./img/car1.png" alt="img">
+                  </div>
+                  <div class="objects-item__info">
+                    <div class="objects-item__title">Объект 4</div>
+                    <div class="objects-item__details">
+                      <div class="objects-item__date"><span>01.01.2019 23:51:44</span></div>
+                      <div class="objects-item__location"><span>Если длинное название обрезать</span></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="objects-item__bottom">
+                  <button class="objects-item__btn">
+                    <span class="objects-item__icon objects-item__icon_blue">
+                      <svg class="icon icon-icons_key">
+                        <use xlink:href="img/sprite.svg#icon-icons_key"></use>
+                      </svg>
+                    </span>
+                    <span class="objects-item__text">Выкл.</span>
+                  </button>
+                  <button class="objects-item__btn">
+                    <span class="objects-item__icon objects-item__icon_blue">
+                      <svg class="icon icon-icons_speedometer">
+                        <use xlink:href="img/sprite.svg#icon-icons_speedometer"></use>
+                      </svg>
+                    </span>
+                    <span class="objects-item__text">0 км/ч</span>
+                  </button>
+                  <button class="objects-item__btn">
+                    <span class="objects-item__icon objects-item__icon_green">
+                      <svg class="icon icon-icons_satellite">
+                        <use xlink:href="img/sprite.svg#icon-icons_satellite"></use>
+                      </svg>
+                    </span>
+                    <span class="objects-item__text">Не в сети</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="objects-item">
+              <div class="objects-item__inner inner">
+                <div class="objects-item__top">
+                  <div class="objects-item__img">
+                    <img src="./img/car1.png" alt="img">
+                  </div>
+                  <div class="objects-item__info">
+                    <div class="objects-item__title">Объект 5</div>
+                    <div class="objects-item__details">
+                      <div class="objects-item__date"><span>01.01.2019 23:51:44</span></div>
+                      <div class="objects-item__location"><span>Московская область</span></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="objects-item__bottom">
+                  <button class="objects-item__btn is-active">
+                    <span class="objects-item__icon objects-item__icon_blue">
+                      <svg class="icon icon-icons_key">
+                        <use xlink:href="img/sprite.svg#icon-icons_key"></use>
+                      </svg>
+                    </span>
+                    <span class="objects-item__text">Вкл.</span>
+                  </button>
+                  <button class="objects-item__btn is-active">
+                    <span class="objects-item__icon objects-item__icon_blue">
+                      <svg class="icon icon-icons_speedometer">
+                        <use xlink:href="img/sprite.svg#icon-icons_speedometer"></use>
+                      </svg>
+                    </span>
+                    <span class="objects-item__text">100 км/ч</span>
+                  </button>
+                  <button class="objects-item__btn is-active">
+                    <span class="objects-item__icon objects-item__icon_green">
+                      <svg class="icon icon-icons_satellite">
+                        <use xlink:href="img/sprite.svg#icon-icons_satellite"></use>
+                      </svg>
+                    </span>
+                    <span class="objects-item__text">В сети</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="objects-item">
+              <div class="objects-item__inner inner">
+                <div class="objects-item__top">
+                  <div class="objects-item__img">
+                    <img src="./img/car1.png" alt="img">
+                  </div>
+                  <div class="objects-item__info">
+                    <div class="objects-item__title">Объект 6</div>
+                    <div class="objects-item__details">
+                      <div class="objects-item__date"><span>01.01.2019 23:51:44</span></div>
+                      <div class="objects-item__location"><span>Московская область</span></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="objects-item__bottom">
+                  <button class="objects-item__btn is-active">
+                    <span class="objects-item__icon objects-item__icon_blue">
+                      <svg class="icon icon-icons_key">
+                        <use xlink:href="img/sprite.svg#icon-icons_key"></use>
+                      </svg>
+                    </span>
+                    <span class="objects-item__text">Вкл.</span>
+                  </button>
+                  <button class="objects-item__btn is-active">
+                    <span class="objects-item__icon objects-item__icon_blue">
+                      <svg class="icon icon-icons_speedometer">
+                        <use xlink:href="img/sprite.svg#icon-icons_speedometer"></use>
+                      </svg>
+                    </span>
+                    <span class="objects-item__text">100 км/ч</span>
+                  </button>
+                  <button class="objects-item__btn is-active">
+                    <span class="objects-item__icon objects-item__icon_green">
+                      <svg class="icon icon-icons_satellite">
+                        <use xlink:href="img/sprite.svg#icon-icons_satellite"></use>
+                      </svg>
+                    </span>
+                    <span class="objects-item__text">В сети</span>
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </div>

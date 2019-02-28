@@ -5,3 +5,7 @@ PageList:
   ready: 50
 - file: 03_01_ObjectsList.html
   ready: 50
+- file: 03_03_ActiveFilters.html
+  ready: 50
+- file: 03_12_NewTask.html
+  ready: 50

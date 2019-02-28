@@ -34,7 +34,7 @@
 		<div class="modal-header__inner inner">
 			<div class="modal-header__title">{{ title }}</div>
 			<div class="modal-header__btn">
-				<button class="btn-icon btn-icon_gray">
+				<button class="btn-icon btn-icon_gray" type="button">
 					{{ icon('icons_close') }}
 				</button>
 			</div>
@@ -46,7 +46,7 @@
 	<div class="head-object">
 		<div class="head-object__inner inner">
 			{% if props.arrow %}
-				<button class="head-object__btn">
+				<button class="head-object__btn" type="button">
 					{{ icon('arrow-left') }}
 				</button>
 			{% endif %}
@@ -72,10 +72,10 @@
 	</div>
 {% endmacro %}
 
-{% macro footerBtn(text) %}
+{% macro footerBtn(text, disabled) %}
 	<div class="footer-btn">
 		<div class="footer-btn__inner inner">
-			<button class="btn btn_w100">
+			<button class="btn btn_w100" type="submit"{% if disabled %} disabled{% endif %}>
 				{{ text }}
 			</button>
 		</div>
@@ -89,5 +89,126 @@
 		{% else %}
 			<input type="text" class="form-input" placeholder="{{ placeholder }}">
 		{% endif %}
+	</div>
+{% endmacro %}
+
+{% macro inputCalendar(value) %}
+	<div class="form-control">
+		<input type="text" class="form-input dtpicker form-input_icon" value="{{ value or '06.10.2019' }}">
+		<div class="form-control__icon">
+			<button class="btn-icon btn-icon_gray" type="button">
+				{{ icon('icons_calendar') }}
+			</button>
+		</div>
+	</div>
+{% endmacro %}
+
+{% macro inputSearch(active) %}
+	<div class="form-control">
+		<input type="search" class="form-input form-input_search form-input_icon-right{% if active %}is-active{% endif %}" placeholder="Поиск">
+		<div class="form-control__icon form-control__icon-right">
+			<button class="btn-icon btn-icon_gray">
+				{{ icon('icons_search') }}
+			</button>
+		</div>
+	</div>
+	
+{% endmacro %}
+
+{% macro pageHeader(props) %}
+	<div class="page-header">
+		<div class="page-header__wrap">
+			<div class="page-header__search">
+				{{ inputSearch() }}
+			</div>
+			<div class="page-header__btns">
+				{% if props.map %}
+					<div class="page-header__btn">
+						<button class="btn-icon btn-icon_gray">
+							{{ icon('icons_map') }}
+						</button>
+					</div>
+				{% endif %}
+				{% if props.filter %}
+					<div class="page-header__btn">
+						<button class="btn-icon btn-icon_gray">
+							{{ icon('icons_filter') }}
+						</button>
+					</div>
+				{% endif %}
+				{% if props.add %}
+					<div class="page-header__btn">
+						<button class="btn-icon btn-icon_gray">
+							{{ icon('icons_add') }}
+						</button>
+					</div>
+				{% endif %}
+				{% if props.changeMap %}
+					<div class="page-header__btn">
+						<button class="btn-icon btn-icon_gray">
+							{{ icon('change-map-api') }}
+						</button>
+					</div>
+				{% endif %}
+				{% if props.geozones %}
+					<div class="page-header__btn">
+						<button class="btn-icon btn-icon_gray">
+							{{ icon('icons_geozones') }}
+						</button>
+					</div>
+				{% endif %}
+				{% if props.trash %}
+					<div class="page-header__btn">
+						<button class="btn-icon btn-icon_gray">
+							{{ icon('trash') }}
+						</button>
+					</div>
+				{% endif %}
+				{% if props.calendar %}
+					<div class="page-header__btn">
+						<button class="btn-icon btn-icon_gray">
+							{{ icon('icons_calendar') }}
+						</button>
+					</div>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+{% endmacro %}
+
+{% macro objectsItem(props) %}
+	<div class="objects-item">
+		<div class="objects-item__inner inner">
+			<div class="objects-item__top">
+				<div class="objects-item__img">
+					<img src="./img/{{ props.img }}" alt="img">
+				</div>
+				<div class="objects-item__info">
+					<div class="objects-item__title">{{ props.title }}</div>
+					<div class="objects-item__details">
+						<div class="objects-item__date"><span>{{ props.date }}</span></div>
+						<div class="objects-item__location"><span>{{ props.location }}</span></div>
+					</div>
+				</div>
+			</div>
+			<div class="objects-item__bottom">
+				{% for item in props.btns %}
+					<button class="objects-item__btn{% if item.active %} is-active{% endif %}">
+						<span class="objects-item__icon objects-item__icon_{{ item.color }}">
+							{{ icon(item.icon) }}
+						</span>
+						<span class="objects-item__text">{{ item.text }}</span>
+					</button>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+{% endmacro %}
+
+{% macro btnRemove(disabled) %}
+	<div class="form-block__filters-remove">
+		<button class="btn btn_remove btn_w100" type="button"{% if disabled %} disabled{% endif %}>
+			Сбросить фильтры
+		</button>
 	</div>
 {% endmacro %}

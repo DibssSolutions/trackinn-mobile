@@ -1,0 +1,84 @@
+<div class="page">
+    <div class="page__header">
+        {{ mixins.modalHeader('Фильтры') }}
+    </div>
+    <div class="page__content">
+        <div class="page__content-wrap">
+            <div class="page__inner inner">
+                <div class="form-block">
+                    <div class="form-group">
+                        
+                    </div>
+                    {% for item in [
+                        {
+                            title: 'Показать только объекты у которых зажигание:',
+                            radio: [
+                                {
+                                    radio: true,
+                                    name: 'ignition',
+                                    text: 'Вкл.'
+                                },
+                                {
+                                    radio: true,
+                                    name: 'ignition',
+                                    text: 'Выкл.'
+                                }
+                            ]
+                        },
+                        {
+                            title: 'Показать только объекты которые:',
+                            radio: [
+                                {
+                                    radio: true,
+                                    name: 'movement',
+                                    text: 'В движении'
+                                },
+                                {
+                                    radio: true,
+                                    name: 'movement',
+                                    text: 'Припаркованы'
+                                }
+                            ]
+                        },
+                        {
+                            title: 'Показать только объекты у которых статус:',
+                            radio: [
+                                {
+                                    radio: true,
+                                    name: 'status',
+                                    text: 'В сети'
+                                },
+                                {
+                                    radio: true,
+                                    name: 'status',
+                                    text: 'Не в сети'
+                                }
+                            ]
+                        }
+                    ] %}
+
+                        <div class="form-group">
+                            <div class="form-group__title">
+                                {{ item.title }}
+                            </div>
+                            <div class="form-group__row">
+                                {% for radio in item.radio %}
+                                    
+                                    <div class="form-group__radio">
+                                        {{ mixins.checkbox(radio) }}
+                                    </div>
+
+                                {% endfor %}
+                            </div>
+                        </div>
+
+                    {% endfor %}
+                    {{ mixins.btnRemove(true) }}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page__footer">
+        {{ mixins.footerBtn('Сохранить',true) }}
+    </div>
+</div>
