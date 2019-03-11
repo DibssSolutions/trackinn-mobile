@@ -3,7 +3,7 @@
 
   <head>
     <meta charset="utf-8">
-    <title>03_03_ActiveFilters</title>
+    <title>03_23_Report-Filters</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#fff">
@@ -168,6 +168,60 @@
       </header>
       <div class="page">
         <div class="page__header">
+          <div class="tabs-header">
+            <div class="tabs-header__inner">
+              <div class="tabs-header__item">
+                <div class="tabs-header__btn">
+                  <button class="btn-icon btn-icon_gray">
+                    <svg class="icon icon-rounded-info-button">
+                      <use xlink:href="img/sprite.svg#icon-rounded-info-button"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="tabs-header__text"> Инфо </div>
+              </div>
+              <div class="tabs-header__item">
+                <div class="tabs-header__btn">
+                  <button class="btn-icon btn-icon_gray">
+                    <svg class="icon icon-icons_routes">
+                      <use xlink:href="img/sprite.svg#icon-icons_routes"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="tabs-header__text"> Поездки </div>
+              </div>
+              <div class="tabs-header__item">
+                <div class="tabs-header__btn">
+                  <button class="btn-icon btn-icon_gray">
+                    <svg class="icon icon-icons_parking-filled">
+                      <use xlink:href="img/sprite.svg#icon-icons_parking-filled"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="tabs-header__text"> Парковки </div>
+              </div>
+              <div class="tabs-header__item is-active">
+                <div class="tabs-header__btn">
+                  <button class="btn-icon btn-icon_gray">
+                    <svg class="icon icon-icons_report">
+                      <use xlink:href="img/sprite.svg#icon-icons_report"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="tabs-header__text"> Отчет </div>
+              </div>
+              <div class="tabs-header__item">
+                <div class="tabs-header__btn">
+                  <button class="btn-icon btn-icon_gray">
+                    <svg class="icon icon-icons_photos">
+                      <use xlink:href="img/sprite.svg#icon-icons_photos"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="tabs-header__text"> Фото </div>
+              </div>
+            </div>
+          </div>
           <div class="modal-header">
             <div class="modal-header__inner inner">
               <div class="modal-header__title">Фильтры</div>
@@ -187,7 +241,7 @@
               <div class="form-block">
                 <div class="form-group">
                   <div class="select-wrap">
-                    <div class="form-input select-mask">Выбрать группу</div>
+                    <div class="form-input select-mask">Выберите тип отчета</div>
                     <select class="select" required>
                       <option value="" hidden>Выбрать группу</option>
                       <option value="">Выбрать группу</option>
@@ -197,72 +251,6 @@
                       <option value="">Выбрать группу</option>
                     </select>
                   </div>
-                </div>
-                <div class="form-group">
-                  <div class="form-group__title"> Показать только объекты у которых зажигание: </div>
-                  <div class="form-group__row">
-                    <div class="form-group__radio">
-                      <!-- begin input -->
-                      <label class="radio">
-                        <input type="radio" name="ignition">
-                        <span class="radio__text">Вкл.</span>
-                      </label>
-                      <!-- end input -->
-                    </div>
-                    <div class="form-group__radio">
-                      <!-- begin input -->
-                      <label class="radio">
-                        <input type="radio" name="ignition">
-                        <span class="radio__text">Выкл.</span>
-                      </label>
-                      <!-- end input -->
-                    </div>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <div class="form-group__title"> Показать только объекты которые: </div>
-                  <div class="form-group__row">
-                    <div class="form-group__radio">
-                      <!-- begin input -->
-                      <label class="radio">
-                        <input type="radio" name="movement">
-                        <span class="radio__text">В движении</span>
-                      </label>
-                      <!-- end input -->
-                    </div>
-                    <div class="form-group__radio">
-                      <!-- begin input -->
-                      <label class="radio">
-                        <input type="radio" name="movement">
-                        <span class="radio__text">Припаркованы</span>
-                      </label>
-                      <!-- end input -->
-                    </div>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <div class="form-group__title"> Показать только объекты у которых статус: </div>
-                  <div class="form-group__row">
-                    <div class="form-group__radio">
-                      <!-- begin input -->
-                      <label class="radio">
-                        <input type="radio" name="status">
-                        <span class="radio__text">В сети</span>
-                      </label>
-                      <!-- end input -->
-                    </div>
-                    <div class="form-group__radio">
-                      <!-- begin input -->
-                      <label class="radio">
-                        <input type="radio" name="status">
-                        <span class="radio__text">Не в сети</span>
-                      </label>
-                      <!-- end input -->
-                    </div>
-                  </div>
-                </div>
-                <div class="form-block__filters-remove">
-                  <button class="btn btn_remove btn_w100" type="button" disabled> Сбросить фильтры </button>
                 </div>
               </div>
             </div>

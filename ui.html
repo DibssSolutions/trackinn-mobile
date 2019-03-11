@@ -49,55 +49,65 @@
           <div class="ui" style="margin:10px 0;"> headObjects height 48px </div>
           <div class="head-object">
             <div class="head-object__inner inner">
-              <button class="head-object__btn" type="button">
-                <svg class="icon icon-arrow-left">
-                  <use xlink:href="img/sprite.svg#icon-arrow-left"></use>
-                </svg>
-              </button>
-              <div class="head-object__icon">
-                <img src="./img/car1.png" alt="icon">
+              <div class="head-object__info">
+                <button class="head-object__btn" type="button">
+                  <svg class="icon icon-arrow-left">
+                    <use xlink:href="img/sprite.svg#icon-arrow-left"></use>
+                  </svg>
+                </button>
+                <div class="head-object__icon">
+                  <img src="./img/car1.png" alt="icon">
+                </div>
+                <div class="head-object__text"> Объект 2 </div>
+                <div class="head-object__comment"> (Комментарий) </div>
               </div>
-              <div class="head-object__text"> Объект 2 </div>
-              <div class="head-object__comment"> (Комментарий) </div>
             </div>
           </div>
           <div class="head-object">
             <div class="head-object__inner inner">
-              <div class="head-object__icon">
-                <img src="./img/car1.png" alt="icon">
+              <div class="head-object__info">
+                <div class="head-object__icon">
+                  <img src="./img/car1.png" alt="icon">
+                </div>
+                <div class="head-object__text"> Объект 2 </div>
+                <div class="head-object__comment"> (Комментарий) </div>
               </div>
-              <div class="head-object__text"> Объект 2 </div>
-              <div class="head-object__comment"> (Комментарий) </div>
             </div>
           </div>
           <div class="head-object">
             <div class="head-object__inner inner">
-              <button class="head-object__btn" type="button">
-                <svg class="icon icon-arrow-left">
-                  <use xlink:href="img/sprite.svg#icon-arrow-left"></use>
-                </svg>
-              </button>
-              <div class="head-object__text"> Объект 2 </div>
-              <div class="head-object__comment"> (Комментарий) </div>
-            </div>
-          </div>
-          <div class="head-object">
-            <div class="head-object__inner inner">
-              <button class="head-object__btn" type="button">
-                <svg class="icon icon-arrow-left">
-                  <use xlink:href="img/sprite.svg#icon-arrow-left"></use>
-                </svg>
-              </button>
-              <div class="head-object__icon">
-                <img src="./img/car1.png" alt="icon">
+              <div class="head-object__info">
+                <button class="head-object__btn" type="button">
+                  <svg class="icon icon-arrow-left">
+                    <use xlink:href="img/sprite.svg#icon-arrow-left"></use>
+                  </svg>
+                </button>
+                <div class="head-object__text"> Объект 2 </div>
+                <div class="head-object__comment"> (Комментарий) </div>
               </div>
-              <div class="head-object__text"> Объект 2 </div>
             </div>
           </div>
           <div class="head-object">
             <div class="head-object__inner inner">
-              <div class="head-object__text"> Объект 2 </div>
-              <div class="head-object__comment"> (Комментарий) </div>
+              <div class="head-object__info">
+                <button class="head-object__btn" type="button">
+                  <svg class="icon icon-arrow-left">
+                    <use xlink:href="img/sprite.svg#icon-arrow-left"></use>
+                  </svg>
+                </button>
+                <div class="head-object__icon">
+                  <img src="./img/car1.png" alt="icon">
+                </div>
+                <div class="head-object__text"> Объект 2 </div>
+              </div>
+            </div>
+          </div>
+          <div class="head-object">
+            <div class="head-object__inner inner">
+              <div class="head-object__info">
+                <div class="head-object__text"> Объект 2 </div>
+                <div class="head-object__comment"> (Комментарий) </div>
+              </div>
             </div>
           </div>
         </div>
@@ -139,14 +149,31 @@
           <div class="page-header">
             <div class="page-header__wrap">
               <div class="page-header__search">
-                <div class="form-control">
-                  <input type="search" class="form-input form-input_search form-input_icon-right" placeholder="Поиск">
-                  <div class="form-control__icon form-control__icon-right">
-                    <button class="btn-icon btn-icon_gray">
-                      <svg class="icon icon-icons_search">
-                        <use xlink:href="img/sprite.svg#icon-icons_search"></use>
-                      </svg>
-                    </button>
+                <div class="search-bar">
+                  <div class="search-bar__input">
+                    <input type="search" class="form-input form-input_search form-input_icon-right" placeholder="Поиск">
+                  </div>
+                  <div class="search-bar__btn">
+                    <div class="search-bar__btn-search">
+                      <button class="btn-icon btn-icon_gray">
+                        <svg class="icon icon-icons_search">
+                          <use xlink:href="img/sprite.svg#icon-icons_search"></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="search-bar__btn-close">
+                      <button class="btn-icon btn-icon_gray">
+                        <svg class="icon icon-icons_close">
+                          <use xlink:href="img/sprite.svg#icon-icons_close"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="search-bar__results">
+                    <ul class="search-bar__list">
+                      <li class="search-bar__item"> bla </li>
+                      <li class="search-bar__item"> bla </li>
+                    </ul>
                   </div>
                 </div>
               </div>

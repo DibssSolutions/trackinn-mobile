@@ -3,7 +3,7 @@
 
   <head>
     <meta charset="utf-8">
-    <title>03_03_ActiveFilters</title>
+    <title>03_06_ObjectsOnMap</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#fff">
@@ -168,110 +168,61 @@
       </header>
       <div class="page">
         <div class="page__header">
-          <div class="modal-header">
-            <div class="modal-header__inner inner">
-              <div class="modal-header__title">Фильтры</div>
-              <div class="modal-header__btn">
-                <button class="btn-icon btn-icon_gray" type="button">
+          <div class="head-object head-object_high head-object_bs">
+            <div class="head-object__inner inner">
+              <div class="head-object__info">
+                <button class="head-object__btn" type="button">
+                  <svg class="icon icon-arrow-left">
+                    <use xlink:href="img/sprite.svg#icon-arrow-left"></use>
+                  </svg>
+                </button>
+                <div class="head-object__text"> Карта </div>
+              </div>
+              <div class="head-object__btns">
+                <div class="head-object__btns-item">
+                  <button class="btn-icon btn-icon_gray">
+                    <svg class="icon icon-icons_search">
+                      <use xlink:href="img/sprite.svg#icon-icons_search"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="head-object__btns-item">
+                  <button class="btn-icon btn-icon_gray btn-icon_bg">
+                    <svg class="icon icon-icons_geozones">
+                      <use xlink:href="img/sprite.svg#icon-icons_geozones"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="search-bar search-bar_hidden">
+            <div class="search-bar__input">
+              <input type="search" class="form-input form-input_search form-input_icon-right" placeholder="Поиск">
+            </div>
+            <div class="search-bar__btn">
+              <div class="search-bar__btn-close">
+                <button class="btn-icon btn-icon_gray">
                   <svg class="icon icon-icons_close">
                     <use xlink:href="img/sprite.svg#icon-icons_close"></use>
                   </svg>
                 </button>
               </div>
             </div>
+            <div class="search-bar__results">
+              <ul class="search-bar__list">
+                <li class="search-bar__item"> bla </li>
+                <li class="search-bar__item"> bla </li>
+              </ul>
+            </div>
           </div>
         </div>
         <div class="page__content">
           <div class="page__content-wrap">
-            <div class="page__inner inner">
-              <div class="form-block">
-                <div class="form-group">
-                  <div class="select-wrap">
-                    <div class="form-input select-mask">Выбрать группу</div>
-                    <select class="select" required>
-                      <option value="" hidden>Выбрать группу</option>
-                      <option value="">Выбрать группу</option>
-                      <option value="">Выбрать группу</option>
-                      <option value="">Выбрать группу</option>
-                      <option value="">Выбрать группу</option>
-                      <option value="">Выбрать группу</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <div class="form-group__title"> Показать только объекты у которых зажигание: </div>
-                  <div class="form-group__row">
-                    <div class="form-group__radio">
-                      <!-- begin input -->
-                      <label class="radio">
-                        <input type="radio" name="ignition">
-                        <span class="radio__text">Вкл.</span>
-                      </label>
-                      <!-- end input -->
-                    </div>
-                    <div class="form-group__radio">
-                      <!-- begin input -->
-                      <label class="radio">
-                        <input type="radio" name="ignition">
-                        <span class="radio__text">Выкл.</span>
-                      </label>
-                      <!-- end input -->
-                    </div>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <div class="form-group__title"> Показать только объекты которые: </div>
-                  <div class="form-group__row">
-                    <div class="form-group__radio">
-                      <!-- begin input -->
-                      <label class="radio">
-                        <input type="radio" name="movement">
-                        <span class="radio__text">В движении</span>
-                      </label>
-                      <!-- end input -->
-                    </div>
-                    <div class="form-group__radio">
-                      <!-- begin input -->
-                      <label class="radio">
-                        <input type="radio" name="movement">
-                        <span class="radio__text">Припаркованы</span>
-                      </label>
-                      <!-- end input -->
-                    </div>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <div class="form-group__title"> Показать только объекты у которых статус: </div>
-                  <div class="form-group__row">
-                    <div class="form-group__radio">
-                      <!-- begin input -->
-                      <label class="radio">
-                        <input type="radio" name="status">
-                        <span class="radio__text">В сети</span>
-                      </label>
-                      <!-- end input -->
-                    </div>
-                    <div class="form-group__radio">
-                      <!-- begin input -->
-                      <label class="radio">
-                        <input type="radio" name="status">
-                        <span class="radio__text">Не в сети</span>
-                      </label>
-                      <!-- end input -->
-                    </div>
-                  </div>
-                </div>
-                <div class="form-block__filters-remove">
-                  <button class="btn btn_remove btn_w100" type="button" disabled> Сбросить фильтры </button>
-                </div>
+            <div class="map js-map" id="map">
+              <div style="width: 100%;height:100%;overflow: hidden;">
+                <img src="./img/map.jpg" alt="map" style="display: block;width: 100%;">
               </div>
-            </div>
-          </div>
-        </div>
-        <div class="page__footer">
-          <div class="footer-btn">
-            <div class="footer-btn__inner inner">
-              <button class="btn btn_w100" type="submit" disabled> Применить </button>
             </div>
           </div>
         </div>
