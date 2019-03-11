@@ -1,0 +1,120 @@
+<div class="page">
+    <div class="page__header">
+        {{ mixins.tabsHeader([
+            {
+                icon: 'rounded-info-button',
+                text: 'Инфо',
+                active: true
+            },
+            {
+                icon: 'icons_routes',
+                text: 'Поездки'
+            },
+            {
+                icon: 'icons_parking-filled',
+                text: 'Парковки'
+            },
+            {
+                icon: 'icons_report',
+                text: 'Отчет'
+            },
+            {
+                icon: 'icons_photos',
+                text: 'Фото'
+            }
+        ]) }}
+        {{ mixins.headObject({
+            boxShadow: true,
+            arrow: true,
+            icon: true,
+            text: 'Объект 2',
+            comment: '(Комментарий)'
+        }) }}
+    </div>
+    <div class="page__content">
+        <div class="page__content-wrap">
+            <div class="object-page">
+                <div class="object-page__map">
+                    {{ mixins.map('map1.jpg') }}
+                </div>
+                <div class="object-page__content">
+                    <div class="object-page__inner inner">
+                        <div class="object-page__date">01.01.2019 23:51:44</div>
+                        <div class="object-page__location">Московская область</div>
+                        <div class="object-page__btns">
+                            {% for item in [
+                                {
+                                    color: 'blue',
+                                    icon: 'icons_key',
+                                    text: 'Вкл.',
+                                    active: true
+                                },
+                                {
+                                    color: 'blue',
+                                    icon: 'icons_speedometer',
+                                    text: '100 км/ч',
+                                    active: true
+                                },
+                                {
+                                    color: 'green',
+                                    icon: 'icons_satellite',
+                                    text: 'В сети',
+                                    active: true
+                                }
+                            ] %}
+                                <button class="object-item-btn{% if item.active %} is-active{% endif %}">
+                                    <span class="object-item-btn__icon object-item-btn__icon_{{ item.color }}">
+                                        {{ mixins.icon(item.icon) }}
+                                    </span>
+                                    <span class="object-item-btn__text">{{ item.text }}</span>
+                                </button>
+                            {% endfor %}
+                        </div>
+                        <div class="object-page__items">
+                            {% for item in [
+                                {
+                                    name: 'Power',
+                                    value: '12.634 V'
+                                },
+                                {
+                                    name: 'Двигатель',
+                                    value: 'Выкл'
+                                },
+                                {
+                                    name: 'Пробег',
+                                    value: '137198,09 км'
+                                },
+                                {
+                                    name: 'Моточасы',
+                                    value: '598,28 ч'
+                                },
+                                {
+                                    name: 'Номер телефона',
+                                    value: '+70000000000'
+                                }
+                            ] %}
+                                {{ mixins.nameValue(item) }}
+                            {% endfor %}
+                        </div>
+                        <div class="object-page__actions">
+                            {% for item in [
+                                {
+                                    icon: 'icons_command',
+                                    text: 'Отпр. команду'
+                                },
+                                {
+                                    icon: 'icons_task',
+                                    text: 'Создать задачу'
+                                }
+                            ] %}
+                                <div class="object-page__actions-btn">
+                                    {{ mixins.actionBtn(item) }}
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

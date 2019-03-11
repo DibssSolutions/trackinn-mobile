@@ -13,6 +13,16 @@
 .head-object
     height: 48px
     border-bottom: 1px solid $lightGray
+    &_high
+        height: 56px
+    &_bs
+        box-shadow: 0 2px 2px 0 rgba($black, 0.25)
+        border: none
+    &__info
+        height: 100%
+        flex: 1 1 auto
+        display: flex
+        align-items: center
     &__inner
         height: 100%
         display: flex
@@ -42,12 +52,20 @@
     &__comment
         margin-left: 8px
         color: rgba($dark, .54)
+    &__btns
+        flex: 0 0 auto
+        display: flex
+        align-items: center
+        &-item
+            &:not(:first-child)
+                margin-left: 24px
 
 .page-header
     height: 57px
     border-bottom: 1px solid $lightGray
     background-color: #f3f3f3
     &__wrap
+        position: relative
         display: flex
         align-items: center
         height: 100%
@@ -65,3 +83,33 @@
         align-items: center
     &__btn
         margin-left: 24px
+
+.tabs-header
+    height: 57px
+    border-bottom: 1px solid $lightGray
+    &__inner
+        display: flex
+        height: 100%
+
+    &__item
+        position: relative
+        flex: 1 1 72px
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        &.is-active
+            .btn-icon
+                color: $blue
+    &__text
+        position: absolute
+        color: $blue
+        font-size: 10px
+        font-weight: 600
+        opacity: 0
+        visibility: hidden
+        transition: opacity .3s, visibility .3s
+        .tabs-header__item.is-active &
+            position: relative
+            opacity: 1
+            visibility: visible

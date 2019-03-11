@@ -5,7 +5,39 @@ PageList:
   ready: 50
 - file: 03_01_ObjectsList.html
   ready: 50
+- file: 03_02_ActiveSearch.html
+  ready: 50
 - file: 03_03_ActiveFilters.html
   ready: 50
+- file: 03_05_ActiveFilters.html
+  ready: 50
+- file: 03_10_ObjectPage-SendCommand.html
+  ready: 50
+- file: 03_11_NewTask.html
+  ready: 50
 - file: 03_12_NewTask.html
+  ready: 50
+- file: 03_14_Routes.html
+  ready: 50
+- file: 03_15_Routes-Filters.html
+  ready: 50
+- file: 03_19_Parkings.html
+  ready: 50
+- file: 03_20_Parkings-Filters.html
+  ready: 50
+- file: 03_22_ReportPage.html
+  ready: 50
+- file: 03_23_Report-Filters.html
+  ready: 50
+- file: 03_24_Photos.html
+  ready: 50
+- file: 03_06_ObjectsOnMap.html
+  ready: 50
+- file: 03_07_ChoosingMapType.html
+  ready: 50
+- file: 03_08_ActiveSearch.html
+  ready: 50
+- file: 03_09_ObjectPage.html
+  ready: 50
+- file: 03_18_Routes-Map.html
   ready: 50

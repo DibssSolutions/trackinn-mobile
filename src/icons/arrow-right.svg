@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 10 10">
+<path d="M0,6h7l-4,4h2l5-5L5,0L3,0l4,4H0L0,6z"/>
+<g>
+	<line x1="0" y1="-54" x2="0" y2="-18"/>
+	<line x1="-54" y1="0" x2="-18" y2="0"/>
+	<line x1="-54" y1="10" x2="-18" y2="10"/>
+	<line x1="0" y1="64" x2="0" y2="28"/>
+	<line x1="12" y1="-54" x2="12" y2="-18"/>
+	<line x1="66" y1="0" x2="30" y2="0"/>
+	<line x1="66" y1="10" x2="30" y2="10"/>
+	<line x1="12" y1="64" x2="12" y2="28"/>
+</g>
+</svg>

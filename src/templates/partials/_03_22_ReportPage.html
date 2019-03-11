@@ -1,0 +1,113 @@
+<div class="page">
+    <div class="page__header">
+        {{ mixins.tabsHeader([
+            {
+                icon: 'rounded-info-button',
+                text: 'Инфо'
+            },
+            {
+                icon: 'icons_routes',
+                text: 'Поездки'
+            },
+            {
+                icon: 'icons_parking-filled',
+                text: 'Парковки'
+            },
+            {
+                icon: 'icons_report',
+                text: 'Отчет',
+                active: true
+            },
+            {
+                icon: 'icons_photos',
+                text: 'Фото'
+            }
+        ]) }}
+        {{ mixins.headObject({
+            icon: true,
+            text: 'Объект 2',
+            btns: [
+                {
+                    icon: 'icons_filter',
+                    dot: true
+                },
+                {
+                    icon: 'icons_calendar'
+                }
+            ]
+        }) }}
+    </div>
+    <div class="page__content">
+        <div class="page__content-wrap">
+            <div class="page__inner inner">
+                <div class="report-block">
+                    {% for item in [
+                        {
+                            headItem: true,
+                            name: 'Пробег',
+                            value: '9,81 км'
+                        },
+                        {
+                            headItem: true,
+                            name: 'Время'
+                        },
+                        {
+                            name: 'Моточасы',
+                            value: '02:51:44'
+                        },
+                        {
+                            name: 'Холостой',
+                            value: '02:51:44'
+                        },
+                        {
+                            name: 'Стоянка',
+                            value: '02:51:44'
+                        },
+                        {
+                            name: 'Время в пути',
+                            value: '02:51:44'
+                        },
+                        {
+                            headItem: true,
+                            name: 'Топливо'
+                        },
+                        {
+                            name: 'Расход топлива',
+                            value: '1,27 л'
+                        },
+                        {
+                            name: 'Расход на 100 км',
+                            value: '13, 00 л'
+                        },
+                        {
+                            name: 'Расход на 1 час',
+                            value: '1, 00 л'
+                        },
+                        {
+                            name: 'Расход в движении',
+                            value: '1, 27 л'
+                        },
+                        {
+                            name: 'Расход в простое',
+                            value: '0, 00 л'
+                        },
+                        {
+                            headItem: true,
+                            name: 'Заправка'
+                        },
+                        {
+                            name: 'Всего заправок',
+                            value: '0, 00 л'
+                        },
+                        {
+                            name: 'Всего сливов',
+                            value: '0, 00 л'
+                        }
+                    ] %}
+                        {{ mixins.reportItem(item) }}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,42 @@
+<div class="page">
+    <div class="page__header">
+        {{ mixins.tabsHeader([
+            {
+                icon: 'rounded-info-button',
+                text: 'Инфо'
+            },
+            {
+                icon: 'icons_routes',
+                text: 'Поездки'
+            },
+            {
+                icon: 'icons_parking-filled',
+                text: 'Парковки'
+            },
+            {
+                icon: 'icons_report',
+                text: 'Отчет',
+                active: true
+            },
+            {
+                icon: 'icons_photos',
+                text: 'Фото'
+            }
+        ]) }}
+        {{ mixins.modalHeader('Фильтры') }}
+    </div>
+    <div class="page__content">
+        <div class="page__content-wrap">
+            <div class="page__inner inner">
+                <div class="form-block">
+                    <div class="form-group">
+                        {{ mixins.select('Выберите тип отчета') }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page__footer">
+        {{ mixins.footerBtn('Применить',true) }}
+    </div>
+</div>

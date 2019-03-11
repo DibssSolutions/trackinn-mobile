@@ -1,0 +1,205 @@
+<div class="page">
+    <div class="page__header">
+        {{ mixins.tabsHeader([
+            {
+                icon: 'rounded-info-button',
+                text: 'Инфо'
+            },
+            {
+                icon: 'icons_routes',
+                text: 'Поездки',
+                active: true
+            },
+            {
+                icon: 'icons_parking-filled',
+                text: 'Парковки'
+            },
+            {
+                icon: 'icons_report',
+                text: 'Отчет'
+            },
+            {
+                icon: 'icons_photos',
+                text: 'Фото'
+            }
+        ]) }}
+        {{ mixins.headObject({
+            icon: true,
+            text: 'Объект 2',
+            btns: [
+                {
+                    icon: 'icons_filter',
+                    dot: true
+                },
+                {
+                    icon: 'icons_calendar'
+                }
+            ]
+        }) }}
+    </div>
+    <div class="page__content">
+        <div class="page__content-wrap">
+            {% for item in [
+                {
+                    number: '01',
+                    rows: [
+                        {
+                            name: 'От:',
+                            value: '01.01.2019 23:51:44',
+                            classLeft: 'text-light',
+                            classRight: 'text-right'
+                        },
+                        {
+                            name: 'До:',
+                            value: '02.01.2019 02:51:44',
+                            classLeft: 'text-light',
+                            classRight: 'text-right'
+                        },
+                        {
+                            name: 'Длит. поездки:',
+                            value: '03:00:00',
+                            classLeft: 'text-light',
+                            classRight: 'text-right'
+                        }
+                    ],
+                    tfoot: [
+                        {
+                            name: 'Пробег:',
+                            value: '3,59 км',
+                            classRight: 'text-right'
+                        }
+                    ]
+                },
+                {
+                    number: '02',
+                    rows: [
+                        {
+                            name: 'От:',
+                            value: '01.01.2019 23:51:44',
+                            classLeft: 'text-light',
+                            classRight: 'text-right'
+                        },
+                        {
+                            name: 'До:',
+                            value: '02.01.2019 02:51:44',
+                            classLeft: 'text-light',
+                            classRight: 'text-right'
+                        },
+                        {
+                            name: 'Длит. поездки:',
+                            value: '03:00:00',
+                            classLeft: 'text-light',
+                            classRight: 'text-right'
+                        }
+                    ],
+                    tfoot: [
+                        {
+                            name: 'Пробег:',
+                            value: '3,59 км',
+                            classRight: 'text-right'
+                        }
+                    ]
+                },
+                {
+                    number: '03',
+                    rows: [
+                        {
+                            name: 'От:',
+                            value: '01.01.2019 23:51:44',
+                            classLeft: 'text-light',
+                            classRight: 'text-right'
+                        },
+                        {
+                            name: 'До:',
+                            value: '02.01.2019 02:51:44',
+                            classLeft: 'text-light',
+                            classRight: 'text-right'
+                        },
+                        {
+                            name: 'Длит. поездки:',
+                            value: '03:00:00',
+                            classLeft: 'text-light',
+                            classRight: 'text-right'
+                        }
+                    ],
+                    tfoot: [
+                        {
+                            name: 'Пробег:',
+                            value: '3,59 км',
+                            classRight: 'text-right'
+                        }
+                    ]
+                },
+                {
+                    number: '04',
+                    rows: [
+                        {
+                            name: 'От:',
+                            value: '01.01.2019 23:51:44',
+                            classLeft: 'text-light',
+                            classRight: 'text-right'
+                        },
+                        {
+                            name: 'До:',
+                            value: '02.01.2019 02:51:44',
+                            classLeft: 'text-light',
+                            classRight: 'text-right'
+                        },
+                        {
+                            name: 'Длит. поездки:',
+                            value: '03:00:00',
+                            classLeft: 'text-light',
+                            classRight: 'text-right'
+                        }
+                    ],
+                    tfoot: [
+                        {
+                            name: 'Пробег:',
+                            value: '3,59 км',
+                            classRight: 'text-right'
+                        }
+                    ]
+                },
+                {
+                    number: '05',
+                    rows: [
+                        {
+                            name: 'От:',
+                            value: '01.01.2019 23:51:44',
+                            classLeft: 'text-light',
+                            classRight: 'text-right'
+                        },
+                        {
+                            name: 'До:',
+                            value: '02.01.2019 02:51:44',
+                            classLeft: 'text-light',
+                            classRight: 'text-right'
+                        },
+                        {
+                            name: 'Длит. поездки:',
+                            value: '03:00:00',
+                            classLeft: 'text-light',
+                            classRight: 'text-right'
+                        }
+                    ],
+                    tfoot: [
+                        {
+                            name: 'Пробег:',
+                            value: '3,59 км',
+                            classRight: 'text-right'
+                        }
+                    ]
+                }
+            ] %}
+                {{ mixins.tableItem(item) }}
+            {% endfor %}
+        </div>
+    </div>
+    <div class="page__footer">
+        {{ mixins.footerBar({
+            title: 'Итого:',
+            time: '24:00:21',
+            distance: '21,59 км'
+        }) }}
+    </div>
+</div>

@@ -1,0 +1,36 @@
+<div class="page">
+    <div class="page__header">
+        {{ mixins.modalHeader('Отправить команду') }}
+        {{ mixins.headObject({
+            title: 'Объект:',
+            icon: true,
+            text: 'Объект 2',
+            comment: '(Комментарий)'
+        }) }}
+    </div>
+    <div class="page__content">
+        <div class="page__content-wrap">
+            <div class="page__inner inner">
+                <div class="form-block">
+                    {{ mixins.checkbox({text: 'Отправлять команды  СМС сообщением'}) }}
+                </div>
+                <div class="divider"></div>
+                <div class="form-group">
+                    <div class="form-control">
+                        <button class="btn btn_w100 btn_white">
+                            Заправка
+                        </button>
+                    </div>
+                    <div class="form-control">
+                        <button class="btn btn_w100 btn_white">
+                            Своя команда
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page__footer">
+        {{ mixins.footerBtn('Применить') }}
+    </div>
+</div>

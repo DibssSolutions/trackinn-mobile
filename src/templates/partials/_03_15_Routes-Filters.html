@@ -1,0 +1,44 @@
+<div class="page">
+    <div class="page__header">
+        {{ mixins.tabsHeader([
+            {
+                icon: 'rounded-info-button',
+                text: 'Инфо'
+            },
+            {
+                icon: 'icons_routes',
+                text: 'Поездки',
+                active: true
+            },
+            {
+                icon: 'icons_parking-filled',
+                text: 'Парковки'
+            },
+            {
+                icon: 'icons_report',
+                text: 'Отчет'
+            },
+            {
+                icon: 'icons_photos',
+                text: 'Фото'
+            }
+        ]) }}
+        {{ mixins.modalHeader('Фильтры',true) }}
+    </div>
+    <div class="page__content">
+        <div class="page__content-wrap">
+            <div class="page__inner inner">
+                <div class="form-block">
+                    <div class="form-group">
+                        {{ mixins.input('Минимальное движение / Мин') }}
+                        {{ mixins.input('Минимальное движение / Км') }}
+                    </div>
+                </div>
+                {{ mixins.btnRemove(true) }}
+            </div>
+        </div>
+    </div>
+    <div class="page__footer">
+        {{ mixins.footerBtn('Сохранить') }}
+    </div>
+</div>

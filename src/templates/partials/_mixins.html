@@ -43,31 +43,67 @@
 {% endmacro %}
 
 {% macro headObject(props) %}
-	<div class="head-object">
+	<div class="head-object{% if props.high %} head-object_high{% endif %}{% if props.boxShadow %} head-object_bs{% endif %}">
 		<div class="head-object__inner inner">
-			{% if props.arrow %}
-				<button class="head-object__btn" type="button">
-					{{ icon('arrow-left') }}
-				</button>
-			{% endif %}
-			{% if props.title %}
-				<div class="head-object__title">
-					{{ title }}
+			<div class="head-object__info">
+				{% if props.arrow %}
+					<button class="head-object__btn" type="button">
+						{{ icon('arrow-left') }}
+					</button>
+				{% endif %}
+				{% if props.title %}
+					<div class="head-object__title">
+						{{ props.title }}
+					</div>
+				{% endif %}
+				{% if props.icon %}
+					<div class="head-object__icon">
+						<img src="./img/car1.png" alt="icon">
+					</div>
+				{% endif %}
+				<div class="head-object__text">
+					{{ props.text }}
 				</div>
-			{% endif %}
-			{% if props.icon %}
-				<div class="head-object__icon">
-					<img src="./img/car1.png" alt="icon">
-				</div>
-			{% endif %}
-			<div class="head-object__text">
-				{{ props.text }}
+				{% if props.comment %}
+					<div class="head-object__comment">
+						{{ props.comment }}
+					</div>
+				{% endif %}
 			</div>
-			{% if props.comment %}
-				<div class="head-object__comment">
-					{{ props.comment }}
+			{% if props.btns %}
+				<div class="head-object__btns">
+					{% for item in props.btns %}
+						<div class="head-object__btns-item">
+							<button class="btn-icon btn-icon_gray{% if item.bgActive %} btn-icon_bg{% endif %}{% if item.active %} is-active{% endif %}">
+								{{ icon(item.icon) }}
+								{% if item.dot %}
+									<span class="red-dot">
+									</span>
+								{% endif %}
+							</button>
+						</div>
+					{% endfor %}
 				</div>
 			{% endif %}
+		</div>
+	</div>
+{% endmacro %}
+
+{% macro tabsHeader(props) %}
+	<div class="tabs-header">
+		<div class="tabs-header__inner">
+			{% for item in props %}
+				<div class="tabs-header__item{% if item.active %} is-active{% endif %}">
+					<div class="tabs-header__btn">
+						<button class="btn-icon btn-icon_gray">
+							{{ icon(item.icon) }}
+						</button>
+					</div>
+					<div class="tabs-header__text">
+						{{ item.text }}
+					</div>
+				</div>
+			{% endfor %}
 		</div>
 	</div>
 {% endmacro %}
@@ -78,6 +114,28 @@
 			<button class="btn btn_w100" type="submit"{% if disabled %} disabled{% endif %}>
 				{{ text }}
 			</button>
+		</div>
+	</div>
+{% endmacro %}
+
+{% macro footerBar(props) %}
+	<div class="footer-bar{% if props.white %} footer-bar_white{% endif %}">
+		<div class="footer-bar__inner inner">
+			<div class="footer-bar__content">
+				{% if props.number %}<div class="footer-bar__number">{{ props.number }}</div>{% endif %}
+				<div class="footer-bar__sum">
+					{% if props.title %}<div class="footer-bar__title">{{ props.title }}</div>{% endif %}
+					{% if props.time %}<div class="footer-bar__value">{{ props.time }}</div>{% endif %}
+					{% if props.distance %}<div class="footer-bar__value">{{ props.distance }}</div>{% endif %}
+				</div>
+				{% if props.btn %}
+				<div class="footer-bar__btn">
+					<button class="btn-icon" type="button">
+						{{ icon('arrow-right') }}
+					</button>
+				</div>
+				{% endif %}
+			</div>
 		</div>
 	</div>
 {% endmacro %}
@@ -104,22 +162,66 @@
 {% endmacro %}
 
 {% macro inputSearch(active) %}
-	<div class="form-control">
-		<input type="search" class="form-input form-input_search form-input_icon-right{% if active %}is-active{% endif %}" placeholder="Поиск">
-		<div class="form-control__icon form-control__icon-right">
-			<button class="btn-icon btn-icon_gray">
-				{{ icon('icons_search') }}
-			</button>
+	<div class="search-bar{% if active %} is-active{% endif %}">
+		<div class="search-bar__input">
+			<input type="search" class="form-input form-input_search form-input_icon-right" placeholder="Поиск">
+		</div>
+		<div class="search-bar__btn">
+			<div class="search-bar__btn-search">
+				<button class="btn-icon btn-icon_gray">
+					{{ icon('icons_search') }}
+				</button>
+			</div>
+			<div class="search-bar__btn-close">
+				<button class="btn-icon btn-icon_gray">
+					{{ icon('icons_close') }}
+				</button>
+			</div>
+		</div>
+		<div class="search-bar__results">
+			<ul class="search-bar__list">
+				<li class="search-bar__item">
+					bla
+				</li>
+				<li class="search-bar__item">
+					bla
+				</li>
+			</ul>
 		</div>
 	</div>
 	
+{% endmacro %}
+
+{% macro searchBarHidden(active) %}
+	<div class="search-bar search-bar_hidden{% if active %} is-active{% endif %}">
+		<div class="search-bar__input">
+			<input type="search" class="form-input form-input_search form-input_icon-right" placeholder="Поиск">
+		</div>
+		<div class="search-bar__btn">
+			<div class="search-bar__btn-close">
+				<button class="btn-icon btn-icon_gray">
+					{{ icon('icons_close') }}
+				</button>
+			</div>
+		</div>
+		<div class="search-bar__results">
+			<ul class="search-bar__list">
+				<li class="search-bar__item">
+					bla
+				</li>
+				<li class="search-bar__item">
+					bla
+				</li>
+			</ul>
+		</div>
+	</div>
 {% endmacro %}
 
 {% macro pageHeader(props) %}
 	<div class="page-header">
 		<div class="page-header__wrap">
 			<div class="page-header__search">
-				{{ inputSearch() }}
+				{{ inputSearch(props.search) }}
 			</div>
 			<div class="page-header__btns">
 				{% if props.map %}
@@ -193,11 +295,11 @@
 			</div>
 			<div class="objects-item__bottom">
 				{% for item in props.btns %}
-					<button class="objects-item__btn{% if item.active %} is-active{% endif %}">
-						<span class="objects-item__icon objects-item__icon_{{ item.color }}">
+					<button class="object-item-btn{% if item.active %} is-active{% endif %}">
+						<span class="object-item-btn__icon object-item-btn__icon_{{ item.color }}">
 							{{ icon(item.icon) }}
 						</span>
-						<span class="objects-item__text">{{ item.text }}</span>
+						<span class="object-item-btn__text">{{ item.text }}</span>
 					</button>
 				{% endfor %}
 			</div>
@@ -211,4 +313,110 @@
 			Сбросить фильтры
 		</button>
 	</div>
+{% endmacro %}
+
+{% macro select(text) %}
+	<div class="select-wrap">
+		<div class="form-input select-mask">{{ text or 'Выбрать группу'}}</div>
+		<select class="select" required>
+			<option value="" hidden>Выбрать группу</option>
+			<option value="">Выбрать группу</option>
+			<option value="">Выбрать группу</option>
+			<option value="">Выбрать группу</option>
+			<option value="">Выбрать группу</option>
+			<option value="">Выбрать группу</option>
+		</select>
+	</div>
+{% endmacro %}
+
+{% macro tableItem(props) %}
+	<div class="table-item{% if props.class %} {{ props.class }}"{% endif %}">
+		<div class="table-item__content">
+			{% if props.number %}
+				<div class="table-item__left">
+					{{ props.number }}
+				</div>
+			{% endif %}
+			<div class="table-item__right">
+				<table class="table-item__table item-table">
+					{% if props.thead %}
+						<thead>
+							{% for item in props.thead %}
+								<tr>
+									<td{% if item.classLeft %} class="{{ item.classLeft }}"{% endif %}>{{ item.name }}</td>
+									<td{% if item.classRight %} class="{{ item.classRight }}"{% endif %}>{{ item.value }}</td>
+								</tr>
+							{% endfor %}
+						</thead>
+					{% endif %}
+					<tbody>
+						{% for item in props.rows %}
+							<tr>
+								{% if item.name %}<td{% if item.classLeft %} class="{{ item.classLeft }}"{% endif %}{% if item.colspan %} colspan="2"{% endif %}>{{ item.name }}</td>{% endif %}
+								{% if item.value %}<td{% if item.classRight %} class="{{ item.classRight }}"{% endif %}>{{ item.value }}</td>{% endif %}
+							</tr>
+						{% endfor %}
+					</tbody>
+					{% if props.tfoot %}
+						<tfoot>
+							{% for item in props.tfoot %}
+								<tr>
+									<td{% if item.classLeft %} class="{{ item.classLeft }}"{% endif %}>{{ item.name }}</td>
+									<td{% if item.classRight %} class="{{ item.classRight }}"{% endif %}>{{ item.value }}</td>
+								</tr>
+							{% endfor %}
+						</tfoot>
+					{% endif %}
+				</table>
+			</div>
+		</div>
+	</div>
+{% endmacro %}
+
+
+{% macro reportItem(props) %}
+	<div class="report-item{% if props.headItem %} report-item_head{% endif %}">
+		<div class="report-item__name">{{ props.name }}</div>
+		{% if props.value %}
+			<div class="report-item__value">{{ props.value }}</div>
+		{% endif %}
+	</div>
+{% endmacro %}
+
+
+{% macro photoItem() %}
+	<div class="photo-item">
+		<div class="photo-item__wrap">
+			<div class="photo-item__img" style="background-image: url('./img/element-image-placeholder.png');"></div>
+			<div class="photo-item__date">01.01.2019 23:51:44</div>
+		</div>
+	</div>
+{% endmacro %}
+
+{% macro map(img) %}
+	<div class="map js-map" id="map">
+		<div style="width: 100%;height:100%;overflow: hidden;">
+			<img src="./img/{{ img or 'map.jpg' }}" alt="map" style="display: block;width: 100%;">
+		</div>
+	</div>
+{% endmacro %}
+
+{% macro nameValue(props) %}
+	<div class="name-value{% if props.border %} name-value_border{% endif %}">
+		<div class="name-value__name">{{ props.name }}</div>
+		{% if props.value %}
+			<div class="name-value__value">{{ props.value }}</div>
+		{% endif %}
+	</div>
+{% endmacro %}
+
+{% macro actionBtn(props) %}
+	<button class="btn-action" type="button">
+		<span class="btn-action__icon">
+			{{ icon(props.icon) }}
+		</span>
+		<span class="btn-action__text">
+			{{ props.text }}
+		</span>
+	</button>
 {% endmacro %}

@@ -1,0 +1,47 @@
+<div class="page">
+    <div class="page__header">
+        {{ mixins.tabsHeader([
+            {
+                icon: 'rounded-info-button',
+                text: 'Инфо'
+            },
+            {
+                icon: 'icons_routes',
+                text: 'Поездки'
+            },
+            {
+                icon: 'icons_parking-filled',
+                text: 'Парковки'
+            },
+            {
+                icon: 'icons_report',
+                text: 'Отчет'
+            },
+            {
+                icon: 'icons_photos',
+                text: 'Фото',
+                active: true
+            }
+        ]) }}
+        {{ mixins.headObject({
+            icon: true,
+            text: 'Объект 2',
+            btns: [
+                {
+                    icon: 'icons_calendar'
+                }
+            ]
+        }) }}
+    </div>
+    <div class="page__content">
+        <div class="page__content-wrap">
+            <div class="page__inner inner">
+                <div class="photo-list">
+                    {% for item in range(1,7) %}
+                        {{ mixins.photoItem() }}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

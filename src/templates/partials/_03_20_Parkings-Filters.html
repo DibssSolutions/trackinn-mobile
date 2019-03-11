@@ -1,0 +1,68 @@
+<div class="page">
+    <div class="page__header">
+        {{ mixins.tabsHeader([
+            {
+                icon: 'rounded-info-button',
+                text: 'Инфо'
+            },
+            {
+                icon: 'icons_routes',
+                text: 'Поездки'
+            },
+            {
+                icon: 'icons_parking-filled',
+                text: 'Парковки',
+                active: true
+            },
+            {
+                icon: 'icons_report',
+                text: 'Отчет'
+            },
+            {
+                icon: 'icons_photos',
+                text: 'Фото'
+            }
+        ]) }}
+        {{ mixins.modalHeader('Фильтры',true) }}
+    </div>
+    <div class="page__content">
+        <div class="page__content-wrap">
+            <div class="page__inner inner">
+                <div class="form-block">
+                    <div class="form-group">
+                        {{ mixins.input('Минимальная стоянка / Мин') }}
+                    </div>
+                    {% for item in [
+                                {
+                                    radio: true,
+                                    name: 'parking',
+                                    text: 'Показать все стоянки',
+                                    checked: true
+                                },
+                                {
+                                    radio: true,
+                                    name: 'parking',
+                                    text: 'Только стоянки в зонах'
+                                },
+                                {
+                                    radio: true,
+                                    name: 'parking',
+                                    text: 'Только стоянки вне зон'
+                                }
+                            ]
+                         %}
+
+                        <div class="form-group">
+                            {{ mixins.checkbox(item) }}
+                        </div>
+
+                    {% endfor %}
+                </div>
+                {{ mixins.btnRemove() }}
+            </div>
+        </div>
+    </div>
+    <div class="page__footer">
+        {{ mixins.footerBtn('Применить') }}
+    </div>
+</div>

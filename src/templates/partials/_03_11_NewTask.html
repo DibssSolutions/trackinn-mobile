@@ -1,0 +1,40 @@
+<div class="page">
+    <div class="page__header">
+        {{ mixins.modalHeader('Новая задача') }}
+        {{ mixins.headObject({
+            icon: true,
+            text: 'Объект 2',
+            comment: '(Комментарий)'
+        }) }}
+    </div>
+    <div class="page__content">
+        <div class="page__content-wrap">
+            <div class="page__inner inner">
+                <div class="form-block">
+                    <div class="form-group">
+                        {{ mixins.input('Название') }}
+                        {{ mixins.input('Комментарий', 'textarea') }}
+                    </div>
+                </div>
+                <div class="divider"></div>
+                {% for item in [
+                    'Время, дни',
+                    'Одометр, км',
+                    'Время работы, ч'
+                ] %}
+                    
+                    <div class="form-group">
+                        {{ mixins.checkbox({text: item}) }}
+                        {# <div class="form-group">
+                            {{ mixins.inputCalendar() }}
+                            {{ mixins.input('Повторение') }}
+                        </div> #}
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <div class="page__footer">
+        {{ mixins.footerBtn('Сохранить',true) }}
+    </div>
+</div>

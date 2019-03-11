@@ -24,11 +24,11 @@
                 ] %}
                     
                     <div class="form-group">
-                        {{ mixins.checkbox({text: item}) }}
-                    </div>
-                    <div class="form-group">
-                        {{ mixins.inputCalendar() }}
-                        {{ mixins.input('Повторение') }}
+                        {{ mixins.checkbox({text: item,checked: true}) }}
+                        <div class="form-group">
+                            {{ mixins.inputCalendar() }}
+                            {{ mixins.input('Повторение') }}
+                        </div>
                     </div>
                 {% endfor %}
             </div>

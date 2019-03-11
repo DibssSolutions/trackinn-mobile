@@ -3,7 +3,7 @@
 
   <head>
     <meta charset="utf-8">
-    <title>Index page</title>
+    <title>03_01_ObjectsList</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#fff">
@@ -171,14 +171,31 @@
           <div class="page-header">
             <div class="page-header__wrap">
               <div class="page-header__search">
-                <div class="form-control">
-                  <input type="search" class="form-input form-input_search form-input_icon-right" placeholder="Поиск">
-                  <div class="form-control__icon form-control__icon-right">
-                    <button class="btn-icon btn-icon_gray">
-                      <svg class="icon icon-icons_search">
-                        <use xlink:href="img/sprite.svg#icon-icons_search"></use>
-                      </svg>
-                    </button>
+                <div class="search-bar">
+                  <div class="search-bar__input">
+                    <input type="search" class="form-input form-input_search form-input_icon-right" placeholder="Поиск">
+                  </div>
+                  <div class="search-bar__btn">
+                    <div class="search-bar__btn-search">
+                      <button class="btn-icon btn-icon_gray">
+                        <svg class="icon icon-icons_search">
+                          <use xlink:href="img/sprite.svg#icon-icons_search"></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="search-bar__btn-close">
+                      <button class="btn-icon btn-icon_gray">
+                        <svg class="icon icon-icons_close">
+                          <use xlink:href="img/sprite.svg#icon-icons_close"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="search-bar__results">
+                    <ul class="search-bar__list">
+                      <li class="search-bar__item"> bla </li>
+                      <li class="search-bar__item"> bla </li>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -218,29 +235,29 @@
                   </div>
                 </div>
                 <div class="objects-item__bottom">
-                  <button class="objects-item__btn is-active">
-                    <span class="objects-item__icon objects-item__icon_blue">
+                  <button class="object-item-btn is-active">
+                    <span class="object-item-btn__icon object-item-btn__icon_blue">
                       <svg class="icon icon-icons_key">
                         <use xlink:href="img/sprite.svg#icon-icons_key"></use>
                       </svg>
                     </span>
-                    <span class="objects-item__text">Вкл.</span>
+                    <span class="object-item-btn__text">Вкл.</span>
                   </button>
-                  <button class="objects-item__btn is-active">
-                    <span class="objects-item__icon objects-item__icon_blue">
+                  <button class="object-item-btn is-active">
+                    <span class="object-item-btn__icon object-item-btn__icon_blue">
                       <svg class="icon icon-icons_speedometer">
                         <use xlink:href="img/sprite.svg#icon-icons_speedometer"></use>
                       </svg>
                     </span>
-                    <span class="objects-item__text">100 км/ч</span>
+                    <span class="object-item-btn__text">100 км/ч</span>
                   </button>
-                  <button class="objects-item__btn is-active">
-                    <span class="objects-item__icon objects-item__icon_green">
+                  <button class="object-item-btn is-active">
+                    <span class="object-item-btn__icon object-item-btn__icon_green">
                       <svg class="icon icon-icons_satellite">
                         <use xlink:href="img/sprite.svg#icon-icons_satellite"></use>
                       </svg>
                     </span>
-                    <span class="objects-item__text">В сети</span>
+                    <span class="object-item-btn__text">В сети</span>
                   </button>
                 </div>
               </div>
@@ -260,29 +277,29 @@
                   </div>
                 </div>
                 <div class="objects-item__bottom">
-                  <button class="objects-item__btn">
-                    <span class="objects-item__icon objects-item__icon_blue">
+                  <button class="object-item-btn">
+                    <span class="object-item-btn__icon object-item-btn__icon_blue">
                       <svg class="icon icon-icons_key">
                         <use xlink:href="img/sprite.svg#icon-icons_key"></use>
                       </svg>
                     </span>
-                    <span class="objects-item__text">Выкл.</span>
+                    <span class="object-item-btn__text">Выкл.</span>
                   </button>
-                  <button class="objects-item__btn">
-                    <span class="objects-item__icon objects-item__icon_blue">
+                  <button class="object-item-btn">
+                    <span class="object-item-btn__icon object-item-btn__icon_blue">
                       <svg class="icon icon-icons_speedometer">
                         <use xlink:href="img/sprite.svg#icon-icons_speedometer"></use>
                       </svg>
                     </span>
-                    <span class="objects-item__text">0 км/ч</span>
+                    <span class="object-item-btn__text">0 км/ч</span>
                   </button>
-                  <button class="objects-item__btn">
-                    <span class="objects-item__icon objects-item__icon_green">
+                  <button class="object-item-btn">
+                    <span class="object-item-btn__icon object-item-btn__icon_green">
                       <svg class="icon icon-icons_satellite">
                         <use xlink:href="img/sprite.svg#icon-icons_satellite"></use>
                       </svg>
                     </span>
-                    <span class="objects-item__text">Не в сети</span>
+                    <span class="object-item-btn__text">Не в сети</span>
                   </button>
                 </div>
               </div>
@@ -302,29 +319,29 @@
                   </div>
                 </div>
                 <div class="objects-item__bottom">
-                  <button class="objects-item__btn is-active">
-                    <span class="objects-item__icon objects-item__icon_blue">
+                  <button class="object-item-btn is-active">
+                    <span class="object-item-btn__icon object-item-btn__icon_blue">
                       <svg class="icon icon-icons_key">
                         <use xlink:href="img/sprite.svg#icon-icons_key"></use>
                       </svg>
                     </span>
-                    <span class="objects-item__text">Вкл.</span>
+                    <span class="object-item-btn__text">Вкл.</span>
                   </button>
-                  <button class="objects-item__btn is-active">
-                    <span class="objects-item__icon objects-item__icon_blue">
+                  <button class="object-item-btn is-active">
+                    <span class="object-item-btn__icon object-item-btn__icon_blue">
                       <svg class="icon icon-icons_parking">
                         <use xlink:href="img/sprite.svg#icon-icons_parking"></use>
                       </svg>
                     </span>
-                    <span class="objects-item__text">0 км/ч</span>
+                    <span class="object-item-btn__text">0 км/ч</span>
                   </button>
-                  <button class="objects-item__btn is-active">
-                    <span class="objects-item__icon objects-item__icon_green">
+                  <button class="object-item-btn is-active">
+                    <span class="object-item-btn__icon object-item-btn__icon_green">
                       <svg class="icon icon-icons_satellite">
                         <use xlink:href="img/sprite.svg#icon-icons_satellite"></use>
                       </svg>
                     </span>
-                    <span class="objects-item__text">В сети</span>
+                    <span class="object-item-btn__text">В сети</span>
                   </button>
                 </div>
               </div>
@@ -344,29 +361,29 @@
                   </div>
                 </div>
                 <div class="objects-item__bottom">
-                  <button class="objects-item__btn">
-                    <span class="objects-item__icon objects-item__icon_blue">
+                  <button class="object-item-btn">
+                    <span class="object-item-btn__icon object-item-btn__icon_blue">
                       <svg class="icon icon-icons_key">
                         <use xlink:href="img/sprite.svg#icon-icons_key"></use>
                       </svg>
                     </span>
-                    <span class="objects-item__text">Выкл.</span>
+                    <span class="object-item-btn__text">Выкл.</span>
                   </button>
-                  <button class="objects-item__btn">
-                    <span class="objects-item__icon objects-item__icon_blue">
+                  <button class="object-item-btn">
+                    <span class="object-item-btn__icon object-item-btn__icon_blue">
                       <svg class="icon icon-icons_speedometer">
                         <use xlink:href="img/sprite.svg#icon-icons_speedometer"></use>
                       </svg>
                     </span>
-                    <span class="objects-item__text">0 км/ч</span>
+                    <span class="object-item-btn__text">0 км/ч</span>
                   </button>
-                  <button class="objects-item__btn">
-                    <span class="objects-item__icon objects-item__icon_green">
+                  <button class="object-item-btn">
+                    <span class="object-item-btn__icon object-item-btn__icon_green">
                       <svg class="icon icon-icons_satellite">
                         <use xlink:href="img/sprite.svg#icon-icons_satellite"></use>
                       </svg>
                     </span>
-                    <span class="objects-item__text">Не в сети</span>
+                    <span class="object-item-btn__text">Не в сети</span>
                   </button>
                 </div>
               </div>
@@ -386,29 +403,29 @@
                   </div>
                 </div>
                 <div class="objects-item__bottom">
-                  <button class="objects-item__btn is-active">
-                    <span class="objects-item__icon objects-item__icon_blue">
+                  <button class="object-item-btn is-active">
+                    <span class="object-item-btn__icon object-item-btn__icon_blue">
                       <svg class="icon icon-icons_key">
                         <use xlink:href="img/sprite.svg#icon-icons_key"></use>
                       </svg>
                     </span>
-                    <span class="objects-item__text">Вкл.</span>
+                    <span class="object-item-btn__text">Вкл.</span>
                   </button>
-                  <button class="objects-item__btn is-active">
-                    <span class="objects-item__icon objects-item__icon_blue">
+                  <button class="object-item-btn is-active">
+                    <span class="object-item-btn__icon object-item-btn__icon_blue">
                       <svg class="icon icon-icons_speedometer">
                         <use xlink:href="img/sprite.svg#icon-icons_speedometer"></use>
                       </svg>
                     </span>
-                    <span class="objects-item__text">100 км/ч</span>
+                    <span class="object-item-btn__text">100 км/ч</span>
                   </button>
-                  <button class="objects-item__btn is-active">
-                    <span class="objects-item__icon objects-item__icon_green">
+                  <button class="object-item-btn is-active">
+                    <span class="object-item-btn__icon object-item-btn__icon_green">
                       <svg class="icon icon-icons_satellite">
                         <use xlink:href="img/sprite.svg#icon-icons_satellite"></use>
                       </svg>
                     </span>
-                    <span class="objects-item__text">В сети</span>
+                    <span class="object-item-btn__text">В сети</span>
                   </button>
                 </div>
               </div>
@@ -428,29 +445,29 @@
                   </div>
                 </div>
                 <div class="objects-item__bottom">
-                  <button class="objects-item__btn is-active">
-                    <span class="objects-item__icon objects-item__icon_blue">
+                  <button class="object-item-btn is-active">
+                    <span class="object-item-btn__icon object-item-btn__icon_blue">
                       <svg class="icon icon-icons_key">
                         <use xlink:href="img/sprite.svg#icon-icons_key"></use>
                       </svg>
                     </span>
-                    <span class="objects-item__text">Вкл.</span>
+                    <span class="object-item-btn__text">Вкл.</span>
                   </button>
-                  <button class="objects-item__btn is-active">
-                    <span class="objects-item__icon objects-item__icon_blue">
+                  <button class="object-item-btn is-active">
+                    <span class="object-item-btn__icon object-item-btn__icon_blue">
                       <svg class="icon icon-icons_speedometer">
                         <use xlink:href="img/sprite.svg#icon-icons_speedometer"></use>
                       </svg>
                     </span>
-                    <span class="objects-item__text">100 км/ч</span>
+                    <span class="object-item-btn__text">100 км/ч</span>
                   </button>
-                  <button class="objects-item__btn is-active">
-                    <span class="objects-item__icon objects-item__icon_green">
+                  <button class="object-item-btn is-active">
+                    <span class="object-item-btn__icon object-item-btn__icon_green">
                       <svg class="icon icon-icons_satellite">
                         <use xlink:href="img/sprite.svg#icon-icons_satellite"></use>
                       </svg>
                     </span>
-                    <span class="objects-item__text">В сети</span>
+                    <span class="object-item-btn__text">В сети</span>
                   </button>
                 </div>
               </div>
