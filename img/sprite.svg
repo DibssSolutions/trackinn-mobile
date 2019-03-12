@@ -21,8 +21,24 @@
     <path d="M66 0H30"/>
     <path d="M66 10H30"/>
     <path d="M12 64V28"/>
+</symbol><symbol id="icon-baseline-brush" viewBox="0 0 24 24">
+    <path d="M7 14c-1.66 0-3 1.34-3 3 0 1.31-1.16 2-2 2 .92 1.22 2.49 2 4 2 2.21 0 4-1.79 4-4 0-1.66-1.34-3-3-3zm13.71-9.37l-1.34-1.34a.996.996 0 0 0-1.41 0L9 12.25 11.75 15l8.96-8.96a.996.996 0 0 0 0-1.41z"/>
 </symbol><symbol id="icon-change-map-api" viewBox="0 0 24 24">
     <path d="M19.554 4h-.137l-4.754 1.863L9.337 4 4.32 5.691a.446.446 0 0 0-.32.423v13.44a.446.446 0 0 0 .446.446h.137l4.743-1.84L14.663 20l5.017-1.691a.446.446 0 0 0 .32-.423V4.446A.446.446 0 0 0 19.554 4zm-4.891 14.217l-5.326-1.874V5.783l5.326 1.874v10.56z"/>
+</symbol><symbol id="icon-check" viewBox="0 0 14.4 13">
+    <style>
+        .st0{fill:#2471be}
+    </style>
+    <path class="st0" d="M6.3 13L0 8.4l1.2-1.6 4.7 3.4L12.8 0l1.6 1.1z"/>
+</symbol><symbol id="icon-diagonalArrows" viewBox="0 0 13 13">
+    <path d="M12 8v4H8" stroke-width="2"/>
+    <path d="M1 5V1h4" stroke-width="2"/>
+    <path d="M12.042 10.628l-1.414 1.415L1 2.414 2.414 1z"/>
+</symbol><symbol id="icon-ellipseZone" viewBox="0 0 16 16">
+    <style>
+        .st0{fill:#a7a7aa}
+    </style>
+    <path class="st0" d="M8 16c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 8zM8 2C4.7 2 2 4.7 2 8s2.7 6 6 6 6-2.7 6-6-2.7-6-6-6z"/>
 </symbol><symbol id="icon-icons_add" viewBox="0 0 16 16">
     <path d="M7 0h2v16H7z"/>
     <path d="M0 9V7h16v2z"/>
@@ -76,6 +92,14 @@
     <path class="st0" d="M.1 6.9c0-.1-.4-2.8 1.3-4.8C2.5.7 4.4 0 6.8 0v2C5 2 3.7 2.5 2.9 3.4 1.8 4.7 2 6.6 2 6.6l-1.9.3zm5.4-.1h-2C3.5 5 5 3.5 6.8 3.5v2c-.7 0-1.3.6-1.3 1.3z"/>
 </symbol><symbol id="icon-icons_search" viewBox="0 0 18 18">
     <path d="M6.702 0a6.685 6.685 0 0 0-5.499 2.864 6.696 6.696 0 0 0 3.812 10.31 6.685 6.685 0 0 0 6.037-1.406l.281.292v.81L16.471 18 18 16.47l-5.127-5.152h-.809l-.292-.282a6.686 6.686 0 0 0-1.465-9.98A6.674 6.674 0 0 0 6.702 0zm0 11.318a4.63 4.63 0 0 1-4.28-2.862 4.638 4.638 0 0 1 3.376-6.32 4.629 4.629 0 0 1 4.755 1.971 4.64 4.64 0 0 1 .78 2.576 4.627 4.627 0 0 1-2.857 4.285 4.618 4.618 0 0 1-1.774.35z"/>
+</symbol><symbol id="icon-icons_speedometer-crossed" viewBox="0 0 22 22">
+    <style>
+        .st0{fill:#a7a7aa}.st1{fill:#f3f3f3}.st2{fill:#f90e0e}
+    </style>
+    <path class="st0" d="M14.4 17.7H7.8c-.4 0-.7.5-.7 1 0 .6.3 1 .7 1h6.6c.4 0 .7-.5.7-1 .1-.5-.3-1-.7-1z"/>
+    <path class="st0" d="M18.2 16.3L16.6 15c1.7-2.1 2-5 .9-7.5-.5-1.1-1.5-2.1-2.6-2.8-1.1-.7-2.5-1.1-3.8-1.1-1.3 0-2.6.4-3.8 1.1-1.1.7-2 1.7-2.6 2.9-1.1 2.4-.8 5.4.9 7.5L4 16.3c-2.2-2.7-2.6-6.5-1.1-9.6.8-1.5 1.9-2.8 3.4-3.7 1.5-.9 3.1-1.4 4.8-1.4 1.7 0 3.4.5 4.9 1.4 1.4.9 2.6 2.2 3.3 3.8 1.5 3.1 1.1 6.8-1.1 9.5zm-6.4-5l-1.4-1.4 4-4 1.4 1.4-4 4z"/>
+    <path class="st1" d="M0 3.4L3.4 0 22 18.6 18.6 22 0 3.4z"/>
+    <path class="st2" d="M1 2.4L2.4 1 21 19.6 19.6 21 1 2.4z"/>
 </symbol><symbol id="icon-icons_speedometer" viewBox="0 0 18 18">
     <style>
         .st0{fill:#a7a7aa}
@@ -95,6 +119,15 @@
     <path class="st0" d="M10 20C4.5 20 0 15.5 0 10S4.5 0 10 0s10 4.5 10 10-4.5 10-10 10zm0-18c-4.4 0-8 3.6-8 8s3.6 8 8 8 8-3.6 8-8-3.6-8-8-8z"/>
     <circle class="st0" cx="10" cy="9" r="3"/>
     <ellipse class="st0" cx="10" cy="16.5" rx="5" ry="3.5"/>
+</symbol><symbol id="icon-rectangleZone" viewBox="0 0 16 16">
+    <style>
+        .st0{fill:#a7a7aa}
+    </style>
+    <path class="st0" d="M15 15H1V1h14v14zM3 13h10V3H3v10z"/>
+    <path class="st0" d="M0 0h4v4H0z"/>
+    <path class="st0" d="M12 0h4v4h-4z"/>
+    <path class="st0" d="M12 12h4v4h-4z"/>
+    <path class="st0" d="M0 12h4v4H0z"/>
 </symbol><symbol id="icon-rounded-info-button" viewBox="0 0 510 510">
     <path d="M255 0C114.8 0 0 114.8 0 255s114.8 255 255 255 255-114.8 255-255S395.3 0 255 0zm25.5 408h-51V204h51v204zm0-255h-51v-51h51v51z"/>
 </symbol><symbol id="icon-satellite" viewBox="0 0 22 22">
@@ -109,4 +142,15 @@
     </title>
     <path class="st0" d="M5 17s.1 1 1 1h8c.6 0 1-.4 1-1V7H5v10z"/>
     <path class="st0" d="M16 4h-3l-1-1H8L7 4H4v2h12z"/>
+</symbol><symbol id="icon-triangleZone" viewBox="0 0 16 16">
+    <path d="M14 8l.447.894a1 1 0 0 0 0-1.788L14 8zM2.447 14.894l12-6-.894-1.788-12 6 .894 1.788zm12-7.788l-12-6-.894 1.788 12 6 .894-1.788z"/>
+    <path d="M0 0h4v4H0zm12 6h4v4h-4zM0 12h4v4H0z"/>
+</symbol><symbol id="icon-upRightArrows" viewBox="0 0 17 17">
+    <style>
+        .st0{fill:#a7a7aa}
+    </style>
+    <path class="st0" d="M1.4 5.4L0 3.9 4 .1 7.8 4 6.3 5.4 4 2.9z"/>
+    <path class="st0" d="M13 17l-1.4-1.5 2.5-2.4-2.5-2.5L13 9.2l3.9 3.9z"/>
+    <path class="st0" d="M2.8 2.5h2.1v11.6H2.8z"/>
+    <path class="st0" d="M2.8 12h11.6v2.1H2.8z"/>
 </symbol></svg>

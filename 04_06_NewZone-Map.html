@@ -3,7 +3,7 @@
 
   <head>
     <meta charset="utf-8">
-    <title>03_18_Routes-Map</title>
+    <title>04_06_NewZone-Map</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#fff">
@@ -168,61 +168,7 @@
       </header>
       <div class="page">
         <div class="page__header">
-          <div class="tabs-header">
-            <div class="tabs-header__inner">
-              <div class="tabs-header__item">
-                <div class="tabs-header__btn">
-                  <button class="btn-icon btn-icon_gray">
-                    <svg class="icon icon-rounded-info-button">
-                      <use xlink:href="img/sprite.svg#icon-rounded-info-button"></use>
-                    </svg>
-                  </button>
-                </div>
-                <div class="tabs-header__text"> Инфо </div>
-              </div>
-              <div class="tabs-header__item is-active">
-                <div class="tabs-header__btn">
-                  <button class="btn-icon btn-icon_gray">
-                    <svg class="icon icon-icons_routes">
-                      <use xlink:href="img/sprite.svg#icon-icons_routes"></use>
-                    </svg>
-                  </button>
-                </div>
-                <div class="tabs-header__text"> Поездки </div>
-              </div>
-              <div class="tabs-header__item">
-                <div class="tabs-header__btn">
-                  <button class="btn-icon btn-icon_gray">
-                    <svg class="icon icon-icons_parking-filled">
-                      <use xlink:href="img/sprite.svg#icon-icons_parking-filled"></use>
-                    </svg>
-                  </button>
-                </div>
-                <div class="tabs-header__text"> Парковки </div>
-              </div>
-              <div class="tabs-header__item">
-                <div class="tabs-header__btn">
-                  <button class="btn-icon btn-icon_gray">
-                    <svg class="icon icon-icons_report">
-                      <use xlink:href="img/sprite.svg#icon-icons_report"></use>
-                    </svg>
-                  </button>
-                </div>
-                <div class="tabs-header__text"> Отчет </div>
-              </div>
-              <div class="tabs-header__item">
-                <div class="tabs-header__btn">
-                  <button class="btn-icon btn-icon_gray">
-                    <svg class="icon icon-icons_photos">
-                      <use xlink:href="img/sprite.svg#icon-icons_photos"></use>
-                    </svg>
-                  </button>
-                </div>
-                <div class="tabs-header__text"> Фото </div>
-              </div>
-            </div>
-          </div>
-          <div class="head-object head-object_bs">
+          <div class="head-object head-object_high head-object_bs">
             <div class="head-object__inner inner">
               <div class="head-object__info">
                 <button class="head-object__btn" type="button">
@@ -230,10 +176,71 @@
                     <use xlink:href="img/sprite.svg#icon-arrow-left"></use>
                   </svg>
                 </button>
-                <div class="head-object__icon">
-                  <img src="./img/car1.png" alt="icon">
+                <div class="head-object__text"> Назад </div>
+              </div>
+              <div class="head-object__btns">
+                <div class="head-object__btns-item">
+                  <button class="btn-icon btn-icon_gray">
+                    <svg class="icon icon-baseline-brush">
+                      <use xlink:href="img/sprite.svg#icon-baseline-brush"></use>
+                    </svg>
+                  </button>
                 </div>
-                <div class="head-object__text"> Объект 2 </div>
+                <div class="head-object__btns-item">
+                  <button class="btn-icon btn-icon_gray">
+                    <svg class="icon icon-triangleZone">
+                      <use xlink:href="img/sprite.svg#icon-triangleZone"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="head-drop">
+              <div class="drop-selection">
+                <div class="drop-selection__inner inner">
+                  <label class="drop-selection__item">
+                    <input type="radio" name="dropSelection" class="drop-selection__input">
+                    <div class="drop-selection__icon btn-icon btn-icon_gray">
+                      <svg class="icon icon-rectangleZone">
+                        <use xlink:href="img/sprite.svg#icon-rectangleZone"></use>
+                      </svg>
+                    </div>
+                    <div class="drop-selection__text">Многоугольник</div>
+                    <div class="drop-selection__check">
+                      <svg class="icon icon-check">
+                        <use xlink:href="img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </div>
+                  </label>
+                  <label class="drop-selection__item">
+                    <input type="radio" name="dropSelection" class="drop-selection__input">
+                    <div class="drop-selection__icon btn-icon btn-icon_gray">
+                      <svg class="icon icon-triangleZone">
+                        <use xlink:href="img/sprite.svg#icon-triangleZone"></use>
+                      </svg>
+                    </div>
+                    <div class="drop-selection__text">Линия</div>
+                    <div class="drop-selection__check">
+                      <svg class="icon icon-check">
+                        <use xlink:href="img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </div>
+                  </label>
+                  <label class="drop-selection__item">
+                    <input type="radio" name="dropSelection" class="drop-selection__input">
+                    <div class="drop-selection__icon btn-icon btn-icon_gray">
+                      <svg class="icon icon-ellipseZone">
+                        <use xlink:href="img/sprite.svg#icon-ellipseZone"></use>
+                      </svg>
+                    </div>
+                    <div class="drop-selection__text">Точка</div>
+                    <div class="drop-selection__check">
+                      <svg class="icon icon-check">
+                        <use xlink:href="img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </div>
+                  </label>
+                </div>
               </div>
             </div>
           </div>
@@ -243,19 +250,6 @@
             <div class="map js-map" id="map">
               <div style="width: 100%;height:100%;overflow: hidden;">
                 <img src="./img/map.jpg" alt="map" style="display: block;width: 100%;">
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="page__footer">
-          <div class="footer-bar footer-bar_white">
-            <div class="footer-bar__inner inner">
-              <div class="footer-bar__content">
-                <div class="footer-bar__number">01</div>
-                <div class="footer-bar__sum">
-                  <div class="footer-bar__title">Пробег:</div>
-                  <div class="footer-bar__value">3,59 км</div>
-                </div>
               </div>
             </div>
           </div>
