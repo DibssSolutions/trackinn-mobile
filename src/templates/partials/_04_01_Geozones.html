@@ -1,0 +1,112 @@
+<div class="page">
+    <div class="page__header">
+        {{ mixins.pageHeader({
+            add: true,
+            filter: true
+        }) }}
+    </div>
+    <div class="page__content">
+        <div class="page__content-wrap">
+            {% for item in [
+                {
+                    icon: 'rectangleZone',
+                    title: 'Зона 1',
+                    location: 'Москва',
+                    btns: [
+                        {
+                            icon: 'upRightArrows',
+                            text: 'S = 45км/2'
+                        },
+                        {
+                            icon: 'icons_speedometer',
+                            text: '50км/ч',
+                            class: 'crossed'
+                        }
+                    ]
+                },
+                {
+                    icon: 'triangleZone',
+                    title: 'Зона 2',
+                    location: 'Питербург',
+                    btns: [
+                        {
+                            icon: 'diagonalArrows',
+                            text: 'L = 5км'
+                        },
+                        {
+                            icon: 'icons_speedometer',
+                            text: '30км/ч',
+                            class: 'crossed'
+                        }
+                    ]
+                },
+                {
+                    icon: 'ellipseZone',
+                    title: 'Зона 3',
+                    location: 'Московская область',
+                    btns: [
+                        {
+                            icon: 'upRightArrows',
+                            text: 'S = 45км/2'
+                        },
+                        {
+                            icon: 'icons_speedometer',
+                            text: '30км/ч',
+                            class: 'crossed'
+                        }
+                    ]
+                },
+                {
+                    icon: 'rectangleZone',
+                    title: 'Зона 5',
+                    btns: [
+                        {
+                            icon: 'upRightArrows',
+                            text: 'S = 45км/2'
+                        },
+                        {
+                            icon: 'icons_speedometer',
+                            text: '30км/ч',
+                            class: 'crossed'
+                        }
+                    ]
+                },
+                {
+                    icon: 'triangleZone',
+                    title: 'Зона 6',
+                    btns: [
+                        {
+                            icon: 'diagonalArrows',
+                            text: 'L = 10км'
+                        },
+                        {
+                            icon: 'icons_speedometer',
+                            text: '30км/ч',
+                            class: 'crossed'
+                        }
+                    ]
+                },
+                {
+                    icon: 'ellipseZone',
+                    title: 'Зона 7',
+                    location: 'Московская область',
+                    btns: [
+                        {
+                            icon: 'upRightArrows',
+                            text: 'S = 45км/2'
+                        },
+                        {
+                            icon: 'icons_speedometer',
+                            text: '30км/ч',
+                            class: 'crossed'
+                        }
+                    ]
+                }
+            ] %}
+            
+                {{ mixins.geozonesItem(item) }}
+                
+            {% endfor %}
+        </div>
+    </div>
+</div>

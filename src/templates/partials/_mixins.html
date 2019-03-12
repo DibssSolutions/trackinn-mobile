@@ -43,7 +43,7 @@
 {% endmacro %}
 
 {% macro headObject(props) %}
-	<div class="head-object{% if props.high %} head-object_high{% endif %}{% if props.boxShadow %} head-object_bs{% endif %}">
+	<div class="head-object{% if props.high %} head-object_high{% endif %}{% if props.boxShadow %} head-object_bs{% endif %}{% if props.active %} is-active{% endif %}">
 		<div class="head-object__inner inner">
 			<div class="head-object__info">
 				{% if props.arrow %}
@@ -86,6 +86,123 @@
 				</div>
 			{% endif %}
 		</div>
+		{% if props.dropSelection %}
+		<div class="head-drop">
+			{# <div class="head-drop__content"> #}
+				{# <div class="head-drop__content-wrap"> #}
+					<div class="drop-selection">
+						<div class="drop-selection__inner inner">
+							{% for item in [
+								{
+									icon: 'rectangleZone',
+									text: 'Многоугольник'
+								},
+								{
+									icon: 'triangleZone',
+									text: 'Линия'
+								},
+								{
+									icon: 'ellipseZone',
+									text: 'Точка'
+								}
+							] %}
+								<label class="drop-selection__item{% if item.active %} is-active{% endif %}">
+									<input type="radio" name="dropSelection" class="drop-selection__input">
+									<div class="drop-selection__icon btn-icon btn-icon_gray">
+										{{ icon(item.icon) }}
+									</div>
+									<div class="drop-selection__text">{{ item.text }}</div>
+									<div class="drop-selection__check">{{ icon('check') }}</div>
+								</label>
+							{% endfor %}
+						</div>
+					</div>
+				{# </div>
+			</div> #}
+		</div>
+			
+		{% endif %}
+		{% if props.dropPage %}
+		<div class="head-drop head-drop_fullPage is-open">
+			<div class="head-drop__content">
+				<div class="head-drop__content-wrap">
+					<div class="inner">
+						<div class="form-block form-block_sm">
+							<div class="form-block__title">
+								Настройка линии
+							</div>
+							<div class="form-group">
+								<div class="form-group__title">
+									Тип
+								</div>
+								{{ select('Сплошная') }}
+							</div>
+							<div class="form-group">
+								<div class="form-group__title">
+									Цвет обводки
+								</div>
+								{{ select('Красный') }}
+							</div>
+							<div class="form-group">
+								<div class="form-group__title">
+									Толщина обводки
+								</div>
+								{{ select('2px') }}
+							</div>
+							<div class="form-group">
+								<div class="form-group__title">
+									Прозрачность
+								</div>
+								<div class="form-control"><input type="range" ></div>
+							</div>
+						</div>
+						<div class="form-block form-block_sm">
+							<div class="form-block__title">
+								Настройка заливки
+							</div>
+							<div class="form-group">
+								<div class="form-group__title">
+									Цвет заливки
+								</div>
+								{{ select('Красный') }}
+							</div>
+							<div class="form-group">
+								<div class="form-group__title">
+									Прозрачность
+								</div>
+								<div class="form-control"><input type="range"></div>
+							</div>
+						</div>
+						<div class="form-block form-block_sm">
+							<div class="form-block__title">
+								Метка
+							</div>
+							<div class="form-group">
+								<div class="form-group__title">
+									Иконка
+								</div>
+								<div class="form-control">
+									<button class="btn btn_w100 btn_white">
+										Выбрать иконку
+									</button>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="form-group__title">
+									Радиус, м
+								</div>
+								{{ input('20') }}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="head-drop__footer">
+				{{ footerBtn('Сохранить') }}
+			</div>
+		</div>
+			
+		{% endif %}
 	</div>
 {% endmacro %}
 
@@ -147,6 +264,17 @@
 		{% else %}
 			<input type="text" class="form-input" placeholder="{{ placeholder }}">
 		{% endif %}
+	</div>
+{% endmacro %}
+
+{% macro inputNumber(props) %}
+	<div class="form-control">
+		<div class="input-number">
+			<div class="input-number-control">
+				<input type="text" placeholder="{{ props.placeholder }}">
+			</div>
+			<div class="input-number-text">{{ props.text }}</div>
+		</div>
 	</div>
 {% endmacro %}
 
@@ -300,6 +428,35 @@
 							{{ icon(item.icon) }}
 						</span>
 						<span class="object-item-btn__text">{{ item.text }}</span>
+					</button>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+{% endmacro %}
+{% macro geozonesItem(props) %}
+	<div class="geozones-item">
+		<div class="geozones-item__inner inner">
+			<div class="geozones-item__top">
+				<div class="geozones-item__icon">
+					{{ icon(props.icon) }}
+				</div>
+				<div class="geozones-item__info">
+					<div class="geozones-item__title">{{ props.title }}</div>
+					{% if props.location %}
+						{# <div class="geozones-item__details"> #}
+							<div class="geozones-item__location"><span>{{ props.location }}</span></div>
+						{# </div> #}
+					{% endif %}
+				</div>
+			</div>
+			<div class="geozones-item__bottom">
+				{% for item in props.btns %}
+					<button class="geozones-item-btn{% if item.active %} is-active{% endif %}">
+						<span class="geozones-item-btn__icon{% if item.class %} geozones-item-btn__icon_{{ item.class }}{% endif %}">
+							{{ icon(item.icon) }}
+						</span>
+						<span class="geozones-item-btn__text">{{ item.text }}</span>
 					</button>
 				{% endfor %}
 			</div>

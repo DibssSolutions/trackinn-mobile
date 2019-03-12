@@ -156,11 +156,23 @@ body
     padding: 24px 0 0
     &__filters-remove
         margin-top: 32px
+.form-block
+    &_sm
+        padding: 0
+        &:not(:first-child)
+            margin-top: 32px
+    &__title
+        padding: 11px 16px
+        background-color: #f3f3f3
 .form-group
     &:not(:first-child)
         margin-top: 24px
+        .form-block_sm &
+            margin-top: 16px
     &:not(:last-child)
         margin-bottom: 24px
+        .form-block_sm &
+            margin-bottom: 16px
     .form-control
         &:not(:first-child)
             margin-top: 8px
@@ -374,10 +386,15 @@ textarea.form-input
 .icon-icons_parking,
 .icon-icons_command
     font-size: 18px
-.icon-icons_speedometer
+.icon-icons_speedometer,
+.icon-rectangleZone
     font-size: 16px
 .icon-icons_satellite
     font-size: 15px
+.icon-upRightArrows
+    font-size: 17px
+.icon-diagonalArrows
+    font-size: 13px
 
 /*TEMPORARY SELECT*/
 .select
@@ -476,6 +493,31 @@ textarea.form-input
         padding-left: 24px
         max-width: 120px
         +text-overflow
+
+.geozones-drop
+    padding: 24px 0 0 32px
+
+.input-number
+    display: flex
+    align-items: center
+    padding-right: 16px
+    border: 1px solid $lightGray
+    &-control
+        flex: 1 0 auto
+        input
+            padding: 15px 16px
+            font-size: 13px
+            width: 100%
+            height: 48px
+            border-radius: 0
+            appearance: none
+            +opensans
+            +placeholder
+                color: rgba($dark,.54)
+                +opensans
+    &-text
+        flex: 0 0 auto
+
 
 
 

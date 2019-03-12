@@ -11,6 +11,14 @@ PageList:
   ready: 50
 - file: 03_05_ActiveFilters.html
   ready: 50
+- file: 03_06_ObjectsOnMap.html
+  ready: 50
+- file: 03_07_ChoosingMapType.html
+  ready: 50
+- file: 03_08_ActiveSearch.html
+  ready: 50
+- file: 03_09_ObjectPage.html
+  ready: 50
 - file: 03_10_ObjectPage-SendCommand.html
   ready: 50
 - file: 03_11_NewTask.html
@@ -21,9 +29,13 @@ PageList:
   ready: 50
 - file: 03_15_Routes-Filters.html
   ready: 50
+- file: 03_18_Routes-Map.html
+  ready: 50
 - file: 03_19_Parkings.html
   ready: 50
 - file: 03_20_Parkings-Filters.html
+  ready: 50
+- file: 03_21_ParkingMap.html
   ready: 50
 - file: 03_22_ReportPage.html
   ready: 50
@@ -31,13 +43,17 @@ PageList:
   ready: 50
 - file: 03_24_Photos.html
   ready: 50
-- file: 03_06_ObjectsOnMap.html
+- file: 04_01_Geozones.html
   ready: 50
-- file: 03_07_ChoosingMapType.html
+- file: 04_02_Geozones-Filters.html
   ready: 50
-- file: 03_08_ActiveSearch.html
+- file: 04_03_Geozones-Filtersr.html
   ready: 50
-- file: 03_09_ObjectPage.html
+- file: 04_04_NewZone-ChooseType.html
   ready: 50
-- file: 03_18_Routes-Map.html
+- file: 04_05_NewZone-FillInfo.html
+  ready: 50
+- file: 04_06_NewZone-Map.html
+  ready: 50
+- file: 04_09_NewZone-GraphicSettings.html
   ready: 50

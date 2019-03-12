@@ -1,0 +1,41 @@
+<div class="page">
+    <div class="page__header">
+        {{ mixins.modalHeader('Новая зона') }}
+    </div>
+    <div class="page__content">
+        <div class="page__content-wrap">
+            <div class="geozone-type">
+                <div class="geozone-type__inner inner">
+                    <div class="geozone-type__title">Выберите тип зоны</div>
+                    <div class="geozone-type__wrap">
+                        {% for item in [
+                            {
+                                icon: 'rectangleZone',
+                                text: 'Многоугольник'
+                            },
+                            {
+                                icon: 'triangleZone',
+                                text: 'Линия'
+                            },
+                            {
+                                icon: 'ellipseZone',
+                                text: 'Точка'
+                            }
+                        ] %}
+                            
+                            <label class="geozone-type__item">
+                                <input class="geozone-type__input" type="radio" name="geozoneType">
+                                <div class="geozone-type__item-content">
+                                    <div class="geozone-type__icon">{{ mixins.icon( item.icon ) }}</div>
+                                    <div class="geozone-type__name">{{ item.text }}</div>
+                                </div>
+                            </label>
+        
+                        {% endfor %}
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
