@@ -61,3 +61,11 @@ PageList:
   ready: 50
 - file: 04_09_NewZone-GraphicSettings.html
   ready: 50
+- file: 04_14_ZonePage.html
+  ready: 50
+- file: 04_15_MapOnFullScreen.html
+  ready: 50
+- file: 05_01_Map.html
+  ready: 50
+- file: 05_03_Map-ActiveMapAPI.html
+  ready: 50

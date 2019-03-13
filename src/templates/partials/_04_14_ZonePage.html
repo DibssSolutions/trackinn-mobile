@@ -1,0 +1,84 @@
+<div class="page">
+    <div class="page__header">
+        {{ mixins.headObject({
+            high: true,
+            boxShadow: true,
+            arrow: true,
+            text: 'Зона 1',
+            comment: '(Комментарий)',
+            btns: [
+                {
+                    icon: 'baseline-edit',
+                    bgActive: true
+                }
+            ]
+        }) }}
+    </div>
+    <div class="page__content">
+        <div class="page__content-wrap">
+            <div class="zone-page">
+                <div class="zone-page__map">
+                    {{ mixins.map() }}
+                </div>
+                <div class="zone-page__content">
+                    <div class="zone-page__inner inner">
+                        <div class="zone-page__btns">
+                            {% for item in [
+                                {
+                                    icon: 'upRightArrows',
+                                    text: 'S = 45км/2'
+                                },
+                                {
+                                    icon: 'icons_speedometer',
+                                    text: '50км/ч',
+                                    class: 'crossed'
+                                }
+                            ] %}
+                                <button class="geozones-item-btn{% if item.active %} is-active{% endif %}">
+                                    <span class="geozones-item-btn__icon{% if item.class %} geozones-item-btn__icon_{{ item.class }}{% endif %}">
+                                        {{ mixins.icon(item.icon) }}
+                                    </span>
+                                    <span class="geozones-item-btn__text">{{ item.text }}</span>
+                                </button>
+                            {% endfor %}
+                        </div>
+                        <div class="zone-page__items">
+                            {% for item in [
+                                {
+                                    name: 'В группах',
+                                    value: 'Нет'
+                                },
+                                {
+                                    name: 'Допустимая скорость',
+                                    value: '50км/ч'
+                                },
+                                {
+                                    name: 'Тип зоны',
+                                    value: 'Линия'
+                                },
+                                {
+                                    name: 'События',
+                                    value: 'Все'
+                                },
+                                {
+                                    name: 'Использовать в отчетах',
+                                    value: 'Да'
+                                }
+                            ] %}
+                                {{ mixins.nameValue(item) }}
+                            {% endfor %}
+                        </div>
+                        <div class="zone-page__bottom">
+                            <div class="zone-page__title">Описание</div>
+                            <div class="zone-page__description">
+                                Основным приёмом вычисления площади при этом являлось построение квадрата, площадь которого равна площади заданной
+                            </div>
+                            <a href="#" class="zone-page__link">Показать полное описание</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

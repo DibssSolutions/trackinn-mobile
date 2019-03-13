@@ -1,0 +1,28 @@
+<div class="page">
+    <div class="page__header">
+        {{ mixins.headObject({
+            high: true,
+            boxShadow: true,
+            arrow: true,
+            text: 'Зона 1',
+            comment: '(Комментарий)'
+        }) }}
+    </div>
+    <div class="page__content">
+        <div class="page__content-wrap">
+            {{ mixins.map() }}
+        </div>
+    </div>
+    <div class="page__footer">
+        <div class="fullscreen-message is-active">
+            <div class="fullscreen-message__close">
+                <button class="btn-icon btn-icon_gray" type="button">
+                    {{ mixins.icon('icons_close') }}
+                </button>
+            </div>
+            <div class="fullscreen-message__text">
+                Вы перешли в режим полно-экранного просмотра. Чтобы выйти из режима нажмите назад или соответствующую иконку внизу экрана.
+            </div>
+        </div>
+    </div>
+</div>

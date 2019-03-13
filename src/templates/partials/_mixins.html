@@ -376,7 +376,7 @@
 				{% endif %}
 				{% if props.changeMap %}
 					<div class="page-header__btn">
-						<button class="btn-icon btn-icon_gray">
+						<button class="btn-icon btn-icon_gray{% if props.dropSelection %} is-active{% endif %}">
 							{{ icon('change-map-api') }}
 						</button>
 					</div>
@@ -404,6 +404,39 @@
 				{% endif %}
 			</div>
 		</div>
+		{% if props.dropSelection %}
+		<div class="head-drop head-drop_noborder is-open">
+			{# <div class="head-drop__content"> #}
+				{# <div class="head-drop__content-wrap"> #}
+					<div class="drop-selection">
+						<div class="drop-selection__inner inner">
+							{% for item in [
+								{
+									icon: 'googlemaps',
+									text: 'Google карты',
+									active: true
+								},
+								{
+									icon: 'yandexmap',
+									text: 'Яндекс карты'
+								}
+							] %}
+								<label class="drop-selection__item">
+									<input type="radio" name="dropSelection" class="drop-selection__input"{% if item.active %} checked{% endif %}>
+									<div class="drop-selection__icon btn-icon">
+										{% include "partials/" + item.icon + ".svg" %}
+									</div>
+									<div class="drop-selection__text">{{ item.text }}</div>
+									<div class="drop-selection__check">{{ icon('check') }}</div>
+								</label>
+							{% endfor %}
+						</div>
+					</div>
+				{# </div>
+			</div> #}
+		</div>
+			
+		{% endif %}
 	</div>
 {% endmacro %}
 
