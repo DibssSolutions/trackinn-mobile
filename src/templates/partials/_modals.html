@@ -1,0 +1,28 @@
+{% macro geozoneChangeType(active) %}
+    
+    <div class="modal{% if active %} is-open{% endif %}" data-modal="geozoneChangeType">
+        <div class="modal__container" data-modal-container>
+            <div class="modal__inner inner">
+                {# <button class="modal__close" data-modal-close>
+                    {{mixins.icon('close')}}
+                </button> #}
+                {# {% include "partials/_form-main.html"%} #}
+                <div class="modal__title">Внимание!</div>
+                <div class="modal__text">Если вы смените тип зоны, то все манипуляции с картой будут удалены.</div>
+                <div class="modal__row">
+                    <div class="modal__col">
+                        <button class="btn btn_w100 btn_white">
+                            Отмена
+                        </button>
+                    </div>
+                    <div class="modal__col">
+                        <button class="btn btn_w100">
+                            Подтвердить
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endmacro %}

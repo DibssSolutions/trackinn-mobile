@@ -55,5 +55,9 @@ PageList:
   ready: 50
 - file: 04_06_NewZone-Map.html
   ready: 50
+- file: 04_07_NewZone-Map-ActiveZoneType.html
+  ready: 50
+- file: 04_08_NewZone-Map-ActiveZoneType.html
+  ready: 50
 - file: 04_09_NewZone-GraphicSettings.html
   ready: 50

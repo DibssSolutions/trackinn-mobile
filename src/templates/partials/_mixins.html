@@ -87,7 +87,7 @@
 			{% endif %}
 		</div>
 		{% if props.dropSelection %}
-		<div class="head-drop">
+		<div class="head-drop is-open">
 			{# <div class="head-drop__content"> #}
 				{# <div class="head-drop__content-wrap"> #}
 					<div class="drop-selection">
@@ -99,15 +99,16 @@
 								},
 								{
 									icon: 'triangleZone',
-									text: 'Линия'
+									text: 'Линия',
+									active: true
 								},
 								{
 									icon: 'ellipseZone',
 									text: 'Точка'
 								}
 							] %}
-								<label class="drop-selection__item{% if item.active %} is-active{% endif %}">
-									<input type="radio" name="dropSelection" class="drop-selection__input">
+								<label class="drop-selection__item">
+									<input type="radio" name="dropSelection" class="drop-selection__input"{% if item.active %} checked{% endif %}>
 									<div class="drop-selection__icon btn-icon btn-icon_gray">
 										{{ icon(item.icon) }}
 									</div>

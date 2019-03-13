@@ -1,0 +1,76 @@
+
+[data-modal]
+    position: fixed
+    z-index: -1
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    opacity: 0
+    visibility: hidden
+    min-width: 320px
+    // padding: 0 40px
+    +vertical
+    // +clr
+    // +gpu
+    // overflow: auto
+    transition: opacity 0.3s, visibility 0.3s, z-index 0.3s
+    &.is-open
+        opacity: 1
+        visibility: visible
+        z-index: 100
+        
+[data-modal-container]
+    position: relative
+    z-index: 1
+    font-size: 13px
+    // float: right
+    vertical-align: bottom
+    display: inline-block
+// [data-modal-close]
+//     position: absolute
+//     background-color: transparent
+//     font-size: 0
+//     .icon
+//         font-size: 16px
+
+.modal
+    overflow-x: hidden
+    color: $dark
+    background-color: rgba($black, .6)
+        // padding: 20px
+    // &__close
+    // 	top: 53px
+    // 	right: 35px
+    // 	width: 40px
+    // 	height: 40px
+    // 	+sm
+    // 		right: 8px
+    // 		top: 8px
+    &__container
+        // display: inline-flex
+        padding: 16px 0 24px
+        // max-width: 600px
+        text-align: left
+        width: 100%
+        background-color: $white
+    &__inner
+        // width: 100%
+        // min-height: 100%
+        // text-align: center
+        // display: flex
+        // align-items: center
+        // justify-content: center
+    &__text
+        margin-top: 16px
+    &__title,
+    &__text
+        max-width: 280px
+    &__row
+        display: flex
+        flex-wrap: wrap
+        margin: 24px -4px 0
+    &__col
+        flex: 0 0 50%
+        max-width: 50%
+        padding: 0 4px

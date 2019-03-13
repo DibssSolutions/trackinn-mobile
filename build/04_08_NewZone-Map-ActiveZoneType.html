@@ -3,7 +3,7 @@
 
   <head>
     <meta charset="utf-8">
-    <title>04_09_NewZone-GraphicSettings</title>
+    <title>04_08_NewZone-Map-ActiveZoneType</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#fff">
@@ -180,7 +180,7 @@
               </div>
               <div class="head-object__btns">
                 <div class="head-object__btns-item">
-                  <button class="btn-icon btn-icon_gray btn-icon_bg is-active">
+                  <button class="btn-icon btn-icon_gray btn-icon_bg">
                     <svg class="icon icon-baseline-brush">
                       <use xlink:href="img/sprite.svg#icon-baseline-brush"></use>
                     </svg>
@@ -195,106 +195,6 @@
                 </div>
               </div>
             </div>
-            <div class="head-drop head-drop_fullPage is-open">
-              <div class="head-drop__content">
-                <div class="head-drop__content-wrap">
-                  <div class="inner">
-                    <div class="form-block form-block_sm">
-                      <div class="form-block__title"> Настройка линии </div>
-                      <div class="form-group">
-                        <div class="form-group__title"> Тип </div>
-                        <div class="select-wrap">
-                          <div class="form-input select-mask">Сплошная</div>
-                          <select class="select" required>
-                            <option value="" hidden>Выбрать группу</option>
-                            <option value="">Выбрать группу</option>
-                            <option value="">Выбрать группу</option>
-                            <option value="">Выбрать группу</option>
-                            <option value="">Выбрать группу</option>
-                            <option value="">Выбрать группу</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <div class="form-group__title"> Цвет обводки </div>
-                        <div class="select-wrap">
-                          <div class="form-input select-mask">Красный</div>
-                          <select class="select" required>
-                            <option value="" hidden>Выбрать группу</option>
-                            <option value="">Выбрать группу</option>
-                            <option value="">Выбрать группу</option>
-                            <option value="">Выбрать группу</option>
-                            <option value="">Выбрать группу</option>
-                            <option value="">Выбрать группу</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <div class="form-group__title"> Толщина обводки </div>
-                        <div class="select-wrap">
-                          <div class="form-input select-mask">2px</div>
-                          <select class="select" required>
-                            <option value="" hidden>Выбрать группу</option>
-                            <option value="">Выбрать группу</option>
-                            <option value="">Выбрать группу</option>
-                            <option value="">Выбрать группу</option>
-                            <option value="">Выбрать группу</option>
-                            <option value="">Выбрать группу</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <div class="form-group__title"> Прозрачность </div>
-                        <div class="form-control"><input type="range"></div>
-                      </div>
-                    </div>
-                    <div class="form-block form-block_sm">
-                      <div class="form-block__title"> Настройка заливки </div>
-                      <div class="form-group">
-                        <div class="form-group__title"> Цвет заливки </div>
-                        <div class="select-wrap">
-                          <div class="form-input select-mask">Красный</div>
-                          <select class="select" required>
-                            <option value="" hidden>Выбрать группу</option>
-                            <option value="">Выбрать группу</option>
-                            <option value="">Выбрать группу</option>
-                            <option value="">Выбрать группу</option>
-                            <option value="">Выбрать группу</option>
-                            <option value="">Выбрать группу</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <div class="form-group__title"> Прозрачность </div>
-                        <div class="form-control"><input type="range"></div>
-                      </div>
-                    </div>
-                    <div class="form-block form-block_sm">
-                      <div class="form-block__title"> Метка </div>
-                      <div class="form-group">
-                        <div class="form-group__title"> Иконка </div>
-                        <div class="form-control">
-                          <button class="btn btn_w100 btn_white"> Выбрать иконку </button>
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <div class="form-group__title"> Радиус, м </div>
-                        <div class="form-control">
-                          <input type="text" class="form-input" placeholder="20">
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="head-drop__footer">
-                <div class="footer-btn">
-                  <div class="footer-btn__inner inner">
-                    <button class="btn btn_w100" type="submit"> Сохранить </button>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
         <div class="page__content">
@@ -302,6 +202,22 @@
             <div class="map js-map" id="map">
               <div style="width: 100%;height:100%;overflow: hidden;">
                 <img src="./img/map.jpg" alt="map" style="display: block;width: 100%;">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal is-open" data-modal="geozoneChangeType">
+        <div class="modal__container" data-modal-container>
+          <div class="modal__inner inner">
+            <div class="modal__title">Внимание!</div>
+            <div class="modal__text">Если вы смените тип зоны, то все манипуляции с картой будут удалены.</div>
+            <div class="modal__row">
+              <div class="modal__col">
+                <button class="btn btn_w100 btn_white"> Отмена </button>
+              </div>
+              <div class="modal__col">
+                <button class="btn btn_w100"> Подтвердить </button>
               </div>
             </div>
           </div>
