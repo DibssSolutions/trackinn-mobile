@@ -1,0 +1,41 @@
+<div class="page">
+    <div class="page__header">
+        {{ mixins.modalHeader('Фильтры') }}
+    </div>
+    <div class="page__content">
+        <div class="page__content-wrap">
+            <div class="page__inner inner">
+                <div class="form-block">
+                    <div class="form-group">
+                        {{ mixins.select('Выбрать объект') }}
+                        {{ mixins.inputCalendar(false ,true,'Выбрать дату и время') }}
+                    </div>
+                    {% for item in [
+                                {
+                                    radio: true,
+                                    name: 'eventsFilter',
+                                    text: 'Все уведомления',
+                                    checked: true
+                                },
+                                {
+                                    radio: true,
+                                    name: 'eventsFilter',
+                                    text: 'Показать только важные'
+                                }
+                            ]
+                            %}
+
+                        <div class="form-group">
+                            {{ mixins.checkbox(item) }}
+                        </div>
+
+                    {% endfor %}
+                </div>
+                {{ mixins.btnRemove() }}
+            </div>
+        </div>
+    </div>
+    <div class="page__footer">
+        {{ mixins.footerBtn('Применить') }}
+    </div>
+</div>

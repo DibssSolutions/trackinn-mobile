@@ -67,5 +67,9 @@ PageList:
   ready: 50
 - file: 05_01_Map.html
   ready: 50
+- file: 05_02_Map-ObjectDetails.html
+  ready: 50
 - file: 05_03_Map-ActiveMapAPI.html
+  ready: 50
+- file: 06_03_Event-Filters.html
   ready: 50

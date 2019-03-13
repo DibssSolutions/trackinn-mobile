@@ -279,10 +279,10 @@
 	</div>
 {% endmacro %}
 
-{% macro inputCalendar(value) %}
+{% macro inputCalendar(value,right,placeholder) %}
 	<div class="form-control">
-		<input type="text" class="form-input dtpicker form-input_icon" value="{{ value or '06.10.2019' }}">
-		<div class="form-control__icon">
+		<input type="text" class="form-input dtpicker form-input_icon{% if right %} form-input_icon-right{% endif %}" {% if not placeholder %}value="{{ value or '06.10.2019' }}"{% else %} placeholder="{{ placeholder }}"{% endif %}>
+		<div class="form-control__icon{% if right %} form-control__icon-right{% endif %}">
 			<button class="btn-icon btn-icon_gray" type="button">
 				{{ icon('icons_calendar') }}
 			</button>

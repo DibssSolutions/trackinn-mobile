@@ -1,0 +1,27 @@
+.map-popup
+    padding: 0 8px 13px
+    width: 100%
+    max-width: 360px
+    z-index: 10
+    &__wrap
+        background-color: $white
+        position: relative
+        box-shadow: 0 4px 4px 0 rgba($black, 0.25)
+        &:before,
+        &:after
+            content: ''
+            position: absolute
+            left: 50%
+            top: 100%
+            width: 20px
+            height: 20px
+            transform: rotate(45deg)
+            margin-top: -11px
+            transform-origin: center
+        &:before
+            background-color: $white
+            // z-index: 1
+        &:after
+            box-shadow: 4px 4px 8px 0 rgba($black, 0.25)
+            z-index: -1
+

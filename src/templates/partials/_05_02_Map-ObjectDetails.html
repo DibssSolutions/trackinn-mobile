@@ -1,0 +1,44 @@
+<div class="page">
+    <div class="page__header">
+        {{ mixins.pageHeader({
+            changeMap: true,
+            geozones: true
+        }) }}
+    </div>
+    <div class="page__content">
+        <div class="page__content-wrap">
+            {{ mixins.map() }}
+        </div>
+        <div class="map-popup" style="position:absolute;left:50%;top:50%;transform:translate(-50%, -50%);">
+            <div class="map-popup__wrap">
+                {{ mixins.objectsItem(
+                    {
+                        img: 'car1.png',
+                        title: 'Объект 1',
+                        date: '01.01.2019 23:51:44',
+                        location: 'Московская область',
+                        btns: [
+                            {
+                                color: 'blue',
+                                icon: 'icons_key',
+                                text: 'Вкл.',
+                                active: true
+                            },
+                            {
+                                color: 'blue',
+                                icon: 'icons_speedometer',
+                                text: '100 км/ч',
+                                active: true
+                            },
+                            {
+                                color: 'green',
+                                icon: 'icons_satellite',
+                                text: 'В сети',
+                                active: true
+                            }
+                        ]
+                    }) }}
+            </div>
+        </div>
+    </div>
+</div>
