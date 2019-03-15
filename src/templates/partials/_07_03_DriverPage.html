@@ -1,0 +1,90 @@
+<div class="page">
+    <div class="page__header">
+        {{ mixins.headObject({
+            high: true,
+            arrow: true,
+            text: 'Водитель 1',
+            btns: [
+                {
+                    icon: 'icons_calendar',
+                    bgActive: true
+                },
+                {
+                    icon: 'baseline-edit',
+                    bgActive: true
+                }
+            ]
+        }) }}
+    </div>
+    <div class="page__content">
+        <div class="page__content-wrap">
+            <div class="page__inner inner">
+                <div class="driver-page">
+                    <div class="driver-page__title">Отчет за период:</div>
+                    <div class="driver-page__period">9.01.2019 00:00 - 17.01.2019 23:59</div>
+                    <div class="driver-page__report driver-report">
+                        {% for item in [
+                            {
+                                headItem: true,
+                                name: 'Основное'
+                            },
+                            {
+                                name: 'Пробег',
+                                value: '0.00 км'
+                            },
+                            {
+                                name: 'Моточасы',
+                                value: '00:00:00'
+                            },
+                            {
+                                name: 'Холостой',
+                                value: '00:00:00'
+                            },
+                            {
+                                headItem: true,
+                                name: 'Скорость'
+                            },
+                            {
+                                name: 'Средняя скорость',
+                                value: '0 км/ч'
+                            },
+                            {
+                                name: 'Максимальная скорость',
+                                value: '0 км/ч'
+                            },
+                            {
+                                headItem: true,
+                                name: 'Топливо'
+                            },
+                            {
+                                name: 'Расход топлива',
+                                value: '0,00 л'
+                            },
+                            {
+                                headItem: true,
+                                name: 'Вождение'
+                            },
+                            {
+                                name: 'Количество нарушений',
+                                value: '0'
+                            },
+                            {
+                                name: 'Штрафы',
+                                value: '0'
+                            }
+                        ] %}
+
+                            <div class="driver-report__item{% if item.headItem %} driver-report__item_head{% endif %}">
+                                <div class="driver-report__name">{{ item.name }}</div>
+                                {% if item.value %}
+                                    <div class="driver-report__value">{{ item.value }}</div>
+                                {% endif %}
+                            </div>
+                            
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

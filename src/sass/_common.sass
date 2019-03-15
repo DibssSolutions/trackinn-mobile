@@ -1,5 +1,7 @@
 html
     height: 100%
+    // overflow: hidden
+    // pointer-events: none
 body
     background: #FFF
     line-height: 1.4
@@ -7,13 +9,14 @@ body
     height: 100%
     font-size: 13px
     min-width: 320px
+    // overflow: hidden
     +opensans
     a
         color: $dark
         text-decoration: none
 .out
     height: 100%
-    padding-top: 54px
+    // overflow: hidden
 
 .btn
     height: 48px
@@ -156,6 +159,8 @@ body
     padding: 24px 0 0
     &__filters-remove
         margin-top: 32px
+    &__add-group
+        margin: 24px 0 29px
 .form-block
     &_sm
         padding: 0
@@ -219,6 +224,8 @@ body
     &_icon-right
         padding-right: 47px
         padding-left: 16px
+        &.form-input_search
+            padding-left: 24px
 textarea.form-input
     height: 168px
     resize: none
@@ -290,6 +297,9 @@ textarea.form-input
         margin-top: 24px
     &:not(:last-child)
         margin-bottom: 24px
+    &_sm
+        &:not(:first-child)
+            margin-top: 16px
 
 .checkbox,
 .radio
@@ -308,6 +318,9 @@ textarea.form-input
         position: relative
         padding-left: 31px
         // display: block
+        .checkbox_rtl &
+            padding-left: 0
+            padding-right: 31px
         &:before
             content: ''
             position: absolute
@@ -319,6 +332,9 @@ textarea.form-input
             background-color: $white
             border: 2px solid #c4c4c4
             transition: border-color .3s
+            .checkbox_rtl &
+                left: auto
+                right: 0
         &:after
             content: ''
             position: absolute
@@ -330,6 +346,9 @@ textarea.form-input
             background-color: $orange
             opacity: 0
             transition: opacity .3s
+            .checkbox_rtl &
+                left: auto
+                right: 6px
 .radio
     padding: 3px 0
     &__text
@@ -340,6 +359,10 @@ textarea.form-input
         &:after
             border-radius: 50%
             left: 7px
+
+.header-checkbox
+    width: 100%
+    text-align: right
 
 .table-item
     padding: 16px 16px 16px 24px
@@ -373,6 +396,8 @@ textarea.form-input
     color: rgba($dark,.54)
 .text-right
     text-align: right
+.text-left
+    text-align: left
 
 .icon
     display: inline-block
@@ -382,14 +407,18 @@ textarea.form-input
 .icon-icons_map,
 .icon-icons_filter,
 .icon-icons_parking-filled,
-.icon-icons_task
+.icon-icons_task,
+.icon-clock
     font-size: 20px
 .icon-icons_search,
 .icon-icons_key,
 .icon-icons_parking,
 .icon-icons_command,
 .icon-baseline-brush,
-.icon-baseline-edit
+.icon-baseline-edit,
+.icon-trash,
+.icon-user,
+.icon-baseline-phone
     font-size: 18px
 .icon-icons_speedometer,
 .icon-rectangleZone,
@@ -397,7 +426,8 @@ textarea.form-input
     font-size: 16px
 .icon-icons_satellite
     font-size: 15px
-.icon-upRightArrows
+.icon-upRightArrows,
+.icon-danger
     font-size: 17px
 .icon-diagonalArrows
     font-size: 13px
@@ -531,6 +561,39 @@ textarea.form-input
         position: absolute
         top: 16px
         right: 16px
+
+.fuel-item
+    padding: 16px 13px
+    border-bottom: 1px solid $lightGray
+    th
+        padding: 0 11px 16px
+        font-weight: normal
+    .item-table
+        td
+            padding: 3px 11px
+        tfoot
+            td
+                padding: 3px 0
+                background: none
+.number
+    // width: 24px
+    display: inline-flex
+    padding: 0 8px
+    align-items: center
+    justify-content: center
+    height: 24px
+    background-color: #2471be
+    color: #fff
+    font-size: 14px
+    font-weight: 600
+    line-height: 1
+    &_sm
+        padding: 0 4px
+    
+.fuel-bypass
+    padding: 7px 11px
+    background-color: rgba(#ffea2a,.2)
+    text-align: right
 
 
 

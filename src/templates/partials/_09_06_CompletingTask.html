@@ -1,0 +1,56 @@
+<div class="page">
+    <div class="page__header">
+        {{ mixins.headObject({
+            icon: true,
+            arrow: true,
+            high: true,
+            text: 'Объект 2',
+            comment: '(Комментарий)'
+        }) }}
+    </div>
+    <div class="page__content">
+        <div class="page__content-wrap">
+            <div class="page__inner inner">
+                <div class="form-block">
+                    <div class="form-group">
+                        {{ mixins.inputCalendar('2/15/2019',true) }}
+                        {{ mixins.input('Комментарий') }}
+                        {{ mixins.inputNumber({
+                            placeholder: 'Показания одометра',
+                            text: 'км'
+                        }) }}
+                        {{ mixins.inputNumber({
+                            placeholder: 'Время работы',
+                            text: 'ч'
+                        }) }}
+                        {{ mixins.input('Стоимость') }}
+                        {{ mixins.inputNumber({
+                            placeholder: 'Длительность',
+                            text: 'мин'
+                        }) }}
+                        {{ mixins.input('Адрес') }}
+                    </div>
+                    <div class="form-control">
+                        <button class="btn btn_w100 btn_white">
+                            Связанные задачи
+                        </button>
+                    </div>
+                    <div class="related-tasks-list is-open">
+                        {% for item in [
+                            'Задача 1',
+                            'Задача 2',
+                            'Задача 3',
+                            'Задача 4'
+                        ] %}
+                            <div class="related-task">{{ item }}</div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <div class="page__footer">
+        {{ mixins.footerBtn('Выполнить') }}
+    </div>
+</div>

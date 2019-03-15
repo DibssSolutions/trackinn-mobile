@@ -1,0 +1,43 @@
+<div class="page">
+    <div class="page__header">
+        {{ mixins.pageHeader({
+            trash: true,
+            filter: true
+        }) }}
+    </div>
+    <div class="page__content">
+        <div class="page__content-wrap">
+            {% for item in [
+                {
+                    img: 'car1.png',
+                    title: 'Объект 1',
+                    date: '01.01.2019 23:51:44',
+                    error: 'Выход из зоны .ZoneName'
+                },
+                {
+                    img: 'car1.png',
+                    title: 'Объект 2',
+                    date: '01.01.2019 23:51:44',
+                    error: 'Захлох двигатель',
+                    red: true
+                },
+                {
+                    img: 'car1.png',
+                    title: 'Объект 1',
+                    date: '01.01.2019 23:51:44',
+                    error: 'Выход из зоны .ZoneName'
+                },
+                {
+                    img: 'car1.png',
+                    title: 'Объект 1',
+                    date: '01.01.2019 23:51:44',
+                    error: 'Выход из зоны .ZoneName'
+                }
+            ] %}
+            {# {% set index = loop.index %} #}
+                {{ mixins.eventsItem(item, loop.index) }}
+                
+            {% endfor %}
+        </div>
+    </div>
+</div>

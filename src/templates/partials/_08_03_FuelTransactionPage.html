@@ -1,0 +1,58 @@
+<div class="page">
+    <div class="page__header">
+        {{ mixins.headObject({
+            boxShadow: true,
+            arrow: true,
+            number: '01',
+            high: true,
+            text: '123412341234123'
+        }) }}
+    </div>
+    <div class="page__content">
+        <div class="page__content-wrap">
+            <div class="fuel-page">
+                <div class="fuel-page__map">
+                    {{ mixins.map('map.jpg') }}
+                </div>
+                <div class="fuel-page__content">
+                    <div class="fuel-page__inner inner">
+                        <div class="fuel-page__items">
+                            {% for item in [
+                                {
+                                    name: 'Дата заправки:',
+                                    value: '01.01.2019 23:51:44'
+                                },
+                                {
+                                    name: 'Длительность:',
+                                    value: '23:51:44'
+                                },
+                                {
+                                    name: 'АЗС',
+                                    value: '123412341234123'
+                                },
+                                {
+                                    name: 'Номер ТРК',
+                                    value: '2'
+                                },
+                                {
+                                    name: 'Объем заправки',
+                                    value: '1,94 л'
+                                },
+                                {
+                                    name: 'Кому',
+                                    value: 'Иван Белошустов'
+                                },
+                                {
+                                    name: 'Остаток лимита',
+                                    value: '0 л'
+                                }
+                            ] %}
+                                {{ mixins.nameValue(item) }}
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,70 @@
+<div class="page">
+    <div class="page__header">
+        {{ mixins.pageHeader({
+            filter: true
+        }) }}
+    </div>
+    <div class="page__content">
+        <div class="page__content-wrap">
+            {% for item in [
+                {
+                    img: 'car1.png',
+                    title: 'Объект 1',
+                    error: 'Тех. осмотр',
+                    red: true,
+                    tags: [
+                        'Просрочен'
+                    ]
+                },
+                {
+                    img: 'car1.png',
+                    title: 'Объект 2',
+                    error: 'Описание сервиса',
+                    red: true,
+                    tags: [
+                        'Просрочен'
+                    ]
+                },
+                {
+                    img: 'car1.png',
+                    title: 'Объект 3',
+                    error: 'Описание сервиса',
+                    tags: [
+                        '30 д'
+                    ]
+                },
+                {
+                    img: 'car1.png',
+                    title: 'Если длинное название',
+                    error: 'Описание сервиса',
+                    green: true,
+                    tags: [
+                        '3897,85 км',
+                        '70 д'
+                    ]
+
+                },
+                {
+                    img: 'car1.png',
+                    title: 'Объект 5',
+                    error: 'Описание сервиса',
+                    tags: [
+                        '30 д'
+                    ]
+                },
+                {
+                    img: 'car1.png',
+                    title: 'Объект 6',
+                    error: 'Описание сервиса',
+                    tags: [
+                        '30 д'
+                    ]
+                }
+            ] %}
+            {# {% set index = loop.index %} #}
+                {{ mixins.servicesItem(item) }}
+                
+            {% endfor %}
+        </div>
+    </div>
+</div>

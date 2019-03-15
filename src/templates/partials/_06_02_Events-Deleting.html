@@ -1,0 +1,57 @@
+<div class="page">
+    <div class="page__header">
+        {{ mixins.modalHeader('Удалить события') }}
+        <div class="modal-header">
+            <div class="modal-header__inner inner">
+                <div class="header-checkbox">
+                    {{ mixins.checkbox({
+                        text: 'Отметить все',
+                        rtl: true
+                    }) }}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page__content">
+        <div class="page__content-wrap">
+            {% for item in [
+                {
+                    img: 'car1.png',
+                    title: 'Объект 1',
+                    date: '01.01.2019 23:51:44',
+                    error: 'Выход из зоны .ZoneName',
+                    removable: true
+                },
+                {
+                    img: 'car1.png',
+                    title: 'Объект 1',
+                    date: '01.01.2019 23:51:44',
+                    error: 'Захлох двигатель',
+                    red: true,
+                    removable: true
+                },
+                {
+                    img: 'car1.png',
+                    title: 'Объект 1',
+                    date: '01.01.2019 23:51:44',
+                    error: 'Выход из зоны .ZoneName',
+                    removable: true
+                },
+                {
+                    img: 'car1.png',
+                    title: 'Объект 1',
+                    date: '01.01.2019 23:51:44',
+                    error: 'Выход из зоны .ZoneName',
+                    removable: true
+                }
+            ] %}
+            {# {% set index = loop.index %} #}
+                {{ mixins.eventsItem(item, loop.index) }}
+                
+            {% endfor %}
+        </div>
+    </div>
+    <div class="page__footer">
+        {{ mixins.footerBtnNumber('Удалить выбранное','2') }}
+    </div>
+</div>

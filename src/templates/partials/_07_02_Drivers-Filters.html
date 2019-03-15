@@ -1,0 +1,40 @@
+<div class="page">
+    <div class="page__header">
+        {{ mixins.modalHeader('Фильтры') }}
+    </div>
+    <div class="page__content">
+        <div class="page__content-wrap">
+            <div class="page__inner inner">
+                <div class="form-block">
+                    <div class="form-group">
+                        {{ mixins.select('Выбрать группу') }}
+                    </div>
+                    {% for item in [
+                                {
+                                    radio: true,
+                                    name: 'driver',
+                                    text: 'Все водители'
+                                },
+                                {
+                                    radio: true,
+                                    name: 'driver',
+                                    text: 'Только с пробегом за последние 24 часа',
+                                    checked: true
+                                }
+                            ]
+                            %}
+
+                        <div class="form-group">
+                            {{ mixins.checkbox(item) }}
+                        </div>
+
+                    {% endfor %}
+                </div>
+                {{ mixins.btnRemove() }}
+            </div>
+        </div>
+    </div>
+    <div class="page__footer">
+        {{ mixins.footerBtn('Применить') }}
+    </div>
+</div>

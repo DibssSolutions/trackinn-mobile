@@ -1,0 +1,25 @@
+.driver-page
+    padding: 24px 0 40px
+    &__title
+        color: rgba($dark,.54)
+    &__period
+        margin-top: 6px
+
+.driver-report
+    &__item
+        padding: 7px 8px
+        display: flex
+        align-items: center
+        justify-content: space-between
+        border-bottom: 1px solid $lightGray
+        &_head
+            margin: 24px 0 1px
+            border: none
+            padding: 11px 8px
+            background-color: #f3f3f3
+    &__name,
+    &__value
+        max-width: 50%
+        +text-overflow
+    &__value
+        padding-left: 15px

@@ -1,0 +1,29 @@
+<div class="page">
+    <div class="page__header">
+        {{ mixins.modalHeader('Редактирование') }}
+    </div>
+    <div class="page__content">
+        <div class="page__content-wrap">
+            <div class="page__inner inner">
+                <div class="form-block">
+                    <div class="form-group">
+                        {{ mixins.input('Водитель') }}
+                        {{ mixins.input('Телефон') }}
+                        {{ mixins.input('Водительские права') }}
+                        {{ mixins.input('Категория') }}
+                        {{ mixins.input('Класс') }}
+                    </div>
+                    <div class="form-group">
+                        <div class="form-group__title">Группы в которых состоит водитель</div>
+                        {{ mixins.eventsGroup('Группа 1') }}
+                        {{ mixins.eventsGroup('Группа 2') }}
+                    </div>
+                    {{ mixins.btnAddGroup('Добавить группу') }}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page__footer">
+        {{ mixins.footerBtn('Сохранить') }}
+    </div>
+</div>

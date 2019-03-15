@@ -22,7 +22,7 @@
 
 {% macro checkbox(props) %}
 <!-- begin input -->
-<label class="{% if props.radio %}radio{% else %}checkbox{% endif %}{% if props.class %} {{ props.class }}{% endif %}">
+<label class="{% if props.radio %}radio{% else %}checkbox{% endif %}{% if props.class %} {{ props.class }}{% endif %}{% if props.rtl %} checkbox_rtl{% endif %}">
 	<input type="{% if props.radio %}radio{% else %}checkbox{% endif %}" name="{{ props.name or 'checkbox' }}"{% if props.checked %} checked{% endif %}>
 	<span class="{% if props.radio %}radio{% else %}checkbox{% endif %}__text">{{ props.text or 'checkbox' }}</span>
 </label>
@@ -59,6 +59,11 @@
 				{% if props.icon %}
 					<div class="head-object__icon">
 						<img src="./img/car1.png" alt="icon">
+					</div>
+				{% endif %}
+				{% if props.number %}
+					<div class="head-object__number">
+						<div class="number number_sm">{{ props.number }}</div>
 					</div>
 				{% endif %}
 				<div class="head-object__text">
@@ -236,6 +241,16 @@
 	</div>
 {% endmacro %}
 
+{% macro footerBtnNumber(text, number) %}
+	<div class="footer-btn">
+		<div class="footer-btn__inner inner">
+			<button class="btn btn_w100" type="submit">
+				{{ text }}{% if number %}<span> ({{ number }})</span>{% endif %}
+			</button>
+		</div>
+	</div>
+{% endmacro %}
+
 {% macro footerBar(props) %}
 	<div class="footer-bar{% if props.white %} footer-bar_white{% endif %}">
 		<div class="footer-bar__inner inner">
@@ -360,6 +375,20 @@
 						</button>
 					</div>
 				{% endif %}
+				{% if props.trash %}
+					<div class="page-header__btn">
+						<button class="btn-icon btn-icon_gray">
+							{{ icon('trash') }}
+						</button>
+					</div>
+				{% endif %}
+				{% if props.calendar %}
+					<div class="page-header__btn">
+						<button class="btn-icon btn-icon_gray">
+							{{ icon('icons_calendar') }}
+						</button>
+					</div>
+				{% endif %}
 				{% if props.filter %}
 					<div class="page-header__btn">
 						<button class="btn-icon btn-icon_gray">
@@ -385,20 +414,6 @@
 					<div class="page-header__btn">
 						<button class="btn-icon btn-icon_gray">
 							{{ icon('icons_geozones') }}
-						</button>
-					</div>
-				{% endif %}
-				{% if props.trash %}
-					<div class="page-header__btn">
-						<button class="btn-icon btn-icon_gray">
-							{{ icon('trash') }}
-						</button>
-					</div>
-				{% endif %}
-				{% if props.calendar %}
-					<div class="page-header__btn">
-						<button class="btn-icon btn-icon_gray">
-							{{ icon('icons_calendar') }}
 						</button>
 					</div>
 				{% endif %}
@@ -498,10 +513,106 @@
 	</div>
 {% endmacro %}
 
+{% macro eventsItem(item, index) %}
+	<div class="events-item{% if item.removable %} is-removable{% endif %}">
+		<input type="checkbox" class="events-item__input" id="eventsItem{{ index }}">
+		<label for="eventsItem{{ index }}" class="events-item__checkbox"></label>
+		<div class="events-item__bg"></div>
+		<div class="events-item__inner inner">
+			<div class="events-item__top">
+				<div class="events-item__img">
+					<img src="./img/{{ item.img }}" alt="img">
+				</div>
+				<div class="events-item__info">
+					<div class="events-item__title">{{ item.title }}</div>
+					{# <div class="events-item__details"> #}
+						<div class="events-item__date"><span>{{ item.date }}</span></div>
+					{# </div> #}
+				</div>
+			</div>
+			<div class="events-item__bottom">
+				<div class="events-item__warning{% if item.red %} events-item__warning_red{% endif %}">
+					<div class="events-item__icon">
+						{{ icon('danger') }}
+					</div>
+				</div>
+				<div class="events-item__error">
+					{{ item.error }}
+				</div>
+			</div>
+		</div>
+	</div>
+{% endmacro %}
+
+{% macro servicesItem(item) %}
+	<div class="services-item{% if item.removable %} is-removable{% endif %}">
+		<div class="services-item__inner inner">
+			<div class="services-item__top">
+				<div class="services-item__img">
+					<img src="./img/{{ item.img }}" alt="img">
+				</div>
+				<div class="services-item__info">
+					<div class="services-item__details">
+						<div class="services-item__title"><span>{{ item.title }}</span></div>
+						<div class="services-item__tags">
+							{% for tag in item.tags %}
+								<span class="tag">{{ tag }}</span>
+							{% endfor %}
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="services-item__bottom">
+				<div class="services-item__warning{% if item.red %} services-item__warning_red{% endif %}{% if item.green %} services-item__warning_green{% endif %}">
+					<div class="services-item__icon">
+						{{ icon('clock') }}
+					</div>
+				</div>
+				<div class="services-item__error">
+					{{ item.error }}
+				</div>
+			</div>
+		</div>
+	</div>
+{% endmacro %}
+
+{% macro driverItem(props) %}
+	<div class="driver-item">
+		<div class="driver-item__inner inner">
+			<div class="driver-item__info">
+				<div class="driver-item__icon">
+					{{ icon('user') }}
+				</div>
+				<div class="driver-item__details">
+					<div class="driver-item__name">{{ props.name }}</div>
+					{% if props.tel %}
+						<div class="driver-item__tel">{{ props.tel }}</div>
+					{% endif %}
+				</div>
+			</div>
+			{% if props.tel %}
+				<div class="driver-item__btn">
+					<a href="tel:{{ props.tel }}" class="btn-icon btn-icon_gray">
+						{{ icon('baseline-phone') }}
+					</a>
+				</div>
+			{% endif %}
+		</div>
+	</div>
+{% endmacro %}
+
 {% macro btnRemove(disabled) %}
 	<div class="form-block__filters-remove">
 		<button class="btn btn_remove btn_w100" type="button"{% if disabled %} disabled{% endif %}>
 			Сбросить фильтры
+		</button>
+	</div>
+{% endmacro %}
+
+{% macro btnAddGroup(text, disabled) %}
+	<div class="form-block__add-group">
+		<button class="btn btn_remove btn_w100" type="button"{% if disabled %} disabled{% endif %}>
+			{{ text }}
 		</button>
 	</div>
 {% endmacro %}
@@ -552,8 +663,8 @@
 						<tfoot>
 							{% for item in props.tfoot %}
 								<tr>
-									<td{% if item.classLeft %} class="{{ item.classLeft }}"{% endif %}>{{ item.name }}</td>
-									<td{% if item.classRight %} class="{{ item.classRight }}"{% endif %}>{{ item.value }}</td>
+									<td{% if item.classLeft %} class="{{ item.classLeft }}"{% endif %}{% if item.colspan %} colspan="2"{% endif %}>{{ item.name }}</td>
+									{% if item.value %}<td{% if item.classRight %} class="{{ item.classRight }}"{% endif %}>{{ item.value }}</td>{% endif %}
 								</tr>
 							{% endfor %}
 						</tfoot>
@@ -562,6 +673,45 @@
 			</div>
 		</div>
 	</div>
+{% endmacro %}
+
+{% macro fuelItem(props) %}
+<div class="fuel-item">
+	{# <div class="fuel-item__inner inner"> #}
+		<table class="item-table">
+			{% if props.thead %}
+				<thead>
+					{% for item in props.thead %}
+						<tr>
+							<th{% if item.classLeft %} class="{{ item.classLeft }}"{% endif %}><div class="number">{{ item.number }}</div></th>
+							<th{% if item.classRight %} class="{{ item.classRight }}"{% endif %}>{{ item.date }}</th>
+						</tr>
+					{% endfor %}
+				</thead>
+			{% endif %}
+			<tbody>
+				{% for item in props.rows %}
+					<tr>
+						{% if item.name %}<td{% if item.classLeft %} class="{{ item.classLeft }}"{% endif %}{% if item.colspan %} colspan="2"{% endif %}>{{ item.name }}</td>{% endif %}
+						{% if item.value %}<td{% if item.classRight %} class="{{ item.classRight }}"{% endif %}>{{ item.value }}</td>{% endif %}
+					</tr>
+				{% endfor %}
+			</tbody>
+			{% if props.tfoot %}
+				<tfoot>
+					{% for item in props.tfoot %}
+						<tr>
+							<td{% if item.classLeft %} class="{{ item.classLeft }}"{% endif %} colspan="2">
+								<div class="fuel-bypass">Байпас</div>
+							</td>
+						</tr>
+					{% endfor %}
+				</tfoot>
+			{% endif %}
+		</table>
+	{# </div> #}
+</div>
+	
 {% endmacro %}
 
 
@@ -610,4 +760,15 @@
 			{{ props.text }}
 		</span>
 	</button>
+{% endmacro %}
+
+{% macro eventsGroup(text) %}
+	<div class="events-group">
+		<div class="events-group__text">{{ text }}</div>
+		<div class="events-group__btn">
+			<button class="btn-icon btn-icon_gray">
+				{{ icon('trash') }}
+			</button>
+		</div>
+	</div>
 {% endmacro %}

@@ -1,0 +1,166 @@
+<div class="page">
+    <div class="page__header">
+        {{ mixins.pageHeader({
+            calendar: true,
+            filter: true
+        }) }}
+    </div>
+    <div class="page__content">
+        <div class="page__content-wrap">
+            {% for item in [
+                {
+                    thead: [
+                        {
+                            number: '99999',
+                            date: '01.01.2019 23:51:44',
+                            classRight: 'text-right',
+                            classLeft: 'text-left'
+                        }
+                    ],
+                    rows: [
+                        {
+                            name: 'Название АЗС:',
+                            value: '123412341234123',
+                            classLeft: 'text-light',
+                            classRight: 'text-right'
+                        },
+                        {
+                            name: 'Объем заправки:',
+                            value: '5,82 л',
+                            classLeft: 'text-light',
+                            classRight: 'text-right'
+                        },
+                        {
+                            name: 'Клиент:',
+                            value: 'Иван Белошустов',
+                            classLeft: 'text-light',
+                            classRight: 'text-right'
+                        }
+                    ]
+                },
+                {
+                    thead: [
+                        {
+                            number: '99998',
+                            date: '01.01.2019 23:51:44',
+                            classRight: 'text-right',
+                            classLeft: 'text-left'
+                        }
+                    ],
+                    rows: [
+                        {
+                            name: 'Название АЗС:',
+                            value: '123412341234123',
+                            classLeft: 'text-light',
+                            classRight: 'text-right'
+                        },
+                        {
+                            name: 'Объем заправки:',
+                            value: '5,82 л',
+                            classLeft: 'text-light',
+                            classRight: 'text-right'
+                        },
+                        {
+                            name: 'Клиент:',
+                            value: 'Иван Белошустов',
+                            classLeft: 'text-light',
+                            classRight: 'text-right'
+                        }
+                    ]
+                },
+                {
+                    thead: [
+                        {
+                            number: '99997',
+                            date: '01.01.2019 23:51:44',
+                            classRight: 'text-right',
+                            classLeft: 'text-left'
+                        }
+                    ],
+                    rows: [
+                        {
+                            name: 'Название АЗС:',
+                            value: '123412341234123',
+                            classLeft: 'text-light',
+                            classRight: 'text-right'
+                        },
+                        {
+                            name: 'Объем заправки:',
+                            value: '5,82 л',
+                            classLeft: 'text-light',
+                            classRight: 'text-right'
+                        }
+                    ],
+                    tfoot: [
+                        {
+                            name: 'Байпас'
+                        }
+                    ]
+                },
+                {
+                    thead: [
+                        {
+                            number: '99996',
+                            date: '01.01.2019 23:51:44',
+                            classRight: 'text-right',
+                            classLeft: 'text-left'
+                        }
+                    ],
+                    rows: [
+                        {
+                            name: 'Название АЗС:',
+                            value: '123412341234123',
+                            classLeft: 'text-light',
+                            classRight: 'text-right'
+                        },
+                        {
+                            name: 'Объем заправки:',
+                            value: '5,82 л',
+                            classLeft: 'text-light',
+                            classRight: 'text-right'
+                        },
+                        {
+                            name: 'Клиент:',
+                            value: 'Иван Белошустов',
+                            classLeft: 'text-light',
+                            classRight: 'text-right'
+                        }
+                    ]
+                },
+                {
+                    thead: [
+                        {
+                            number: '99995',
+                            date: '01.01.2019 23:51:44',
+                            classRight: 'text-right',
+                            classLeft: 'text-left'
+                        }
+                    ],
+                    number: '01',
+                    rows: [
+                        {
+                            name: 'Название АЗС:',
+                            value: '123412341234123',
+                            classLeft: 'text-light',
+                            classRight: 'text-right'
+                        },
+                        {
+                            name: 'Объем заправки:',
+                            value: '5,82 л',
+                            classLeft: 'text-light',
+                            classRight: 'text-right'
+                        },
+                        {
+                            name: 'Клиент:',
+                            value: 'Иван Белошустов',
+                            classLeft: 'text-light',
+                            classRight: 'text-right'
+                        }
+                    ]
+                }
+            ] %}
+                {{ mixins.fuelItem(item) }}
+            {% endfor %}
+        </div>
+    </div>
+</div>

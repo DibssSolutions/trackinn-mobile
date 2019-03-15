@@ -1,0 +1,62 @@
+<div class="page">
+    <div class="page__header">
+        {{ mixins.headObject({
+            boxShadow: true,
+            icon: true,
+            arrow: true,
+            high: true,
+            text: 'Объект 2',
+            comment: '(Комментарий)'
+        }) }}
+    </div>
+    <div class="page__content">
+        <div class="page__content-wrap">
+            <div class="services-page">
+                <div class="services-page__map">
+                    {{ mixins.map('map.jpg') }}
+                </div>
+                <div class="services-page__content">
+                    <div class="services-page__inner inner">
+                        <div class="services-page__title">Тех. осмотр</div>
+                        <div class="services-page__subtitle">Пройти тех. осмотр</div>
+                        <div class="divider divider_sm"></div>
+                        <div class="services-page__items">
+                            {% for item in [
+                                {
+                                    name: 'Повторение',
+                                    duration: '10 ч',
+                                    distance: '200,00 км'
+                                },
+                                {
+                                    name: 'План выполнения',
+                                    duration: '605 ч',
+                                    distance: '41102,00 км'
+                                },
+                                {
+                                    name: 'Осталось',
+                                    duration: '5 ч',
+                                    distance: '1000 км'
+                                }
+                            ] %}
+                                <div class="service">
+                                    <div class="service__name">{{ item.name }}</div>
+                                    <div class="service__info">
+                                        <div class="service__duration">
+                                            {{ item.duration }}
+                                        </div>
+                                        <div class="service__distance">
+                                            {{ item.distance }}
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page__footer">
+        {{ mixins.footerBtn('Отметить как выполненная') }}
+    </div>
+</div>

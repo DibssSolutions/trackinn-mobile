@@ -71,5 +71,37 @@ PageList:
   ready: 50
 - file: 05_03_Map-ActiveMapAPI.html
   ready: 50
+- file: 06_01_Events.html
+  ready: 50
+- file: 06_02_Events-Deleting.html
+  ready: 50
 - file: 06_03_Event-Filters.html
+  ready: 50
+- file: 07_01_Drivers.html
+  ready: 50
+- file: 07_02_Drivers-Filters.html
+  ready: 50
+- file: 07_03_DriverPage.html
+  ready: 50
+- file: 07_05_EditDriversInfo.html
+  ready: 50
+- file: 08_01_ObjectsList.html
+  ready: 50
+- file: 08_02_ObjectsList.html
+  ready: 50
+- file: 08_03_FuelTransactionPage.html
+  ready: 50
+- file: 09_01_Services.html
+  ready: 50
+- file: 09_02_ServicesFilter.html
+  ready: 50
+- file: 09_03_ServicePage.html
+  ready: 50
+- file: 09_04_CompletingTask.html
+  ready: 50
+- file: 09_05_Tasks.html
+  ready: 50
+- file: 09_06_CompletingTask.html
+  ready: 50
+- file: 09_07_SuccessCompleting.html
   ready: 50

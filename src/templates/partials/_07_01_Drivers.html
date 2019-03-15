@@ -1,0 +1,50 @@
+<div class="page">
+    <div class="page__header">
+        {{ mixins.pageHeader({
+            filter: true
+        }) }}
+    </div>
+    <div class="page__content">
+        <div class="page__content-wrap">
+            {% for item in [
+                {
+                    name: 'Водитель 1',
+                    tel: '+70000000000'
+                },
+                {
+                    name: 'Водитель 2',
+                    tel: '+70000000000'
+                },
+                {
+                    name: 'Водитель 3',
+                    tel: '+70000000000'
+                },
+                {
+                    name: 'Водитель 3',
+                    tel: '+70000000000'
+                },
+                {
+                    name: 'Водитель 3',
+                    tel: '+70000000000'
+                },
+                {
+                    name: 'Водитель 3'
+                },
+                {
+                    name: 'Водитель 3'
+                },
+                {
+                    name: 'Водитель 3'
+                },
+                {
+                    name: 'Водитель 3',
+                    tel: '+70000000000'
+                }
+            ] %}
+            
+                {{ mixins.driverItem(item) }}
+                
+            {% endfor %}
+        </div>
+    </div>
+</div>
