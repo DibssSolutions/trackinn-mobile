@@ -3,7 +3,7 @@
 
   <head>
     <meta charset="utf-8">
-    <title>03_10_ObjectPage-SendCommand</title>
+    <title>11_01_Profile</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#fff">
@@ -166,29 +166,39 @@
           </div>
         </div>
       </header>
-      <div class="page page_low">
+      <div class="page">
         <div class="page__header">
-          <div class="modal-header">
-            <div class="modal-header__inner inner">
-              <div class="modal-header__title">Отправить команду</div>
-              <div class="modal-header__btn">
-                <button class="btn-icon btn-icon_gray" type="button">
-                  <svg class="icon icon-icons_close">
-                    <use xlink:href="img/sprite.svg#icon-icons_close"></use>
-                  </svg>
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="head-object">
-            <div class="head-object__inner inner">
-              <div class="head-object__info">
-                <div class="head-object__title"> Объект: </div>
-                <div class="head-object__icon">
-                  <img src="./img/car1.png" alt="icon">
+          <div class="tabs-header">
+            <div class="tabs-header__inner">
+              <div class="tabs-header__item is-active">
+                <div class="tabs-header__btn">
+                  <button class="btn-icon btn-icon_gray">
+                    <svg class="icon icon-rounded-info-button">
+                      <use xlink:href="img/sprite.svg#icon-rounded-info-button"></use>
+                    </svg>
+                  </button>
                 </div>
-                <div class="head-object__text"> Объект 2 </div>
-                <div class="head-object__comment"> (Комментарий) </div>
+                <div class="tabs-header__text"> Мой профиль </div>
+              </div>
+              <div class="tabs-header__item">
+                <div class="tabs-header__btn">
+                  <button class="btn-icon btn-icon_gray">
+                    <svg class="icon icon-settings">
+                      <use xlink:href="img/sprite.svg#icon-settings"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="tabs-header__text"> Общие настройки </div>
+              </div>
+              <div class="tabs-header__item">
+                <div class="tabs-header__btn">
+                  <button class="btn-icon btn-icon_gray">
+                    <svg class="icon icon-icons_protection">
+                      <use xlink:href="img/sprite.svg#icon-icons_protection"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="tabs-header__text"> Защита </div>
               </div>
             </div>
           </div>
@@ -197,20 +207,41 @@
           <div class="page__content-wrap">
             <div class="page__inner inner">
               <div class="form-block">
-                <!-- begin input -->
-                <label class="checkbox">
-                  <input type="checkbox" name="checkbox">
-                  <span class="checkbox__text">Отправлять команды СМС сообщением</span>
-                </label>
-                <!-- end input -->
-              </div>
-              <div class="divider"></div>
-              <div class="form-group">
-                <div class="form-control">
-                  <button class="btn btn_w100 btn_white"> Заправка </button>
+                <div class="form-group">
+                  <div class="form-group__title"> Пользователь </div>
+                  <div class="form-control">
+                    <input type="text" class="form-input" value="Admin" disabled>
+                  </div>
                 </div>
-                <div class="form-control">
-                  <button class="btn btn_w100 btn_white"> Своя команда </button>
+                <div class="form-group">
+                  <div class="form-group__title"> Название организации </div>
+                  <div class="form-control">
+                    <input type="text" class="form-input" value="Организация 1">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="form-group__title"> Телефон </div>
+                  <div class="form-control">
+                    <input type="text" class="form-input" value="+70000000000">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="form-group__title"> Электронная почта </div>
+                  <div class="form-control">
+                    <input type="text" class="form-input" value="email@mail.com">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="form-group__title"> Контакт </div>
+                  <div class="form-control">
+                    <input type="text" class="form-input" value="?">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="form-group__title"> Адресс </div>
+                  <div class="form-control">
+                    <input type="text" class="form-input" value="Адрес 1">
+                  </div>
                 </div>
               </div>
             </div>
@@ -219,7 +250,7 @@
         <div class="page__footer">
           <div class="footer-btn">
             <div class="footer-btn__inner inner">
-              <button class="btn btn_w100 btn_bold" type="submit"> Применить </button>
+              <button class="btn btn_w100 btn_bold" type="submit" disabled> Сохранить </button>
             </div>
           </div>
         </div>
