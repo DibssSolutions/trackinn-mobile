@@ -1,0 +1,32 @@
+
+<div class="auth-page">
+    <div class="auth-page__bg" style="background-image:url('./img/bg_auth.png')"></div>
+    <div class="auth-page__inner inner">
+        <div class="auth-page__logo">
+            <img src="./img/logo@2x.png" alt="logotype">
+        </div>
+        <div class="auth-page__content">
+            <div class="auth-page__title">Авторизация</div>
+            <form class="auth-page__form">
+                <div class="form-group">
+                    {{ mixins.input('Пользователь') }}
+                    {{ mixins.input('Пароль') }}
+                </div>
+                <div class="auth-page__submit">
+                    <button type="submit" class="btn btn_orange btn_w100 btn_bold">Войти</button>
+                </div>
+            </form>
+            <div class="auth-page__password">
+                <a href="#" class="auth-page__link">Забыли пароль?</a>
+            </div>
+            <div class="auth-page__registration">
+                <span>Нет аккаунта?</span>
+                <a href="#" class="auth-page__link">Зарегистрироваться</a>
+            </div>
+        </div>
+        <div class="auth-page__footer">
+            <span>Язык интерфейса:</span>
+            <span class="language">Русский</span>
+        </div>
+    </div>
+    </div>

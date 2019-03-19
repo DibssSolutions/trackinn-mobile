@@ -1,0 +1,50 @@
+<div class="page">
+    <div class="page__header">
+        {{ mixins.tabsHeader([
+            {
+                icon: 'rounded-info-button',
+                text: 'Мой профиль'
+            },
+            {
+                icon: 'settings',
+                text: 'Общие настройки'
+            },
+            {
+                icon: 'icons_protection',
+                text: 'Защита',
+                active: true
+            }
+        ]) }}
+    </div>
+    <div class="page__content">
+        <div class="page__content-wrap">
+            <div class="page__inner inner">
+                <div class="form-block">
+                    {% for item in [
+                            {
+                                title: 'Текущий пароль'
+                            },
+                            {
+                                title: 'Новый пароль'
+                            },
+                            {
+                                title: 'Повторите новый пароль'
+                            }
+                        ] %}
+                        
+                        <div class="form-group">
+                            <div class="form-group__title">
+                                {{ item.title }}
+                            </div>
+                            {{ mixins.input(  ) }}
+                        </div>
+
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page__footer">
+        {{ mixins.footerBtn('Сменить пароль', true) }}
+    </div>
+</div>

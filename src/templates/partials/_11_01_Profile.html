@@ -1,0 +1,72 @@
+<div class="page">
+    <div class="page__header">
+        {{ mixins.tabsHeader([
+            {
+                icon: 'rounded-info-button',
+                text: 'Мой профиль',
+                active: true
+            },
+            {
+                icon: 'settings',
+                text: 'Общие настройки'
+            },
+            {
+                icon: 'icons_protection',
+                text: 'Защита'
+            }
+        ]) }}
+    </div>
+    <div class="page__content">
+        <div class="page__content-wrap">
+            <div class="page__inner inner">
+                <div class="form-block">
+                    {% for item in [
+                            {
+                                title: 'Пользователь',
+                                text: 'Admin',
+                                value: true,
+                                disabled: true
+                            },
+                            {
+                                title: 'Название организации',
+                                text: 'Организация 1',
+                                value: true
+                            },
+                            {
+                                title: 'Телефон',
+                                text: '+70000000000',
+                                value: true
+                            },
+                            {
+                                title: 'Электронная почта',
+                                text: 'email@mail.com',
+                                value: true
+                            },
+                            {
+                                title: 'Контакт',
+                                text: '?',
+                                value: true
+                            },
+                            {
+                                title: 'Адресс',
+                                text: 'Адрес 1',
+                                value: true
+                            }
+                        ] %}
+                        
+                        <div class="form-group">
+                            <div class="form-group__title">
+                                {{ item.title }}
+                            </div>
+                            {{ mixins.input( item.text, false, item.value, item.disabled ) }}
+                        </div>
+
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page__footer">
+        {{ mixins.footerBtn('Сохранить', true) }}
+    </div>
+</div>

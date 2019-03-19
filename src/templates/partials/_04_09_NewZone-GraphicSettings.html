@@ -2,7 +2,6 @@
     <div class="page__header">
         {{ mixins.headObject({
             high: true,
-            boxShadow: true,
             arrow: true,
             text: 'Назад',
             btns: [
@@ -15,13 +14,84 @@
                     icon: 'triangleZone',
                     bgActive: true
                 }
-            ],
-            dropPage: true
+            ]
         }) }}
     </div>
     <div class="page__content">
         <div class="page__content-wrap">
-            {{ mixins.map() }}
+            <div class="page__inner inner">
+                <div class="form-block form-block_sm">
+                    <div class="form-block__title">
+                        Настройка линии
+                    </div>
+                    <div class="form-group">
+                        <div class="form-group__title">
+                            Тип
+                        </div>
+                        {{ mixins.select('Сплошная') }}
+                    </div>
+                    <div class="form-group">
+                        <div class="form-group__title">
+                            Цвет обводки
+                        </div>
+                        {{ mixins.select('Красный') }}
+                    </div>
+                    <div class="form-group">
+                        <div class="form-group__title">
+                            Толщина обводки
+                        </div>
+                        {{ mixins.select('2px') }}
+                    </div>
+                    <div class="form-group">
+                        <div class="form-group__title">
+                            Прозрачность
+                        </div>
+                        <div class="form-control"><input type="range" ></div>
+                    </div>
+                </div>
+                <div class="form-block form-block_sm">
+                    <div class="form-block__title">
+                        Настройка заливки
+                    </div>
+                    <div class="form-group">
+                        <div class="form-group__title">
+                            Цвет заливки
+                        </div>
+                        {{ mixins.select('Красный') }}
+                    </div>
+                    <div class="form-group">
+                        <div class="form-group__title">
+                            Прозрачность
+                        </div>
+                        <div class="form-control"><input type="range"></div>
+                    </div>
+                </div>
+                <div class="form-block form-block_sm">
+                    <div class="form-block__title">
+                        Метка
+                    </div>
+                    <div class="form-group">
+                        <div class="form-group__title">
+                            Иконка
+                        </div>
+                        <div class="form-control">
+                            <button class="btn btn_w100 btn_white">
+                                Выбрать иконку
+                            </button>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-group__title">
+                            Радиус, м
+                        </div>
+                        {{ mixins.input('20') }}
+                    </div>
+                </div>
+
+            </div>
         </div>
+    </div>
+    <div class="page__footer">
+        {{ mixins.footerBtn('Сохранить') }}
     </div>
 </div>

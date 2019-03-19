@@ -1,0 +1,27 @@
+<div class="page">
+    <div class="page__header">
+        {{ mixins.headObject({
+            high: true,
+            boxShadow: true,
+            arrow: true,
+            text: 'Назад',
+            btns: [
+                {
+                    icon: 'baseline-brush',
+                    bgActive: true,
+                    active: true
+                },
+                {
+                    icon: 'triangleZone',
+                    bgActive: true
+                }
+            ],
+            dropPage: true
+        }) }}
+    </div>
+    <div class="page__content">
+        <div class="page__content-wrap">
+            {{ mixins.map() }}
+        </div>
+    </div>
+</div>

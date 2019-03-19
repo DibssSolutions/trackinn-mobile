@@ -45,10 +45,10 @@
 
 .head-drop
     z-index: 10
-    position: absolute
+    position: fixed
     left: 0
-    top: 100%
-    width: 100%
+    // top: 100%
+    top: 110px
     width: 100%
     display: flex
     flex-direction: column
@@ -64,6 +64,7 @@
     &_fullPage
         height: calc(100vh - 56px - 54px)
         max-height: none
+        overflow: auto
     &_noborder
         border: none
     &.is-open
@@ -75,12 +76,12 @@
         // height: 100%
         // overflow: auto
         &-wrap
-            position: absolute
-            left: 0
-            top: 0
+            // position: absolute
+            // left: 0
+            // top: 0
             width: 100%
             height: 100%
             padding: 24px 0 0
-            overflow: auto
+            // overflow: auto
     &__footer
         flex: 0 0 auto

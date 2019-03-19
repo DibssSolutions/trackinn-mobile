@@ -1,0 +1,28 @@
+.users-item
+    padding: 21px 44px 21px 24px
+    border-bottom: 1px solid $lightGray
+    // &__wrap
+    display: flex
+    position: relative
+    align-items: center
+    cursor: pointer
+    &__input
+        display: none
+    &__item
+    &__icon
+        flex: 0 0 auto
+    &__text
+        flex: 1 0 auto
+        margin-left: 10px
+    &__check
+        position: absolute
+        right: 29px
+        top: 50%
+        transform: translateY(-50%)
+        color: $blue
+        opacity: 0
+        visibility: hidden
+        transition: opacity .3s, visibility .3s
+        .users-item__input:checked ~ &
+            opacity: 1
+            visibility: visible

@@ -1,4 +1,4 @@
-<div class="page">
+<div class="page page_low">
     <div class="page__header">
         {{ mixins.tabsHeader([
             {
@@ -32,10 +32,10 @@
     </div>
     <div class="page__content">
         <div class="page__content-wrap">
-            {{ mixins.map() }}
+            {{ mixins.map(false,true) }}
         </div>
     </div>
-    <div class="page__footer">
+    <div class="page__footer is-fixed">
         {{ mixins.footerBar({
             white: true,
             number: '01',

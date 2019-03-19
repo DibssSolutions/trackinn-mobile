@@ -1,3 +1,4 @@
+{% import "partials/_mixins.html" as mixins %}
 {% macro geozoneChangeType(active) %}
     
     <div class="modal{% if active %} is-open{% endif %}" data-modal="geozoneChangeType">
@@ -21,6 +22,52 @@
                         </button>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+
+{% endmacro %}
+
+{% macro usersActions(active, usersList) %}
+    
+    <div class="modal modal_users{% if active %} is-open{% endif %}" data-modal="geozoneChangeType">
+        <div class="modal__container" data-modal-container>
+            <div class="modal__inner inner users-actions">
+                {# <button class="modal__close" data-modal-close>
+                    {{mixins.icon('close')}}
+                </button> #}
+                {# {% include "partials/_form-main.html"%} #}
+                <div class="users-actions__top">
+                    <div class="users-actions__block">
+                        <div class="users-actions__title">Ваш профиль</div>
+                        <div class="users-actions__row">
+                            <div class="users-actions__profile">Admin</div>
+                            <div class="users-actions__settings">
+                                <button type="button" class="btn-icon btn-icon_gray">
+                                    {{ mixins.icon('settings') }}
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="users-actions__block">
+                        <div class="users-actions__title">Баланс</div>
+                        <div class="users-actions__row">
+                            <div class="users-actions__balance">1000.00 руб</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="users-actions__btns"> -->
+                    {% if usersList %}
+                        <a href="#" class="users-actions__btn">
+                            {{mixins.icon('user')}}
+                            <span>Список пользователей</span>
+                        </a>
+                    {% endif %}
+                    <a href="#" class="users-actions__btn">
+                        {{mixins.icon('logout')}}
+                        <span>Выйти</span>
+                    </a>
+                <!-- </div> -->
             </div>
         </div>
     </div>

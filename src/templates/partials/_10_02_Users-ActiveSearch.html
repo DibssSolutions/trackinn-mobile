@@ -1,0 +1,47 @@
+<div class="page">
+        <div class="page__header">
+            {{ mixins.pageHeader({
+                map: true,
+                filter: true,
+                search: 'active'
+            }) }}
+        </div>
+        <div class="page__content">
+            <div class="page__content-wrap">
+                {% for item in [
+                    {
+                        text: 'Пользователь 1'
+                    },
+                    {
+                        text: 'Пользователь 2',
+                        active: true
+                    },
+                    {
+                        text: 'Пользователь 3'
+                    },
+                    {
+                        text: 'Пользователь 4'
+                    },
+                    {
+                        text: 'Пользователь 5'
+                    },
+                    {
+                        text: 'Пользователь 6'
+                    },
+                    {
+                        text: 'Пользователь 7'
+                    },
+                    {
+                        text: 'Пользователь 8'
+                    },
+                    {
+                        text: 'Пользователь 9'
+                    }
+                ] %}
+                
+                    {{ mixins.usersItem(item) }}
+                    
+                {% endfor %}
+            </div>
+        </div>
+    </div>

@@ -1,7 +1,5 @@
 html
     height: 100%
-    // overflow: hidden
-    // pointer-events: none
 body
     background: #FFF
     line-height: 1.4
@@ -9,14 +7,12 @@ body
     height: 100%
     font-size: 13px
     min-width: 320px
-    // overflow: hidden
     +opensans
     a
         color: $dark
         text-decoration: none
 .out
     height: 100%
-    // overflow: hidden
 
 .btn
     height: 48px
@@ -26,6 +22,8 @@ body
     padding: 0 30px
     &:disabled
         background-color: rgba($blue,.4)
+    &_bold
+        font-weight: 600
     &_remove
         background-color: transparent
         color: $dark
@@ -39,6 +37,9 @@ body
         background-color: $white
         color: $blue
         border: 1px solid $blue
+    &_orange
+        height: 40px
+        background-color: $orange
 
 .btn-icon
     position: relative
@@ -49,7 +50,6 @@ body
     background: none
     width: 24px
     height: 24px
-    // padding: 3px
     transition: color .3s
     &:before
         position: absolute
@@ -163,8 +163,8 @@ body
         margin: 24px 0 29px
 .form-block
     &_sm
-        padding: 0
         &:not(:first-child)
+            padding: 0
             margin-top: 32px
     &__title
         padding: 11px 16px
@@ -184,12 +184,10 @@ body
     &__title
         margin-bottom: 10px
     &__row
-        // display: flex
     &__radio
         display: inline-block
         min-width: 143px
         padding-right: 15px
-        // width: 50%
 .form-control
     position: relative
     &__icon
@@ -203,7 +201,6 @@ body
     .icon-icons_calendar
         font-size: 11px
 .form-input
-    // display: inline-block
     padding: 15px 16px
     font-size: 13px
     width: 100%
@@ -226,6 +223,8 @@ body
         padding-left: 16px
         &.form-input_search
             padding-left: 24px
+    &:disabled
+        background-color: #f3f3f3
 textarea.form-input
     height: 168px
     resize: none
@@ -286,13 +285,11 @@ textarea.form-input
             padding-bottom: 24px
 
 .divider
-    // width: 100%
     height: 1px
     background-color: $lightGray
     margin: 0 -24px
     +ms
         margin: 0 -12px
-        // margin-right: -12px
     &:not(:first-child)
         margin-top: 24px
     &:not(:last-child)
@@ -367,6 +364,8 @@ textarea.form-input
 .table-item
     padding: 16px 16px 16px 24px
     border-bottom: 1px solid $lightGray
+    +ms
+        padding: 16px 8px
     &__content
         display: flex
     &__left
@@ -381,6 +380,8 @@ textarea.form-input
         justify-content: center
         margin-right: 16px
         flex-shrink: 0
+        +ms
+            margin-right: 8px
     &__right
         flex: 1 1 auto
     
@@ -388,6 +389,12 @@ textarea.form-input
     td
         padding: 2px 8px
         vertical-align: middle
+        +ms
+            letter-spacing: -0.02em
+        &:not(:first-child)
+            padding-left: 4px
+        &:not(:last-child)
+            padding-right: 4px
     tfoot
         td
             background-color: #f3f3f3
@@ -418,11 +425,13 @@ textarea.form-input
 .icon-baseline-edit,
 .icon-trash,
 .icon-user,
-.icon-baseline-phone
+.icon-baseline-phone,
+.icon-user
     font-size: 18px
 .icon-icons_speedometer,
 .icon-rectangleZone,
-.icon-change-map-api
+.icon-change-map-api,
+.icon-logout
     font-size: 16px
 .icon-icons_satellite
     font-size: 15px
@@ -441,9 +450,7 @@ textarea.form-input
     position: absolute
     left: 0
     top: 0
-    // z-index: -1
     &-mask
-        // user-select: none
         position: relative
         pointer-events: none
         background-color: #fff
@@ -484,7 +491,7 @@ textarea.form-input
         padding-left: 15px
 
 .report-block
-    padding: 17px 0 0
+    padding: 17px 0 7px
 
 
 .photo-list
@@ -509,6 +516,9 @@ textarea.form-input
 .map
     height: 100%
     width: 100%
+    max-height: calc(100vh - 110px)
+    &_modal
+        max-height: calc(100vh - 159px)
     &-wrap
         height: 100%
         width: 100%
@@ -520,8 +530,6 @@ textarea.form-input
     align-items: center
     justify-content: space-between
     border-bottom: 1px solid $lightGray
-    // &_border
-    //     border-bottom: 1px solid $lightGray
     &__name
         max-width: 176px
         +text-overflow
@@ -557,6 +565,7 @@ textarea.form-input
 .fullscreen-message
     position: relative
     padding: 16px 55px 24px 24px
+    background-color: $white
     &__close
         position: absolute
         top: 16px
@@ -576,7 +585,6 @@ textarea.form-input
                 padding: 3px 0
                 background: none
 .number
-    // width: 24px
     display: inline-flex
     padding: 0 8px
     align-items: center

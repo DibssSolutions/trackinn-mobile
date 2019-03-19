@@ -1,0 +1,58 @@
+// CUSTOM COLUMN SIZES
+
+// $column-sizes: 5, 10, 15, 18, 20, 25, 30, 33.33, 35, 40, 45, 46, 50, 55, 54, 60, 65, 66.66, 70, 72, 80, 82, 85, 90, 100
+// $padding: 15px
+
+// @each $size in $column-sizes
+//   .col-#{round($size)}
+//     flex: 0 0 $size * 1%
+//     min-width: $size
+//     padding-left: $padding
+//     padding-right: $padding
+
+// .row
+//   display: flex
+//   flex-wrap: wrap
+//   margin: 0 -#{$padding}
+
+// [class*='col']
+//   padding: 0 $padding
+
+// GENERATE GRID EXAMPLE
+// CUSTOM PADDING ON BREAKPOINTS - NOT INCLUDED IN MIXIN
+// +generate_grid($columns: 3, $sizeXs: false, $sizeSm: false, $sizeMd: false, $sizeLg: true, $padding: 30px)
+
+.inner
+    padding: 0 24px
+    +ms
+        padding: 0 12px
+
+.page
+    height: 100%
+    width: 100%
+    display: flex
+    flex-direction: column
+    padding-top: 54px
+    // padding-top: 110px
+    // overflow: hidden
+    &__header
+        position: relative
+    &__content
+        position: relative
+        flex: 1 0 auto
+        min-height: 150px
+        &-wrap
+            position: absolute
+            left: 0
+            top: 0
+            width: 100%
+            height: 100%
+            overflow: auto
+            // pointer-events: initial
+    &__footer
+        flex: 0 0 auto
+        // position: fixed
+        // left: 0
+        // bottom: 0
+        // right: 0
+        // margin-top: auto

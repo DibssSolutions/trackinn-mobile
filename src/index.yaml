@@ -3,6 +3,14 @@ ProjectTitle: template
 PageList:
 - file: ui.html
   ready: 50
+- file: 01_01_AuthPage.html
+  ready: 50
+- file: 01_02_RegistrationPage.html
+  ready: 50
+- file: 01_03_ResetPassword.html
+  ready: 50
+- file: 01_04_ResetPassword-Message.html
+  ready: 50
 - file: 03_01_ObjectsList.html
   ready: 50
 - file: 03_02_ActiveSearch.html
@@ -104,4 +112,20 @@ PageList:
 - file: 09_06_CompletingTask.html
   ready: 50
 - file: 09_07_SuccessCompleting.html
+  ready: 50
+- file: 10_01_Users.html
+  ready: 50
+- file: 10_02_Users-ActiveSearch.html
+  ready: 50
+- file: 10_03_NoData.html
+  ready: 50
+- file: 10_04_UsersActions.html
+  ready: 50
+- file: 10_05_UsersActions.html
+  ready: 50
+- file: 11_01_Profile.html
+  ready: 50
+- file: 11_02_GeneralSettings.html
+  ready: 50
+- file: 11_03_Protection.html
   ready: 50

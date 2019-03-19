@@ -1,7 +1,7 @@
 {% import "partials/_mixins.html" as mixins %}
 {% import "partials/_modals.html" as modals %}
 <!doctype html>
-<html>
+<html{% if class %} class={{ class }}{% endif %}>
   <head>
     <meta charset="utf-8">
     <title>{% if title %}{{ title }}{% else %}Template{% endif %}</title>
