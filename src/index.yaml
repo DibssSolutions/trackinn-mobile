@@ -11,6 +11,8 @@ PageList:
   ready: 50
 - file: 01_04_ResetPassword-Message.html
   ready: 50
+- file: 02_01_OpenedMenu+Row2.html
+  ready: 50
 - file: 03_01_ObjectsList.html
   ready: 50
 - file: 03_02_ActiveSearch.html
