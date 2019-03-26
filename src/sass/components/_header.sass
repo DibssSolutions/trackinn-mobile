@@ -52,11 +52,12 @@
 
 .main-menu
     padding-top: 54px
-    position: absolute
+    position: fixed
     left: 0
     top: 0
+    bottom: 0
     width: 100%
-    height: 100vh
+    // height: 100vh
     overflow: auto
     background-color: $white
     z-index: -1
@@ -66,12 +67,14 @@
         flex-direction: column
     &__inner
         flex: 1 0 auto
+        position: relative
+        padding-bottom: 50px
     &__wrap
         padding: 24px 0
         display: flex
         flex-wrap: wrap
         margin: 0 -8px
-        height: 100%
+        min-height: 100%
     &__item
         width: 50%
         min-height: 90px
@@ -88,9 +91,12 @@
             height: 100%
             border: 1px solid $lightGray
     &__icon
-        width: 24px
+        min-width: 24px
         height: 24px
         color: $gray
+        display: flex
+        align-items: center
+        justify-content: center
         .icon
             display: block
             font-size: 24px
@@ -98,14 +104,18 @@
         font-size: 13px
         margin-top: 10px
     &__footer
-        flex: 0 0 auto
-        width: 100%
+        // flex: 0 0 auto
+        position: absolute
+        bottom: 0
+        right: 0
+        left: 0
+        // width: 100%
         height: 50px
         background-color: $bgGray
         &-icon
             .icon
                 display: block
-                font-size: 21px
+                font-size: 14px
         &-text
             margin-left: 10px
     &__desktop

@@ -313,7 +313,7 @@
 {% macro inputSearch(active) %}
 	<div class="search-bar{% if active %} is-active{% endif %}">
 		<div class="search-bar__input">
-			<input type="search" class="form-input form-input_search form-input_icon-right" placeholder="Поиск">
+			<input type="text" class="form-input form-input_search form-input_icon-right" placeholder="Поиск">
 		</div>
 		<div class="search-bar__btn">
 			<div class="search-bar__btn-search">
@@ -461,7 +461,7 @@
 {% endmacro %}
 
 {% macro objectsItem(props) %}
-	<div class="objects-item">
+	<a href="#" class="objects-item">
 		<div class="objects-item__inner inner">
 			<div class="objects-item__top">
 				<div class="objects-item__img">
@@ -477,19 +477,19 @@
 			</div>
 			<div class="objects-item__bottom">
 				{% for item in props.btns %}
-					<button class="object-item-btn{% if item.active %} is-active{% endif %}">
+					<div class="object-item-btn{% if item.active %} is-active{% endif %}">
 						<span class="object-item-btn__icon object-item-btn__icon_{{ item.color }}">
 							{{ icon(item.icon) }}
 						</span>
 						<span class="object-item-btn__text">{{ item.text }}</span>
-					</button>
+					</div>
 				{% endfor %}
 			</div>
 		</div>
-	</div>
+	</a>
 {% endmacro %}
 {% macro geozonesItem(props) %}
-	<div class="geozones-item">
+	<a href="#" class="geozones-item">
 		<div class="geozones-item__inner inner">
 			<div class="geozones-item__top">
 				<div class="geozones-item__icon">
@@ -506,20 +506,20 @@
 			</div>
 			<div class="geozones-item__bottom">
 				{% for item in props.btns %}
-					<button class="geozones-item-btn{% if item.active %} is-active{% endif %}">
+					<div class="geozones-item-btn{% if item.active %} is-active{% endif %}">
 						<span class="geozones-item-btn__icon{% if item.class %} geozones-item-btn__icon_{{ item.class }}{% endif %}">
 							{{ icon(item.icon) }}
 						</span>
 						<span class="geozones-item-btn__text">{{ item.text }}</span>
-					</button>
+					</div>
 				{% endfor %}
 			</div>
 		</div>
-	</div>
+	</a>
 {% endmacro %}
 
 {% macro eventsItem(item, index) %}
-	<div class="events-item{% if item.removable %} is-removable{% endif %}">
+	<a href="#" class="events-item{% if item.removable %} is-removable{% endif %}">
 		<input type="checkbox" class="events-item__input" id="eventsItem{{ index }}">
 		<label for="eventsItem{{ index }}" class="events-item__checkbox"></label>
 		<div class="events-item__bg"></div>
@@ -546,11 +546,11 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</a>
 {% endmacro %}
 
 {% macro servicesItem(item) %}
-	<div class="services-item{% if item.removable %} is-removable{% endif %}">
+	<a href="#" class="services-item{% if item.removable %} is-removable{% endif %}">
 		<div class="services-item__inner inner">
 			<div class="services-item__top">
 				<div class="services-item__img">
@@ -578,13 +578,13 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</a>
 {% endmacro %}
 
 {% macro driverItem(props) %}
 	<div class="driver-item">
 		<div class="driver-item__inner inner">
-			<div class="driver-item__info">
+			<a href="#" class="driver-item__info">
 				<div class="driver-item__icon">
 					{{ icon('user') }}
 				</div>
@@ -594,7 +594,7 @@
 						<div class="driver-item__tel">{{ props.tel }}</div>
 					{% endif %}
 				</div>
-			</div>
+			</a>
 			{% if props.tel %}
 				<div class="driver-item__btn">
 					<a href="tel:{{ props.tel }}" class="btn-icon btn-icon_gray">
@@ -694,7 +694,7 @@
 {% endmacro %}
 
 {% macro fuelItem(props) %}
-<div class="fuel-item">
+<a href="#" class="fuel-item">
 	{# <div class="fuel-item__inner inner"> #}
 		<table class="item-table">
 			{% if props.thead %}
@@ -728,7 +728,7 @@
 			{% endif %}
 		</table>
 	{# </div> #}
-</div>
+</a>
 	
 {% endmacro %}
 
